@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1500
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SharingCulture", "SharingCulture\", "{184DDFC9-BC1C-4C1D-8A20-E61C711A70E6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51040"
+		Debug.AspNetCompiler.PhysicalPath = "SharingCulture\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51040\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51040"
+		Release.AspNetCompiler.PhysicalPath = "SharingCulture\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51040\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51040"
+		SlnRelativePath = "SharingCulture\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{184DDFC9-BC1C-4C1D-8A20-E61C711A70E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184DDFC9-BC1C-4C1D-8A20-E61C711A70E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8897AA4C-803B-47CF-812F-9A8D863E4A6A}
+	EndGlobalSection
+EndGlobal

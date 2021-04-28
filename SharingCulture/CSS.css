@@ -1,0 +1,58 @@
+﻿header {
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+body {
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+    .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+
+h1 {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    color: red
+}
+
+h2 {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    color: lightblue
+}
+
+h3 {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    color: lightcoral
+}
+
+h4 {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    color: red
+}

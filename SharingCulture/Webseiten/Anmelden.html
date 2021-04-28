@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SharingCulture - Log In</title>
+    <!--Steuert das icon was im "Browser-Tab"(also Header)angezeigt wird!-->
+    <link rel="icon" href="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif">
+    <!--hier wird der Style für Bilder festgelegt; sorgt dafür, dass unser Logo mittig positioniert ist!-->    
+    <style>
+        img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        resize:none;
+        }
+        p{
+            font-family:Bahnschrift;
+            color:black;
+        }
+        input{
+            font-family:Bahnschrift;
+            font-size:11px;
+            Font-style:italic;
+        }
+        h2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color:black;
+        }
+    </style>
+     
+</head>
+<body style="color:gray">
+    <div class="bg"></div>
+    <p>
+        <!--hier wird auch auf CSS.css zugegriffen um die Style-Anpassung aus dem CSS mit dem class-Attribut auszulesen-->
+        <img  src="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif" alt="Bewegtes Bild was das Teilen symbolisiert" class="center" style="width:25%"/> 
+ 
+    </p>
+    <form method="get" action="Anmelden.html">
+        <!--Formular für die Anmeldung-->
+        <h2 style="text-align:center; font-family:Bahnschrift">Anmeldung</h2>
+        <p style="text-align:center">Benutzername: <input type="text" autofocus /></p>
+        <p style="text-align:center">Passwort: <input type="password" /></p>
+        <p style="text-align:center"> <input type="button" name="btnAbbrechen" value="Abbrechen" /> 
+            <input type="submit" name="btnBestätigen" value="Bestätigen" />
+        </p>
+
+    </form>
+
+</body>
+</html>
