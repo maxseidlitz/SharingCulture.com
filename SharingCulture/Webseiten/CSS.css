@@ -1,0 +1,89 @@
+/*Textaufbau*/
+header {
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+body {
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+
+p {
+    font-family: Bahnschrift;
+    color: black;
+}
+/*Ueberschriften*/
+h1 {
+    font-family:Bahnschrift;
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    color: yellowgreen
+}
+
+h2 {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    display: block;
+    color: black;
+}
+
+h3 {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    color: lightcoral
+}
+
+h4 {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 10px 0 0 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding: 10px;
+    color: red
+}
+
+/*Assets*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+}
+
+input {
+    font-family: Bahnschrift;
+    font-size: 11px;
+    Font-style: italic;
+}
+
+form {
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*Klassen*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

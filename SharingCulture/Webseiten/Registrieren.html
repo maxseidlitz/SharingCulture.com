@@ -3,17 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <title>SharingCulture - Registrieren</title>
-    <link rel="stylesheet" type="text/css" href="../CSS.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS.css" media="screen" />
+    <style> 
+        input{
+            color: green;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <p style="text-align:center">
-        <h1>Registrieren</h1>
-    </p>
+    <h1 style="text-align:center;">Registrieren</h1>
+  <!--CLEAN CODE; "name" und "id"!!!!!-->
+  <form action="Startseite.html" method="get">
     <p>
-        Vorname:
-    <input value="" style="position:center" type="text" />
+        <label for="txtVorname" id="lblVorname">Vorname: </label>
+    <input id="txtVorname" name="txtVorname" value="" style="position:center" type="text" />
     </p>
+
     <p>
         Nachname:
         <input value="" style="position:center" type="text" />
@@ -31,5 +37,6 @@
         <input type="button" value="Abbrechen" />
         <input type="submit" value="Bestätigen" />
     </p>
+    </form>
 </body>
 </html>
