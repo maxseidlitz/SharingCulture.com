@@ -3,29 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <title>SharingCulture - Registrieren</title>
-    <link rel="stylesheet" type="text/css" href="CSS.css" media="screen" />
-    <style> 
-        input{
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../CSS.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-    <h1 style="text-align:center;">Registrieren</h1>
-  <!--CLEAN CODE; "name" und "id"!!!!!-->
-  <form action="Startseite.html" method="get">
-    <p>
-        <label for="txtVorname" id="lblVorname">Vorname: </label>
-    <input id="txtVorname" name="txtVorname" value="" style="position:center" type="text" />
-    </p>
+<body style="text-align:center">
+    <img  src="../Bilder/SharingCulture-Motiv.png" alt="Logo" style="width:50%" />
 
+    <p style="text-align:center">
+        <h1>Registrieren</h1>
+    </p>
+    <p>
+        Anrede:
+        <select name="cmbAnrede">
+            <option value="0">Männlich</option>
+            <option value="1">Weiblich</option>
+            <option value="2">Divers</option>
+        </select>
+    </p>
+    <p>
+        Vorname:
+        <input value="" style="position:center" type="text" />
+    </p>
     <p>
         Nachname:
         <input value="" style="position:center" type="text" />
     </p>
     <p>
         Benutzername:
+        <input value="" style="position:center" type="text" />
+    </p>
+    <p>
+        Alter:
+        <input value="" style="position:center" type="number" />
+    </p>
+    <p>
+        Telefonnummer:
         <input value="" style="position:center" type="text" />
     </p>
     <p>
@@ -37,6 +49,5 @@
         <input type="button" value="Abbrechen" />
         <input type="submit" value="Bestätigen" />
     </p>
-    </form>
 </body>
 </html>
