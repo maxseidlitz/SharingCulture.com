@@ -3,6 +3,7 @@ header {
     font-family: Bahnschrift;
     font-size: 18px;
 }
+
 body {
     font-family: Bahnschrift;
     font-size: 18px;
@@ -11,11 +12,11 @@ body {
 p {
     font-family: Bahnschrift;
     color: black;
-    text-align:center;
+    /*text-align:center; AUSKOMMENTIERT UND BEI KLASSE '.centertext' eingefügt */
 }
 /*Ueberschriften*/
 h1 {
-    font-family:Bahnschrift;
+    font-family: Bahnschrift;
     font-size: 30px;
     margin-left: 5px;
     margin-top: 10px;
@@ -33,7 +34,6 @@ h2 {
 
 h3 {
     font-size: 20px;
-    
     color: lightcoral
 }
 
@@ -64,8 +64,13 @@ input {
 
 form {
     width: 50%;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    white-space: nowrap;
 }
 
 /*Klassen*/
@@ -75,11 +80,31 @@ form {
     margin: 0; /* Space from this element (entire page) and others*/
     padding: 0; /*space from content and border*/
     border: solid yellowgreen;
-    border-style:double;
+    border-style: double;
     border-width: thin;
     overflow: hidden;
     display: block;
 }
+/*von Max*/
+.AnmeldeMenü {
+    font-size: 25px;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    width: 350px;
+    padding: 30px;
+    border: solid rgb(119, 161, 34);
+    margin: auto;
+}
+
+.AnmeldeMenüInhalt {
+    font-size: 25px;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    width: 350px;
+    padding: 30px;
+    margin: auto;
+}
+/*Von Max Ende*/
 
 .centerblock {
     display: block;
@@ -87,14 +112,30 @@ form {
     margin-right: auto;
     width: 50%;
 }
-.centertext{
-    text-align:center;
-}
-.sekundaer {
-    font-size:smaller;
+
+.centertext {
+    text-align: center;
 }
 
-  table, th, td {
-      border: 1px solid black;
-      white-space: nowrap;
-  }
+/*Diese Klasse wurde von Max eingefügt*/
+.centerdiv {
+    margin: auto;
+    margin-top: 7%;
+    width: 70%;
+    border: 5px solid yellowgreen;
+    padding: 100px;
+}
+
+.sekundaer {
+    font-size: smaller;
+}
+
+/*ID's von Max */
+#footerlinks {
+    width: 300px;
+}
+
+    #footerlinks li {
+        width: 100px;
+        display: inline-block;
+    }
