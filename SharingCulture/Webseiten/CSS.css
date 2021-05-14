@@ -12,7 +12,7 @@ body {
 p {
     font-family: Bahnschrift;
     color: black;
-    /*text-align:center; AUSKOMMENTIERT UND BEI KLASSE '.centertext' eingefügt */
+    /*text-align:center; AUSKOMMENTIERT UND BEI KLASSE '.centertext' eingefï¿½gt */
 }
 /*Ueberschriften*/
 h1 {
@@ -86,7 +86,7 @@ table, th, td {
     display: block;
 }
 
-.AnmeldeMenü {
+.AnmeldeMenï¿½ {
     font-size: 25px;
     border-collapse: collapse;
     border-spacing: 10px;
@@ -96,7 +96,7 @@ table, th, td {
     margin: auto;
 }
 
-.AnmeldeMenüInhalt {
+.AnmeldeMenï¿½Inhalt {
     font-size: 25px;
     border-collapse: collapse;
     border-spacing: 10px;
@@ -105,6 +105,11 @@ table, th, td {
     margin: auto;
 }
 
+.hintergrundbildAnmelden{
+    background-image: url(../Bilder/tile_background.png);
+    background-repeat:no-repeat ;
+    text-align: center;
+}
 
 .centerblock {
     display: block;
