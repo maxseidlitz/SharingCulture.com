@@ -352,3 +352,5 @@ MigrationBackup/
 .DS_Store
 .AppleDouble
 .LSOverride
+/SharingCulture-ASP.NET/App_Data/Datenbank.mdf
+/SharingCulture-ASP.NET/App_Data/Datenbank_log.ldf
