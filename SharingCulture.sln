@@ -27,7 +27,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SharingCulture", "SharingCu
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SharingCulture-ASP.NET", "SharingCulture-ASP.NET\SharingCulture-ASP.NET.vbproj", "{A045FE8D-1071-4AA0-AD5D-B60957C96A5B}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SharinCulture.com", "SharinCulture.com\SharinCulture.com.vbproj", "{EDFAAB2D-8505-4609-BFBE-470635B5A073}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SharingCulture.com", "SharinCulture.com\SharingCulture.com.vbproj", "{EDFAAB2D-8505-4609-BFBE-470635B5A073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
