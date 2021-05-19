@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SharingCulture - Übersicht meine Gegenstände</title>
+    <link rel="stylesheet" type="text/css" href="../CSS.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="../Bilder/SharingCulture-Motiv.png" style="width:50%;height:50%"/>
+</head>
+
+
+
+<body>
+
+
+    <!--Linker Block für die Navigation
+    div class "Primärnavigation"-->
+    <div>
+        <h1>Navigation</h1>
+    </div>
+
+        <div class="Primärnavigation">
+            <img src="../Bilder/typ.jpg" style="float:left;width:10%" />
+
+            <label style="text-align: left">Name, Vorname:</label> <br />
+            <input type="text" value="Dent, Arthur" /> <br />
+            <label>Community:</label> <br />
+            <input type="text" value="Studiwohnheim Prenzlberg" />
+
+            <button type="button">Startseite</button> <br />
+            <button type="button">Alle verfügbaren Gegenstände</button> <br />
+            <button type="button">Meine geliehenen Gegenstände</button> <br />
+            <button type="button">Meine angebotenen Gegenstände</button> <br />
+            <button type="button">Meldungen</button> <br />
+        </div>
+
+
+
+
+    <!-- Tabpanel zur Navigation-->
+        <p>
+            <a href="frmÜbersichtAlleGegenstände.html">Ausleihbare Gegenstände</a>
+            <a href="frmNeuesAngebot.html">Neues Angebot erstellen</a>
+            <a href="frmNeuerSuchauftrag.html">Neuen Suchauftrag anlegen</a>
+        </p>
+
+    <div class="items">
+
+
+
+        <form accept-charset="UTF-8" action="action_page.php" autocomplete="off" method="GET" target="_blank">
+            <fieldset>
+                <legend><h3>Neuen Suchauftrag aufgeben</h3></legend>
+
+                <label for="name"><h3>Name</h3></label>
+                <input name="name" type="text" value="" /> <br /> 
+
+                <label for="vorname"><h3>Vorname</h3></label>
+                <input vorname="vorname" type="text" value=""/> <br />
+
+                <label for="beschreibung"><h3>Bezeichnung</h3></label>
+                <input vorname="beschreibung" type="text" value=""/> <br />
+
+                <label for="kategorie"><h3>Kategorie</h3></label>            
+                    <select>
+                        <option selected="standard" value="1">Keine</option>
+                        <option value="10">Raum</option>
+                        <option value="2">Küchenutensilien</option>
+                        <option value="3">Garten</option>
+                        <option value="4">Werkzeug</option>
+                        <option value="5">Haushalt</option>
+                        <option value="6">Auto, Rad & Boot</option>
+                        <option value="7">Dienstleistungen</option>
+                        <option value="8">Familie, Kind & Baby</option>
+                        <option value="9">Jobs</option>
+                        <option value="11">Mode & Beauty</option>
+                        <option value="12">Elektronik</option>
+                        <option value="13">Musik, Filme & Bücher</option>
+                        <option value="14">Nachbarschaftshilfe</option>
+                    </select><br /> 
+
+
+            <label for="ergänzenderText"><h3>Ergänzender Text:</h3></label>
+            <textarea cols="30" rows="2">Hallo, ich suche...</textarea><br />
+
+            <label for ="zeitraum"><h3>Zeitraum der Ausleihe:</h3></label>
+            <div class="anfangsdatumausleihen">
+                <label for="anfangsdatum">Von:</label>
+                <input type="date" id="date" value="2018-07-03">
+                <span></span>
+                <input type="time" id="time" value="08:00">
+            </div>
+            <div class="endatumausleihen">
+                <label for="endatum">Bis:</label>
+                <input type="date" id="date" value="2018-07-03">
+                <span></span>
+                <input type="time" id="time" value="08:00">
+            </div>
+
+
+
+            <button type="submit" value="Submit" style="width: 125px; height: 50px;">Suchauftrag speichern</button>
+
+
+            </fieldset>
+        </form>
+
+
+</body>
+</html>

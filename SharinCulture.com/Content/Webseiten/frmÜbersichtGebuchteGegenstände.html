@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SharingCulture - Übersicht meine Gegenstände</title>
+    <link rel="stylesheet" type="text/css" href="../CSS.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="../Bilder/SharingCulture-Motiv.png" style="width:50%;height:50%"/>
+</head>
+
+<body>
+    
+    
+    <!--Linker Block für die Navigation-->
+    <div>
+        <h1>Navigation</h1>
+        <div class="object-fit">
+            <img src="../Bilder/typ.jpg" style="float:left;width:10%" /> <br />
+        </div>
+
+
+        <label style="text-align: left">Name, Vorname:</label> <br />
+        <input type="text" value="Dent, Arthur" /> <br />
+        <label>Community:</label> <br />
+        <input type="text" value="Studiwohnheim Prenzlberg" />
+
+        <div>
+            <button type="button">Startseite</button> <br />
+            <button type="button">Alle Gegenstände</button> <br />
+            <button type="button">Geliehene Gegenstände</button> <br />
+            <button type="button">Meine Gegenstände</button> <br />
+            <button type="button">Aktuell geliehen</button> <br />
+            <button type="button">Meldungen</button> <br />
+        </div>
+
+
+    </div>
+
+    <!-- Tabpanel zur Navigation-->
+    <p>
+        <a href="#item1">Auszuleihende Gegenstände</a>
+        <a href="#item2">Neues Angebot erstellen</a>
+        <a href="#item3">Neuen Suchauftrag anlegen</a>
+    </p>
+
+
+    <!--Oberer Block mit Titel, Suchleiste und Neuerstellung-->
+    <div class="topnav">
+        <form>
+            <input type="text" placeholder="Search..">
+            <input type="checkbox" id=gegenstaende name=gegenstaende value="Gegenstände">
+            <label for=gegenstaende>Gegenstände</label>
+            <input type="checkbox" id=raeume name=raeume value="Räume">
+            <label for=raeue>Räume</label>
+            <br/>
+        </form>  
+    </div>
+
+<!-- NEUE TABELLE
+Die eingefügten Gegenstände dienen vorerst als Platzhalter und sollen nachher durch eine Eingabe ersetzt werden
+L.S. 16.05.2021 18 Uhr-->
+<table class="tblAlleGegenstaende">
+    <thead>
+        <tr>
+            <th>Bild</th>
+            <th>Beschreibung</th>
+            <th>Kategorie</th>
+            <th>Leihende Person</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a
+                        href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+            </td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td><img src="../Bilder/schaufel.jpg" style="float:left;width: 240px;" /></td>
+            <td>Schaufel</td>
+            <td>Garten</td>
+            <td>Leonard Sinden</td>
+            <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+        </tr>
+        <tr>
+            <td><img src="../Bilder/Akkuschrauber.jpg" style="float:left;width: 240px;" /></td>
+            <td>Akkuschrauber</td>
+            <td>Werkzeug</td>
+            <td>Max Seidlitz</td>
+            <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+        </tr>
+        <tr>
+            <td><img src="../Bilder/kaffemühle.jpg" style="float:left;width: 240px;" /></td>
+            <td>Kaffeemühle</td>
+            <td>Küchenutensilien</td>
+            <td>Carolina Kowando</td>
+            <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+        </tr>
+        <tr>
+            <td><img src="../Bilder/vacuum-24229_1280.png" style="float:left;width: 240px;"</td>
+            <td>Staubsauger</td>
+            <td>Haushalt</td>
+            <td>Alexandra Bendzko</td>
+            <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+        </tr>
+        <tr>
+            <td><img src="../Bilder/lastenfahrrad.jpg" style="float:left;width:240px"></td>
+            <td>Lastenfahrrad</td>
+            <td>Mobilität</td>
+            <td>Leonard Sinden</td>
+            <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+        </tr>
+    </tbody>
+    </tr>
+</table>
+
+
+
+    <!-- Alte Tabelle Auskommentiert-->
+   <!--
+    <p>
+    <table style="width:100%", class=t1>
+        <tr>
+          <th>Bild</th>
+          <th>Beschreibung</th>
+          <th>Kategorie</th>
+          <th>Leihende Person</th>
+          <th> </th>
+        </tr>
+        <tr>
+          <td style="height: 240px; width: 240px;"><img src="../Bilder/schaufel.jpg" style="float:left;width: 240px;" /></td>
+          <td>Schaufel</td>
+          <td>Haushalts- und gartengegenstände</td>
+          <td>Leonard Sinden</td>
+          <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+
+        </tr>
+
+        <tr>
+          <td style="height: 240px; width: 240px;"><img src="../Bilder/Akkuschrauber.jpg" style="float:left;width: 240px;" /></td>
+          <td>Akkuschrauber</td>
+          <td>Werkzeug</td>
+          <td>Max Seidlitz</td>
+          <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+        </tr>
+
+        <tr>
+            <td style="height: 240px; width: 240px;"><img src="../Bilder/kaffemühle.jpg" style="float:left;width: 240px;" /></td>
+            <td>Kaffeemühle</td>
+            <td>Küchenutensilien</td>
+            <td>Carolina Kowando</td>
+            <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+        </tr>
+      </table> 
+   </p>
+-->
+
+
+
+
+</body>
+</html>
