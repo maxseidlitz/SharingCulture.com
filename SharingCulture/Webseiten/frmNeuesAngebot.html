@@ -51,18 +51,18 @@
 
         <form accept-charset="UTF-8" action="action_page.php" autocomplete="off" method="GET" target="_blank">
             <fieldset>
-                <legend>Neues Angebot erstellen</legend>
+                <legend><h1>Neues Angebot erstellen</h1></legend>
 
-                <label for="name">Name</label><br /> 
-                <input name="name" type="text" value="" /> <br /> 
+                <label for="name"><h3>Name</h3></label>
+                <input name="name" type="text" value="" />  
 
-                <label for="vorname">Vorname</label><br />
-                <input vorname="vorname" type="text" value=""/> <br />
+                <label for="vorname"><h3>Vorname</h3></label>
+                <input vorname="vorname" type="text" value=""/> 
 
-                <label for="bezeichnung">Bezeichnung</label><br />
+                <label for="bezeichnung"><h3>Bezeichnung</h3></label>
                 <input vorname="bezeichnung" type="text" value=""/> <br />
 
-                <label for="kategorie">Kategorie</label><br />             
+                <label for="kategorie"><h3>Kategorie</h3></label>            
                     <select>
                         <option selected="standard" value="1">Keine</option>
                         <option value="10">Raum</option>
@@ -81,10 +81,10 @@
                     </select><br /> 
 
 
-            <label for="ergänzenderText">Ergänzender Text:</label><br/>
+            <label for="ergänzenderText"><h3>Ergänzender Text:</h3></label>
             <textarea cols="30" rows="2">Hallo, ich biete...</textarea><br />
 
-            <label for ="zeitraum">Anbietungszeitraum:</label>
+            <label for ="zeitraum"><h3>Anbietungszeitraum:</h3></label>
             <div class="anfangsdatum">
                 <label for="anfangsdatum">Von:</label>
                 <input type="date" id="date" value="2018-07-03">
@@ -98,15 +98,18 @@
                 <input type="time" id="time" value="08:00">
             </div>
 
+            <br/>
+
             <div>
                 <form method="post" enctype="multipart/form-data">
-                    <label>Bild hinzufügen:
+                    <label><h3>Bild hinzufügen:
                       <input name="bilddatei" type="image" size="50"> 
-                    </label>  
+                    </h3></label>  
                     <button>Durchsuchen...</button>
                   </form>
             </div>
 
+            <br/>
             <button type="submit" value="Submit" style="width: 125px; height: 50px;">Angebot speichern</button>
 
 
