@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SharingCulture.com.Gegenstand">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAgAACAAAAAAAAAAAAAQAAgASAABAAAAAAA=</HashCode>
+      <FileName>Gegenstand.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kategorie" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SharingCulture.com.GegenstaendeListe">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GegenstandListe.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Gegenstände" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SharingCulture.com.Benutzer">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAEAAAAAAAQBABAAgAAAEAAAAYgAgAACAAAA=</HashCode>
+      <FileName>Benutzer.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nachbarschaft" />
+      <Property Name="Gegenstand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SharingCulture.com.Kategorie">
+    <Position X="1.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Kategorie.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharingCulture.com.BenutzerListe">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>GegenstandListe.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Benutzer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SharingCulture.com.NachbarschaftenListe">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>NachbarschaftenListe.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
