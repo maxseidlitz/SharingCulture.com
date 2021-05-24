@@ -99,4 +99,8 @@ Public Class Benutzer
         Set(value As Gegenstand)
         End Set
     End Property
+
+    Public Sub buchenGegenstand()
+
+    End Sub
 End Class
