@@ -150,13 +150,13 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="Benutzer.vb" />
-    <Compile Include="Gegenstand.vb" />
-    <Compile Include="GegenstandListe.vb" />
+    <Compile Include="Models\Benutzer.vb" />
+    <Compile Include="Models\Gegenstand.vb" />
+    <Compile Include="Models\GegenstandListe.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Kategorie.vb" />
+    <Compile Include="Models\Kategorie.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -173,7 +173,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
-    <Compile Include="NachbarschaftenListe.vb" />
+    <Compile Include="Models\NachbarschaftenListe.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
