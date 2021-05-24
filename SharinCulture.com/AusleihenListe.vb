@@ -3,8 +3,8 @@ Imports System.Web.Services
 Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
-Public Class AusleiheListe
-    Public Property Ausleihen As Ausleihe
+Public Class AusleihenListe
+    Public Property Ausleihe As Ausleihe
         Get
             Return Nothing
         End Get
