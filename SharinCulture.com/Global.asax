@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.vb" Inherits="SharinCulture.com.MvcApplication" Language="VB" %>
+﻿<%@ Application Codebehind="Global.asax.vb" Inherits="SharingCulture.com.MvcApplication" Language="VB" %>
