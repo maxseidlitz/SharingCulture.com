@@ -150,8 +150,8 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="Ausleihe.vb" />
-    <Compile Include="AusleihenListe.vb" />
+    <Compile Include="Models\Ausleihe.vb" />
+    <Compile Include="Models\AusleihenListe.vb" />
     <Compile Include="Models\Benutzer.vb" />
     <Compile Include="Models\Gegenstand.vb" />
     <Compile Include="Models\GegenstandListe.vb" />
