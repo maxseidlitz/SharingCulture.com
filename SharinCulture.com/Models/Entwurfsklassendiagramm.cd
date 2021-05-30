@@ -3,7 +3,7 @@
   <Class Name="SharingCulture.com.Gegenstand">
     <Position X="4.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAgAACAAAAAAAAAAAAAQAAgASAABAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAIAgAACAAAAAAAAAAAAAQAAgASAABAAAAAAA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -26,9 +26,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Benutzer">
-    <Position X="6.75" Y="2.75" Width="1.5" />
+    <Position X="6.75" Y="2.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAEAAAAAAAQBABAAgAAAEAAAAYgEgAACAAAA=</HashCode>
+      <HashCode>AAAABAAAAEAACAAAAQBABAEgAAQEAAAAYgEgEACAAAA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -59,21 +59,21 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.NachbarschaftenListe">
-    <Position X="9.5" Y="2.75" Width="1.75" />
+    <Position X="10.25" Y="2.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Models\NachbarschaftenListe.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SharingCulture.com.Ausleihe">
-    <Position X="4.25" Y="5.5" Width="1.5" />
+    <Position X="4.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAQCAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Ausleihe.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SharingCulture.com.AusleihenListe">
-    <Position X="1.75" Y="5.5" Width="1.5" />
+    <Position X="1.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Models\AusleihenListe.vb</FileName>

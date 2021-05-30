@@ -67,4 +67,8 @@ Public Class Gegenstand
         Set(value As Kategorie)
         End Set
     End Property
+
+    Public Sub neuenGegenstandHinzufuegen()
+
+    End Sub
 End Class

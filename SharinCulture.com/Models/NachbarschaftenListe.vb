@@ -27,4 +27,8 @@ Public Class NachbarschaftenListe
         Set(value As Integer)
         End Set
     End Property
+
+    Public Sub LadenAlleNachbarschaften()
+
+    End Sub
 End Class

@@ -28,6 +28,10 @@ Public Class Ausleihe
         Set(value As Integer)
         End Set
     End Property
+
+    Public Sub neueAusleihe()
+
+    End Sub
 End Class
 
 Public Class CopyOfAusleihe
