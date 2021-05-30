@@ -103,4 +103,20 @@ Public Class Benutzer
     Public Sub buchenGegenstand()
 
     End Sub
+
+    Public Sub zurückgebenGegenstand()
+
+    End Sub
+
+    Public Sub anbietenGegenstand()
+
+    End Sub
+
+    Public Sub loeschenGegenstand()
+
+    End Sub
+
+    Public Sub verlängernAusleihe()
+
+    End Sub
 End Class
