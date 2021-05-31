@@ -119,4 +119,8 @@ Public Class Benutzer
     Public Sub verlängernAusleihe()
 
     End Sub
+
+    Public Sub neuenBenutzerHizufuegen()
+
+    End Sub
 End Class

@@ -352,3 +352,6 @@ MigrationBackup/
 .DS_Store
 .AppleDouble
 .LSOverride
+/SharinCulture.com/Content/CSS.css
+/SharinCulture.com/Controllers/StartseiteController.vb
+/SharinCulture.com/Views/Startseite/Startseite.vbhtml

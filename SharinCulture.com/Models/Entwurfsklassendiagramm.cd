@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SharingCulture.com.Gegenstand">
-    <Position X="4.25" Y="2.75" Width="1.5" />
+    <Position X="4" Y="2.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAIAgAACAAAAAAAAAAAAAQAAgASAABAAAAAAA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
@@ -26,9 +26,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Benutzer">
-    <Position X="6.75" Y="2.75" Width="2" />
+    <Position X="7" Y="2.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAEAACAAAAQBABAEgAAQEAAAAYgEgEACAAAA=</HashCode>
+      <HashCode>AAAABAAAAEAACAAgAQBABAEgAAQEAAAAYgEgEACAAAA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -37,14 +37,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Kategorie">
-    <Position X="1.75" Y="2.75" Width="1.5" />
+    <Position X="1.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Kategorie.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SharingCulture.com.BenutzerListe">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="7" Y="0.5" Width="1.5" />
     <AssociationLine Name="Benutzer" Type="SharingCulture.com.Benutzer">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.152" Y="0.445" />
@@ -59,7 +59,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.NachbarschaftenListe">
-    <Position X="10.25" Y="2.75" Width="1.75" />
+    <Position X="10.5" Y="2.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Models\NachbarschaftenListe.vb</FileName>
