@@ -12,26 +12,10 @@ End Code
     <link rel="stylesheet" type="text/css" href="CSS.css" media="screen" />
     <link rel="icon" href="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script>
-        var count = 1;
-        function setColor(btn, color) {
-            var property = document.getElementById(btnMeineGegenstände);
-            if (count == 0) {
-                property.style.backgroundColor = "#FFFFFF"
-                count = 1;
-            }
-            else {
-                property.style.backgroundColor = "#7FFF00"
-                count = 0;
-            }
-        }
-    </script>
-
 </head>
 <body>
     <div class="centerdiv">
-        <p style="font-size: 30px; color:yellowgreen;">Hallo, *Benutzername* !</p>
+        <p style="font-size: 30px; color:yellowgreen;">Hallo, !</p>
         <table class="AnmeldeMenü">
             <tr>
                 <!--hier übernimmt er die Klasse 'AnmeldeMenüInhalt' nicht mehr.... WARUM?-->
