@@ -84,19 +84,19 @@ Public Class Benutzer
         End Set
     End Property
 
-    Public Property Nachbarschaft As NachbarschaftenListe
-        Get
-            Return Nothing
-        End Get
-        Set(value As NachbarschaftenListe)
-        End Set
-    End Property
-
     Public Property Gegenstand As Gegenstand
         Get
             Return Nothing
         End Get
         Set(value As Gegenstand)
+        End Set
+    End Property
+
+    Public Property Nachbarschaft As Nachbarschaft
+        Get
+            Return Nothing
+        End Get
+        Set(value As Nachbarschaft)
         End Set
     End Property
 
