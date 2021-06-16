@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\StartseiteController.vb" />
+    <Compile Include="KategorieListe.vb" />
     <Compile Include="Models\Ausleihe.vb" />
     <Compile Include="Models\AusleihenListe.vb" />
     <Compile Include="Models\Benutzer.vb" />

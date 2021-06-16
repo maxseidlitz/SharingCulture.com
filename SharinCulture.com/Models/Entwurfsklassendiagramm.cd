@@ -9,7 +9,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAIAgAACAAAAAAAAAAAAAQAAgASAABAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAIAgAACAAAAAAAAAAAAAAAAgASAABAAAAAAA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -35,8 +35,8 @@
     <Position X="8" Y="2.75" Width="2" />
     <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand" FixedToPoint="true">
       <Path>
-        <Point X="8" Y="3.312" />
-        <Point X="6" Y="3.312" />
+        <Point X="8" Y="3.272" />
+        <Point X="6" Y="3.272" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft" FixedToPoint="true">
@@ -78,6 +78,11 @@
   </Class>
   <Class Name="SharingCulture.com.NachbarschaftenListe">
     <Position X="12.25" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.508" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Models\NachbarschaftenListe.vb</FileName>
@@ -117,6 +122,21 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Nachbarschaft.vb</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="SharingCulture.com.KategorieListe">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Kategorie" Type="SharingCulture.com.Kategorie">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="0.445" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KategorieListe.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kategorie" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
