@@ -120,7 +120,7 @@
     <Position X="12.25" Y="2.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAABAAAAAAA=</HashCode>
-      <FileName>Nachbarschaft.vb</FileName>
+      <FileName>Models\Nachbarschaft.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SharingCulture.com.KategorieListe">
@@ -132,7 +132,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KategorieListe.vb</FileName>
+      <FileName>Models\KategorieListe.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Kategorie" />
