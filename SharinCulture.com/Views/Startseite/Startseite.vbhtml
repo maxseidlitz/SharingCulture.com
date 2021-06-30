@@ -1,19 +1,13 @@
 ﻿@Code
     ViewData("Title") = "Startseite"
-
 End Code
 
-<!DOCTYPE html>
-<html lang="de">
+<div class="jumbotron">
+    <h1>SharingCultrue.com</h1>
+    <p class="lead">Die bewusste Art zu teilen.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
 
-<head runat="server">
-    <meta charset="utf-8" />
-    <title>SharingCulture - Startseite</title>
-    <link rel="stylesheet" type="text/css" href="CSS.css" media="screen" />
-    <link rel="icon" href="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
     <div class="centerdiv">
         <p style="font-size: 30px; color:yellowgreen;">Hallo, !</p>
         <table class="AnmeldeMenü">
@@ -34,5 +28,3 @@ End Code
             </tr>
         </table>
     </div>
-</body>
-</html>

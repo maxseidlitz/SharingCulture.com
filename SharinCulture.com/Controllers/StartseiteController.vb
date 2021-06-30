@@ -1,17 +1,13 @@
-﻿Imports System.Web.Mvc
+﻿Public Class StartseiteController
+    Inherits System.Web.Mvc.Controller
 
-Namespace Controllers
-    Public Class StartseiteController
-        Inherits Controller
+    ' GET: Startseite
+    Function Startseite() As ActionResult
+        Return View()
+    End Function
 
-        ' GET: Startseite
-        Function Startseite() As ActionResult
-            Return View()
-        End Function
+    Function Test() As ActionResult
+        Return View()
+    End Function
 
-        Function Test() As ActionResult
-            Return View()
-        End Function
-
-    End Class
-End Namespace
+End Class
