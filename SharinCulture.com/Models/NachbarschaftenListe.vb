@@ -4,27 +4,12 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class NachbarschaftenListe
-    Public Property IntID As Integer
-        Get
-            Return Nothing
-        End Get
-        Set(value As Integer)
-        End Set
-    End Property
 
-    Public Property strName As Integer
+    Public Property Nachbarschaft As Nachbarschaft
         Get
             Return Nothing
         End Get
-        Set(value As Integer)
-        End Set
-    End Property
-
-    Public Property strOrt As Integer
-        Get
-            Return Nothing
-        End Get
-        Set(value As Integer)
+        Set(value As Nachbarschaft)
         End Set
     End Property
 

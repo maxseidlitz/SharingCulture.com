@@ -4,7 +4,6 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class Ausleihe
-    Inherits Gegenstand
     Public Property intID As Integer
         Get
             Return Nothing
@@ -26,6 +25,14 @@ Public Class Ausleihe
             Return Nothing
         End Get
         Set(value As Integer)
+        End Set
+    End Property
+
+    Public Property Gegenstand As Gegenstand
+        Get
+            Return Nothing
+        End Get
+        Set(value As Gegenstand)
         End Set
     End Property
 

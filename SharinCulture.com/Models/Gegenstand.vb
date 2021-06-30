@@ -52,14 +52,6 @@ Public Class Gegenstand
         End Set
     End Property
 
-    Public Property intKategorie As Integer
-        Get
-            Return Nothing
-        End Get
-        Set(value As Integer)
-        End Set
-    End Property
-
     Public Property Kategorie As Kategorie
         Get
             Return Nothing

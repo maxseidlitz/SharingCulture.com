@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\StartseiteController.vb" />
+    <Compile Include="Models\KategorieListe.vb" />
     <Compile Include="Models\Ausleihe.vb" />
     <Compile Include="Models\AusleihenListe.vb" />
     <Compile Include="Models\Benutzer.vb" />
@@ -177,6 +178,7 @@
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Models\NachbarschaftenListe.vb" />
+    <Compile Include="Models\Nachbarschaft.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -224,6 +226,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Startseite\Startseite.vbhtml" />
+    <Content Include="Views\Startseite\Test.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

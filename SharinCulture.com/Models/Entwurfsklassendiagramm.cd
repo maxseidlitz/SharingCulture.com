@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SharingCulture.com.Gegenstand">
-    <Position X="4.25" Y="2.75" Width="1.5" />
+    <Position X="4" Y="2.75" Width="2" />
+    <AssociationLine Name="Kategorie" Type="SharingCulture.com.Kategorie" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="3.312" />
+        <Point X="2.75" Y="3.312" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAIAgAACAAAAAAAAAAAAAQAAgASAABAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAIAgAACAAAAAAAAAAAAAAAAgASAABAAAAAAA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -26,25 +32,37 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Benutzer">
-    <Position X="6.75" Y="2.75" Width="2" />
+    <Position X="8" Y="2.75" Width="2" />
+    <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="3.272" />
+        <Point X="6" Y="3.272" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft" FixedToPoint="true">
+      <Path>
+        <Point X="10" Y="3.375" />
+        <Point X="12.25" Y="3.375" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAABAAAAEAACAAAAQBABAEgAAQEAAAAYgEgEACAAAA=</HashCode>
+      <HashCode>AAAABAAAAEAACAAgAQBABAEgAAQEAAAAYgEgEACAAAA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Nachbarschaft" />
       <Property Name="Gegenstand" />
+      <Property Name="Nachbarschaft" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Kategorie">
-    <Position X="1.75" Y="2.75" Width="1.5" />
+    <Position X="1.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Kategorie.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SharingCulture.com.BenutzerListe">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="0.5" Width="1.5" />
     <AssociationLine Name="Benutzer" Type="SharingCulture.com.Benutzer">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.152" Y="0.445" />
@@ -59,27 +77,65 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.NachbarschaftenListe">
-    <Position X="10.25" Y="2.75" Width="1.75" />
+    <Position X="12.25" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.508" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Models\NachbarschaftenListe.vb</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nachbarschaft" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Ausleihe">
     <Position X="4.25" Y="6.25" Width="1.5" />
+    <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.098" Y="0.228" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAACAAAAAQCAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAAAAACAAAAAQCAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Ausleihe.vb</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Gegenstand" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.AusleihenListe">
-    <Position X="1.75" Y="6.25" Width="1.5" />
+    <Position X="1.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Models\AusleihenListe.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Ausleihe" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SharingCulture.com.Nachbarschaft">
+    <Position X="12.25" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Models\Nachbarschaft.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharingCulture.com.KategorieListe">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Kategorie" Type="SharingCulture.com.Kategorie">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="0.445" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\KategorieListe.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kategorie" />
     </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
