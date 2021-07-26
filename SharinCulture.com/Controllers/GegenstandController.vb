@@ -1,5 +1,4 @@
-﻿
-Public Class GegenstandController
+﻿Public Class GegenstandController
     Inherits System.Web.Mvc.Controller
 
     ' GET: Gegenstand

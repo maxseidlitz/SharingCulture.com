@@ -11,6 +11,7 @@ End Code
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/Content/aufgabenverwaltung.css" type="text/css" />
     <title>GegenstaendeAnzeigen</title>
+</head>
     <body>
 
 
