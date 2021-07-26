@@ -1,20 +1,11 @@
-﻿@ModelType SharingCulture.com.Benutzer
-
-@Code
+﻿@Code
     Layout = Nothing
 End Code
 
-<!DOCTYPE html>
+    <div>
+        <h1>Aufgabenverwaltung</h1>
+        <p>Die moderne Aufgabenverwaltung.</p>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Test</title>
-</head>
-<body>
-    <div> 
-        @Model.
-        
+        <h2>Willkommen</h2>
     </div>
-</body>
-</html>
+
