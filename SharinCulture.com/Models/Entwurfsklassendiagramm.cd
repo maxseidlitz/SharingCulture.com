@@ -9,7 +9,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAIAgAACAAAAAAAAAAAAAAAAgASAABAAAAAAA=</HashCode>
+      <HashCode>ACCAAAAAKEgACCAAAQAAAAAAAAAAAAgASAABAAAAAgA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -20,8 +20,8 @@
     <Position X="8" Y="2.75" Width="2" />
     <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand" FixedToPoint="true">
       <Path>
-        <Point X="8" Y="3.272" />
-        <Point X="6" Y="3.272" />
+        <Point X="8" Y="3.605" />
+        <Point X="6" Y="3.605" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft" FixedToPoint="true">
@@ -62,10 +62,10 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Ausleihe">
-    <Position X="4.25" Y="6.25" Width="1.5" />
+    <Position X="4.25" Y="6.75" Width="1.5" />
     <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.098" Y="0.228" />
+        <Position X="0.228" Y="0.098" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -77,7 +77,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.AusleihenListe">
-    <Position X="1.25" Y="6.25" Width="1.5" />
+    <Position X="1.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Models\AusleihenListe.vb</FileName>

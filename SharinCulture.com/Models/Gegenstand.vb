@@ -4,6 +4,52 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class Gegenstand
+    Private mstrBezeichnung As String
+    Private mintID As Integer
+    Private mbolIstGebucht As Boolean
+    Private mbinaryBild As Integer
+    Private mintNachbarschaft As Integer
+    Private mstrBenutzername As String
+    Private mKategorie As Kategorie
+
+    'Paramterloser Konstruktor
+    Public Sub New()
+        mstrBezeichnung = String.Empty
+        mintID = -1
+        mbolIstGebucht = False
+        mbinaryBild = Nothing
+        mintNachbarschaft = -1
+        mstrBenutzername = String.Empty
+
+        mKategorie = Nothing
+    End Sub
+
+    'Konstruktor mit Parametern
+    Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
+                   pbinaryBild As Integer, pintNachbarschaft As Integer, pstrBenutzername As String, pKat As Kategorie)
+        mstrBezeichnung = pstrBezeichnung
+        mintID = pintID
+        mbolIstGebucht = pbolIstGebucht
+        mbinaryBild = pbinaryBild
+        mintNachbarschaft = pintNachbarschaft
+        mstrBenutzername = pstrBenutzername
+
+        mKategorie = pKat
+    End Sub
+
+    'Konstruktor mit Parametern und Fremdschlüssel für Kategorie
+    Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
+                   pbinaryBild As Integer, pintNachbarschaft As Integer, pstrBenutzername As String, pintKatFk As Kategorie)
+        mstrBezeichnung = pstrBezeichnung
+        mintID = pintID
+        mbolIstGebucht = pbolIstGebucht
+        mbinaryBild = pbinaryBild
+        mintNachbarschaft = pintNachbarschaft
+        mstrBenutzername = pstrBenutzername
+
+        mKategorie = Nothing
+    End Sub
+
     Public Property strBezeichnung As Integer
         Get
             Return Nothing
@@ -44,7 +90,7 @@ Public Class Gegenstand
         End Set
     End Property
 
-    Public Property strgBenutzername As Integer
+    Public Property strBenutzername As Integer
         Get
             Return Nothing
         End Get
