@@ -76,7 +76,7 @@ form {
 }
 
 td {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Bahnschrift, Verdana, sans-serif;
     border: 6px solid #24943A;
     background-color: #D4EED1;
     width: 240px;
@@ -86,7 +86,7 @@ td {
   
 /* TABELLE ALLE GEGENSTÄNDE*/
 table.tblAlleGegenstaende {
-  font-family: Georgia, serif;
+  font-family: Bahnschrift, sans-serif;
   border: 6px solid #24943A;
   background-color: #D4EED1;
   width: 100%;
@@ -112,7 +112,7 @@ table.tblAlleGegenstaende thead th {
   font-weight: bold;
   color: #F0F0F0;
   text-align: left;
-  border-left: 2px solid #24943A;
+  border-left: 2px solid #24943A; 
 }
 table.tblAlleGegenstaende thead th:first-child {
   border-left: none;

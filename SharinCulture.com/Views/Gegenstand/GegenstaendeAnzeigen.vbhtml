@@ -9,7 +9,7 @@ End Code
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/Content/aufgabenverwaltung.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/CSS.css" type="text/css" />
     <title>GegenstaendeAnzeigen</title>
 </head>
     <body>

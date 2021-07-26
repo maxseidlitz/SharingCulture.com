@@ -17,7 +17,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.GegenstaendeListe">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.75" />
     <AssociationLine Name="Gegenstände" Type="SharingCulture.com.Gegenstand">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.12" Y="0.508" />
