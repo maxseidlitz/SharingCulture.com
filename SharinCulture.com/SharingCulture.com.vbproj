@@ -202,6 +202,16 @@
     <Content Include="App_Data\Datenbank1_log.ldf">
       <DependentUpon>Datenbank1.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\Bilder\Akkuschrauber.jpg" />
+    <Content Include="Content\Bilder\Berlin.gif" />
+    <Content Include="Content\Bilder\kaffemühle.jpg" />
+    <Content Include="Content\Bilder\lastenfahrrad.jpg" />
+    <Content Include="Content\Bilder\schaufel.jpg" />
+    <Content Include="Content\Bilder\Sharing.png" />
+    <Content Include="Content\Bilder\SharingCulture-Motiv.png" />
+    <Content Include="Content\Bilder\tile_background.png" />
+    <Content Include="Content\Bilder\typ.jpg" />
+    <Content Include="Content\Bilder\vacuum-24229_1280.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
