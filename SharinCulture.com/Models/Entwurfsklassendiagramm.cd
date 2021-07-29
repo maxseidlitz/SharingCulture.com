@@ -9,7 +9,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ACCAAAAAKEgACCAAAQAAAAAAAAAAAAgASAABAAAAAgA=</HashCode>
+      <HashCode>ACCAAAAAKEgACCAAAQAAAAAAAAAAAAgASAABQAAAAgA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -62,10 +62,10 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Ausleihe">
-    <Position X="4.25" Y="6.75" Width="1.5" />
+    <Position X="4.25" Y="7.75" Width="1.5" />
     <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.228" Y="0.098" />
+        <Position X="0.098" Y="0.228" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -77,7 +77,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.AusleihenListe">
-    <Position X="1.25" Y="6.75" Width="1.5" />
+    <Position X="1.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Models\AusleihenListe.vb</FileName>
