@@ -4,51 +4,107 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class Gegenstand
-    Public Property strBezeichnung As Integer
+    Private mstrBezeichnung As String
+    Private mintID As Integer
+    Private mbolIstGebucht As Boolean
+    Private mbinaryBild As image
+    Private mintNachbarschaft As Integer
+    Private mstrBenutzername As String
+    Private mKategorie As Kategorie
+
+    'Paramterloser Konstruktor
+    Public Sub New()
+        mstrBezeichnung = String.Empty
+        mintID = -1
+        mbolIstGebucht = False
+        mbinaryBild = Nothing
+        mintNachbarschaft = -1
+        mstrBenutzername = String.Empty
+
+        mKategorie = Nothing
+    End Sub
+
+    'Konstruktor mit Parametern
+    Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
+                   pbinaryBild As image, pintNachbarschaft As Integer, pstrBenutzername As String, pKat As Kategorie)
+        mstrBezeichnung = pstrBezeichnung
+        mintID = pintID
+        mbolIstGebucht = pbolIstGebucht
+        mbinaryBild = pbinaryBild
+        mintNachbarschaft = pintNachbarschaft
+        mstrBenutzername = pstrBenutzername
+
+        mKategorie = pKat
+    End Sub
+
+    'Konstruktor mit Parametern und Fremdschlüssel für Kategorie
+    Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
+                   pbinaryBild As Image, pintNachbarschaft As Integer, pstrBenutzername As String, pintKatFk As Kategorie)
+        mstrBezeichnung = pstrBezeichnung
+        mintID = pintID
+        mbolIstGebucht = pbolIstGebucht
+        mbinaryBild = pbinaryBild
+        mintNachbarschaft = pintNachbarschaft
+        mstrBenutzername = pstrBenutzername
+
+        mKategorie = Nothing
+    End Sub
+
+    Public Sub New(pGegenstandEntity As GegenstandEntity, pKategorie As KategorieEntity)
+        mbinaryBild = pGegenstandEntity.gegBild
+        mbolIstGebucht = pGegenstandEntity.gegIstGebucht
+        mintID = pGegenstandEntity.gegID_
+        mintNachbarschaft = pGegenstandEntity.gegnachIDFk
+        mstrBenutzername = pGegenstandEntity.gegbenBenutzernameFk
+        mstrBezeichnung = pGegenstandEntity.gegBezeichnung
+
+    End Sub
+
+    Public Property strBezeichnung As String
         Get
-            Return Nothing
+            Return mstrBezeichnung
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 
     Public Property intID As Integer
         Get
-            Return Nothing
+            Return mintID
         End Get
         Set(value As Integer)
         End Set
     End Property
 
-    Public Property bolIstGebucht As Integer
+    Public Property bolIstGebucht As Boolean
         Get
-            Return Nothing
+            Return mbolIstGebucht
         End Get
-        Set(value As Integer)
+        Set(value As Boolean)
         End Set
     End Property
 
-    Public Property binaryBild As Integer
+    Public Property binaryBild As Image
         Get
-            Return Nothing
+            Return mbinaryBild
         End Get
-        Set(value As Integer)
+        Set(value As Image)
         End Set
     End Property
 
     Public Property intNachbarschaft As Integer
         Get
-            Return Nothing
+            Return mintNachbarschaft
         End Get
         Set(value As Integer)
         End Set
     End Property
 
-    Public Property strgBenutzername As Integer
+    Public Property strBenutzername As String
         Get
-            Return Nothing
+            Return mstrBenutzername
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 

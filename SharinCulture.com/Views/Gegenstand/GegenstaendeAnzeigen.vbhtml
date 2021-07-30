@@ -9,7 +9,7 @@ End Code
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/Content/aufgabenverwaltung.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/CSS.css" type="text/css" />
     <title>GegenstaendeAnzeigen</title>
 </head>
     <body>
@@ -22,7 +22,7 @@ End Code
         </div>
 
         <div class="Primärnavigation">
-            <img src="../Bilder/typ.jpg" style="float:left;width:10%" />
+            <img src="../Content/Bilder/typ.jpg" style="float:left;width:10%" />
 
             <label style="text-align: left">Name, Vorname:</label> <br />
             <input type="text" value="Dent, Arthur" /> <br />
@@ -48,7 +48,8 @@ End Code
 
         <div class="items">
 
-
+            <!--TODO: hier ist noch einige Verweise so, dass sie auf Websites verweisen (../Webseiten/xyz.html). 
+                Diese Verweise müssen mit HTML-Helpern ausgestattet werden.-->
 
             <p id="item1">
                 <!--Oberer Block mit Titel, Suchleiste und Neuerstellung-->
@@ -64,9 +65,8 @@ End Code
                 </div>
 
                 <!-- NEUE TABELLE
-                    Die eingefügten Gegenstände dienen vorerst als Platzhalter und sollen nachher durch eine Eingabe ersetzt werden
-                    L.S. 16.05.2021 18 Uhr-->
-
+        Die eingefügten Gegenstände dienen vorerst als Platzhalter und sollen nachher durch eine Eingabe ersetzt werden
+        L.S. 16.05.2021 18 Uhr-->
                 <!--Ab hier sind Beipsieldaten eingetragen! 30.6.21; Max Seidlitz -->
                 <!--Hier müssen dann mit HTML-Helpern die Daten aus der DB gelesen werden.-->
                 <table class="tblAlleGegenstaende">
@@ -90,35 +90,35 @@ End Code
                     </tfoot>
                     <tbody>
                         <tr>
-                            <td><img src="../Bilder/schaufel.jpg" style="float:left;width: 240px;" /></td>
+                            <td><img src="../Content/Bilder/schaufel.jpg" style="float:left;width: 240px;" /></td>
                             <td>Schaufel</td>
                             <td>Garten</td>
                             <td>Leonard Sinden</td>
                             <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
                         </tr>
                         <tr>
-                            <td><img src="../Bilder/Akkuschrauber.jpg" style="float:left;width: 240px;" /></td>
+                            <td><img src="../Content/Bilder/Akkuschrauber.jpg" style="float:left;width: 240px;" /></td>
                             <td>Akkuschrauber</td>
                             <td>Werkzeug</td>
                             <td>Max Seidlitz</td>
                             <td><a href="../Webseiten/dlgBeispielDialog.html"><button type="button" style="width: 200px; height: 100px;">Details</button></a></td>
                         </tr>
                         <tr>
-                            <td><img src="../Bilder/kaffemühle.jpg" style="float:left;width: 240px;" /></td>
+                            <td><img src="../Content/Bilder/kaffemühle.jpg" style="float:left;width: 240px;" /></td>
                             <td>Kaffeemühle</td>
                             <td>Küchenutensilien</td>
                             <td>Carolina Kowando</td>
                             <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
                         </tr>
                         <tr>
-                            <td><img src="../Bilder/vacuum-24229_1280.png" style="float:left;width: 240px;"</td>
+                            <td><img src="../Content/Bilder/vacuum-24229_1280.png" style="float:left;width: 240px;"</td>
                             <td>Staubsauger</td>
                             <td>Haushalt</td>
                             <td>Alexandra Bendzko</td>
                             <td><button type="button" style="width: 200px; height: 100px;">Details</button></td>
                         </tr>
                         <tr>
-                            <td><img src="../Bilder/lastenfahrrad.jpg" style="float:left;width:240px"></td>
+                            <td><img src="../Content/Bilder/lastenfahrrad.jpg" style="float:left;width:240px"></td>
                             <td>Lastenfahrrad</td>
                             <td>Mobilität</td>
                             <td>Leonard Sinden</td>
@@ -129,42 +129,42 @@ End Code
                 </table>
 
                 <!-- Alte Tabelle Auskommentiert
-                   <p>
-                    <table style="width:100%", class=t1>
-                        <tr>
-                          <th>Bild</th>
-                          <th>Beschreibung</th>
-                          <th>Kategorie</th>
-                          <th>Leihende Person</th>
-                          <th> </th>
-                        </tr>
-                        <tr>
-                          <td style="height: 240px; width: 240px;"><img src="../Bilder/schaufel.jpg" style="float:left;width: 240px;" /></td>
-                          <td>Schaufel</td>
-                          <td>Haushalts- und gartengegenstände</td>
-                          <td>Leonard Sinden</td>
-                          <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+           <p>
+            <table style="width:100%", class=t1>
+                <tr>
+                  <th>Bild</th>
+                  <th>Beschreibung</th>
+                  <th>Kategorie</th>
+                  <th>Leihende Person</th>
+                  <th> </th>
+                </tr>
+                <tr>
+                  <td style="height: 240px; width: 240px;"><img src="../Bilder/schaufel.jpg" style="float:left;width: 240px;" /></td>
+                  <td>Schaufel</td>
+                  <td>Haushalts- und gartengegenstände</td>
+                  <td>Leonard Sinden</td>
+                  <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
 
-                        </tr>
+                </tr>
 
-                        <tr>
-                          <td style="height: 240px; width: 240px;"><img src="../Bilder/Akkuschrauber.jpg" style="float:left;width: 240px;" /></td>
-                          <td>Akkuschrauber</td>
-                          <td>Werkzeug</td>
-                          <td>Max Seidlitz</td>
-                          <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
-                        </tr>
+                <tr>
+                  <td style="height: 240px; width: 240px;"><img src="../Bilder/Akkuschrauber.jpg" style="float:left;width: 240px;" /></td>
+                  <td>Akkuschrauber</td>
+                  <td>Werkzeug</td>
+                  <td>Max Seidlitz</td>
+                  <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+                </tr>
 
-                        <tr>
-                            <td style="height: 240px; width: 240px;"><img src="../Bilder/kaffemühle.jpg" style="float:left;width: 240px;" /></td>
-                            <td>Kaffeemühle</td>
-                            <td>Küchenutensilien</td>
-                            <td>Carolina Kowando</td>
-                            <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
-                        </tr>
-                      </table>
-                   </p>
-                -->
+                <tr>
+                    <td style="height: 240px; width: 240px;"><img src="../Bilder/kaffemühle.jpg" style="float:left;width: 240px;" /></td>
+                    <td>Kaffeemühle</td>
+                    <td>Küchenutensilien</td>
+                    <td>Carolina Kowando</td>
+                    <td style="height: 200px; width: 100px"><button type="button" style="width: 200px; height: 100px;">Details</button></td>
+                </tr>
+              </table>
+           </p>
+        -->
 
 
 

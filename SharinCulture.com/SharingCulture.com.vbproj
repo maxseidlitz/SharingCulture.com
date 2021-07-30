@@ -160,6 +160,28 @@
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\GegenstandController.vb" />
     <Compile Include="Controllers\StartseiteController.vb" />
+    <Compile Include="Models\DataAccess\GegenstandDataModel.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GegenstandDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataAccess\GegenstandDataModel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataAccess\GegenstandDataModel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GegenstandViewModel.vb" />
+    <Compile Include="Models\DataAccess\GegenstandEntity.vb">
+      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataAccess\KategorieEntity.vb">
+      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\KategorieListe.vb" />
     <Compile Include="Models\Ausleihe.vb" />
     <Compile Include="Models\AusleihenListe.vb" />
@@ -202,11 +224,31 @@
     <Content Include="App_Data\Datenbank1_log.ldf">
       <DependentUpon>Datenbank1.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\Bilder\Akkuschrauber.jpg" />
+    <Content Include="Content\Bilder\Berlin.gif" />
+    <Content Include="Content\Bilder\kaffemühle.jpg" />
+    <Content Include="Content\Bilder\lastenfahrrad.jpg" />
+    <Content Include="Content\Bilder\schaufel.jpg" />
+    <Content Include="Content\Bilder\Sharing.png" />
+    <Content Include="Content\Bilder\SharingCulture-Motiv.png" />
+    <Content Include="Content\Bilder\tile_background.png" />
+    <Content Include="Content\Bilder\typ.jpg" />
+    <Content Include="Content\Bilder\vacuum-24229_1280.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSS.css" />
+    <Content Include="Models\DataAccess\GegenstandDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+      <LastGenOutput>GegenstandDataModel.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\DataAccess\GegenstandDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+      <LastGenOutput>GegenstandDataModel.vb</LastGenOutput>
+    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -217,6 +259,13 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Models\Entwurfsklassendiagramm.cd" />
+    <EntityDeploy Include="Models\DataAccess\GegenstandDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GegenstandDataModel.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DataAccess\GegenstandDataModel.edmx.diagram">
+      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+    </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -237,6 +286,7 @@
     <Content Include="Views\Startseite\Startseite.vbhtml" />
     <Content Include="Views\Startseite\Test.vbhtml" />
     <Content Include="Views\Gegenstand\GegenstaendeAnzeigen.vbhtml" />
+    <Content Include="ViewModels\ViewModels-Klassendiagramm.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -265,8 +315,9 @@
     <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DataAccess\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

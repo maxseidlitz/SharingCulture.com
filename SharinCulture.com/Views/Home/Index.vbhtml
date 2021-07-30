@@ -2,30 +2,40 @@
     ViewData("Title") = "Startseite"
 End Code
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SharingCulture - Log In</title>
+    <link rel="stylesheet" type="text/css" href="../Webseiten/CSS.css" />
+    <!--Steuert das icon was im "Browser-Tab"(also Header)angezeigt wird!-->
+    <link rel="icon" href="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif">
+    <!--hier wird der Style für Bilder festgelegt; sorgt dafür, dass unser Logo mittig positioniert ist!-->
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+</head>
+
+<body class="centertext">
+    <!--Die Klasse .hintergrundbildAnmelden kann hier einen Muster-Hintergrund einfügen in grün-->
+    <p>
+        <!--hier wird auch auf CSS.css zugegriffen um die Style-Anpassung aus dem CSS mit dem class-Attribut auszulesen-->
+        <img id="GifAnmeldung" src="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif" alt="Logo" class="centerblock" style="width:25%" />
+        <!--<img  src="../Bilder/SharingCulture-Motiv.png" alt="Logo" class="center" style="width:100%"/> -->
+
+    </p>
+
+    <form method="get" action="Anmelden.html" class="border">
+        <!--Formular für die Anmeldung-->
+        <h2 class="centertext">Anmeldung</h2>
+        <p>Benutzername: </p>
+        <input type="text" autofocus />
+        <p>Passwort: </p>
+        <input type="password" />
+        
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            <input type="button" name="btnAbbrechen" value="Abbrechen" />
+            <input type="submit" name="btnBestätigen" value="Bestätigen" />
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+        <p>
+            <a class="sekundaer" href="../Webseiten/frmRegistrieren.html">Registrieren</a>
+        </p>
+    </form>
+</body>

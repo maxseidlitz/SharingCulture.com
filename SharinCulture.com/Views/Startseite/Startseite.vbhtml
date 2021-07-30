@@ -10,20 +10,19 @@ End Code
 
     <div class="centerdiv">
         <p style="font-size: 30px; color:yellowgreen;">Hallo, !</p>
-        <table class="AnmeldeMenü">
+        <table class="AnmeldeMenue">
             <tr>
-                <!--hier übernimmt er die Klasse 'AnmeldeMenüInhalt' nicht mehr.... WARUM?-->
                 <th>
                     <!--<a href="Meldungen.html">Meldungen</a>-->
-                    <input name="btnMeldungen" class="AnmeldeMenüInhalt" type="button" value="Meldungen" />
+                    <input name="btnMeldungen" class="AnmeldeMenueInhalt" type="button" value="Meldungen" />
                 </th>
                 <th>
                     <!--<a href="MeineGegenstände.html">Meine Gegenständen</a>-->
-                    <input name="btnMeineGegenstände" class="AnmeldeMenüInhalt" type="button" value="Meine Gegenstände" />
+                    <input name="btnMeineGegenstände" class="AnmeldeMenueInhalt" type="button" value="Meine Gegenstände" />
                 </th>
                 <th>
                     <!--<a href="frmGelieheneGegenstände.html">Aktuell geliehene Gegenstände</a>-->
-                    <input name="btnGelieheneGegenstände" class="AnmeldeMenüInhalt" type="button" value="Geliehene Gegenstände" />
+                    <input name="btnGelieheneGegenstände" class="AnmeldeMenueInhalt" type="button" value="Geliehene Gegenstände" />
                 </th>
             </tr>
         </table>
