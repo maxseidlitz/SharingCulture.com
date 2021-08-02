@@ -135,11 +135,11 @@ Public Class Benutzer
         End Set
     End Property
 
-    Public Property intNachbarschaft As Integer
+    Public Property intNachbarschaft As Nachbarschaft
         Get
-            Return mintNachbarschaft
+            Return mNachbarschaft
         End Get
-        Set(value As Integer)
+        Set(value As Nachbarschaft)
         End Set
     End Property
 
