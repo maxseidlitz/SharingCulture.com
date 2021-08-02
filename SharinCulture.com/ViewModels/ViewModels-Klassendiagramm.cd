@@ -4,7 +4,7 @@
     <Position X="8.25" Y="1.5" Width="1.5" />
     <AssociationLine Name="Kategorie" Type="SharingCulture.com.Kategorie">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.057" Y="1.102" />
+        <Position X="-0.919" Y="0.912" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -27,7 +27,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>ACAACAAAAEAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GegenstandViewModel.vb</FileName>
+      <FileName>ViewModels\GegenstandViewModel.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Gegenstand" />
@@ -40,6 +40,39 @@
       <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Kategorie.vb</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="SharingCulture.com.Nachbarschaft" Collapsed="true">
+    <Position X="8.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Models\Nachbarschaft.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharingCulture.com.Benutzer" Collapsed="true">
+    <Position X="8.25" Y="5.5" Width="1.5" />
+    <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.233" Y="0.566" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAgFAACAAgAUBABAEgAAQEAAAAYgEgUQiCARA=</HashCode>
+      <FileName>Models\Benutzer.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nachbarschaft" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SharingCulture.com.BenutzerViewModel">
+    <Position X="2.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgAAACAAQA=</HashCode>
+      <FileName>BenutzerViewModel.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nachbarschaft" />
+      <Property Name="Benutzer" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

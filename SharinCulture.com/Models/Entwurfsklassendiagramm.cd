@@ -24,14 +24,8 @@
         <Point X="6" Y="3.605" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft" FixedToPoint="true">
-      <Path>
-        <Point X="10.25" Y="3.375" />
-        <Point X="12.25" Y="3.375" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAABAAAgFAACAAgAUBABAEgAAQEAAAAYgEgUQiCAwA=</HashCode>
+      <HashCode>AAAABAAAgFAACAAgAUBABAEgAAQEAAAAYgEgUQiCARA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

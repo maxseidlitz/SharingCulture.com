@@ -158,6 +158,7 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="BenutzerViewModel.vb" />
     <Compile Include="Controllers\GegenstandController.vb" />
     <Compile Include="Controllers\StartseiteController.vb" />
     <Compile Include="Models\DataAccess\GegenstandDataModel.Context.vb">
@@ -175,7 +176,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GegenstandDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="GegenstandViewModel.vb" />
+    <Compile Include="ViewModels\GegenstandViewModel.vb" />
     <Compile Include="Models\DataAccess\GegenstandEntity.vb">
       <DependentUpon>GegenstandDataModel.tt</DependentUpon>
     </Compile>
