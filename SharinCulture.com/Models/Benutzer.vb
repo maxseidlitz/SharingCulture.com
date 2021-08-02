@@ -4,81 +4,140 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class Benutzer
-    Public Property strBenutzername As Integer
+    Private mbolIstEigentuemer As Boolean
+    Private mbolIstKoordinator As Boolean
+    Private mdatGeburtstag As Date
+    Private mNachbarschaft As Nachbarschaft
+    Private mstrBenutzername As String
+    Private mstrEmail As String
+    Private mstrName As String
+    Private mstrPasswort As String
+    Private mstrTelefonnummer As String
+    Private mstrVorname As String
+
+    'Parameterloser Kostruktor
+    Public Sub New()
+        mbolIstEigentuemer = False
+        mbolIstKoordinator = False
+        mdatGeburtstag = Date.Today
+        mNachbarschaft = Nothing
+        mstrBenutzername = String.Empty
+        mstrEmail = String.Empty
+        mstrName = String.Empty
+        mstrPasswort = String.Empty
+        mstrTelefonnummer = String.Empty
+    End Sub
+
+    'Kostruktor mit Parametern
+    Public Sub New(pbolIstEigentuemer As Boolean, pbolIstKoordinator As Boolean, pdatGeburtstag As Date,
+                   pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pstrEmail As String,
+                   pstrName As String, pstrPasswort As String, pstrTelefonnummer As String)
+
+        mbolIstEigentuemer = pbolIstEigentuemer
+        mbolIstKoordinator = pbolIstKoordinator
+        mdatGeburtstag = pdatGeburtstag
+        mNachbarschaft = Nothing
+        mstrBenutzername = pstrBenutzername
+        mstrEmail = pstrEmail
+        mstrName = pstrName
+        mstrPasswort = pstrPasswort
+        mstrTelefonnummer = pstrTelefonnummer
+
+    End Sub
+
+    'Konstruktor mit Parametern und Fremdschlüssel für Nachbarschaft
+    Public Sub New(pbolIstEigentuemer As Boolean, pbolIstKoordinator As Boolean, pdatGeburtstag As Date,
+                   pintNachFk As Integer, pstrBenutzername As String, pstrEmail As String,
+                   pstrName As String, pstrPasswort As String, pstrTelefonnummer As String)
+
+        mbolIstEigentuemer = pbolIstEigentuemer
+        mbolIstKoordinator = pbolIstKoordinator
+        mdatGeburtstag = pdatGeburtstag
+
+        mstrBenutzername = pstrBenutzername
+        mstrEmail = pstrEmail
+        mstrName = pstrName
+        mstrPasswort = pstrPasswort
+        mstrTelefonnummer = pstrTelefonnummer
+
+    End Sub
+
+
+    Public Property strBenutzername As String
         Get
-            Return Nothing
+            Return mstrBenutzername
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 
-    Public Property strName As Integer
+    Public Property strName As String
         Get
-            Return Nothing
+            Return mstrName
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 
-    Public Property strVorname As Integer
+    Public Property strVorname As String
         Get
-            Return Nothing
+            Return mstrVorname
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 
-    Public Property strEmail As Integer
+    Public Property strEmail As String
         Get
-            Return Nothing
+            Return mstrEmail
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 
-    Public Property strTelefonnummer As Integer
+    Public Property strTelefonnummer As String
         Get
-            Return Nothing
+            Return mstrTelefonnummer
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 
-    Public Property strPasswort As Integer
+    Public Property strPasswort As String
         Get
-            Return Nothing
+            Return mstrPasswort
         End Get
-        Set(value As Integer)
+        Set(value As String)
         End Set
     End Property
 
-    Public Property datGeburtsdatum As Integer
+    Public Property datGeburtsdatum As Date
         Get
-            Return Nothing
+            Return mdatGeburtstag
         End Get
-        Set(value As Integer)
+        Set(value As Date)
         End Set
     End Property
 
-    Public Property bolIstKoordinator As Integer
+    Public Property bolIstKoordinator As Boolean
         Get
-            Return Nothing
+            Return mbolIstKoordinator
         End Get
-        Set(value As Integer)
+        Set(value As Boolean)
         End Set
     End Property
 
-    Public Property bolIstEigentümer As Integer
+    Public Property bolIstEigentümer As Boolean
         Get
-            Return Nothing
+            Return mbolIstEigentuemer
         End Get
-        Set(value As Integer)
+        Set(value As Boolean)
         End Set
     End Property
 
     Public Property intNachbarschaft As Integer
         Get
-            Return Nothing
+            Return mintNachbarschaft
         End Get
         Set(value As Integer)
         End Set

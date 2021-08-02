@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="SharingCulture.com.Gegenstand">
-    <Position X="4" Y="2.75" Width="2" />
+    <Position X="3.75" Y="2.75" Width="2.25" />
     <AssociationLine Name="Kategorie" Type="SharingCulture.com.Kategorie" FixedToPoint="true">
       <Path>
-        <Point X="4" Y="3.312" />
+        <Point X="3.75" Y="3.312" />
         <Point X="2.75" Y="3.312" />
       </Path>
     </AssociationLine>
@@ -17,7 +17,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Benutzer">
-    <Position X="8" Y="2.75" Width="2" />
+    <Position X="8" Y="2.75" Width="2.25" />
     <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand" FixedToPoint="true">
       <Path>
         <Point X="8" Y="3.605" />
@@ -26,12 +26,12 @@
     </AssociationLine>
     <AssociationLine Name="Nachbarschaft" Type="SharingCulture.com.Nachbarschaft" FixedToPoint="true">
       <Path>
-        <Point X="10" Y="3.375" />
+        <Point X="10.25" Y="3.375" />
         <Point X="12.25" Y="3.375" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAABAAAAEAACAAgAQBABAEgAAQEAAAAYgEgEACAAAA=</HashCode>
+      <HashCode>AAAABAAAgFAACAAgAUBABAEgAAQEAAAAYgEgUQiCAwA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -62,7 +62,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SharingCulture.com.Ausleihe">
-    <Position X="4.25" Y="7.75" Width="1.5" />
+    <Position X="3.75" Y="7.75" Width="2.25" />
     <AssociationLine Name="Gegenstand" Type="SharingCulture.com.Gegenstand">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.098" Y="0.228" />
