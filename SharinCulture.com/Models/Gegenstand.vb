@@ -18,7 +18,7 @@ Public Class Gegenstand
         mintID = -1
         mbolIstGebucht = False
         mbinaryBild = Nothing
-        mintNachbarschaft = -1
+        mintNachbarschaft = -1              'muss mintNachbarschaft und intNachbarschaft nicht als Fremdschlüssel gekennzeichnet sein? [M.S./02.08.]
         mstrBenutzername = String.Empty
 
         mKategorie = Nothing
