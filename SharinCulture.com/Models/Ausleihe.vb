@@ -3,6 +3,8 @@ Imports System.Web.Services
 Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
+'Test
+
 Public Class Ausleihe
     Public Property intID As Integer
         Get
