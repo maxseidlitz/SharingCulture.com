@@ -5,7 +5,7 @@ Imports System.ComponentModel
 
 Public Class BenutzerViewModel
     Private mNachbarschaft As Integer
-    Private mBenutzer As Integer
+    Private mBenutzer As Integer 'Integer?
 
     Public Property Nachbarschaft As Nachbarschaft
         Get
@@ -22,4 +22,6 @@ Public Class BenutzerViewModel
         Set(value As Benutzer)
         End Set
     End Property
+
+
 End Class
