@@ -1,4 +1,4 @@
-﻿@ModelType SharingCulture.com.Gegenstand
+﻿@ModelType SharingCulture.com.GegenstandViewModel
 
 @Code
     Layout = Nothing
@@ -10,7 +10,7 @@ End Code
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/Content/CSS.css" type="text/css" />
-    <title>GegenstaendeAnzeigen</title>
+    <title>Übersicht alle Gegenstände</title>
 </head>
     <body>
 
@@ -35,8 +35,6 @@ End Code
             <button type="button">Meine angebotenen Gegenstände</button> <br />
             <button type="button">Meldungen</button> <br />
         </div>
-
-
 
 
         <!-- Tabpanel zur Navigation-->
@@ -65,8 +63,8 @@ End Code
                 </div>
 
                 <!-- NEUE TABELLE
-        Die eingefügten Gegenstände dienen vorerst als Platzhalter und sollen nachher durch eine Eingabe ersetzt werden
-        L.S. 16.05.2021 18 Uhr-->
+                    Die eingefügten Gegenstände dienen vorerst als Platzhalter und sollen nachher durch eine Eingabe ersetzt werden
+                    L.S. 16.05.2021 18 Uhr-->
                 <!--Ab hier sind Beipsieldaten eingetragen! 30.6.21; Max Seidlitz -->
                 <!--Hier müssen dann mit HTML-Helpern die Daten aus der DB gelesen werden.-->
                 <table class="tblAlleGegenstaende">

@@ -2,7 +2,7 @@
     Inherits System.Web.Mvc.Controller
 
     ' GET: Gegenstand
-    Function AlleGegenstaendeAnzeigen() As ActionResult
+    Function UebersichtAlleGegenstaende() As ActionResult
         Return View()
     End Function
 

@@ -286,7 +286,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Startseite\Startseite.vbhtml" />
     <Content Include="Views\Startseite\Test.vbhtml" />
-    <Content Include="Views\Gegenstand\GegenstaendeAnzeigen.vbhtml" />
+    <Content Include="Views\Gegenstand\UebersichtAlleGegenstaende.vbhtml" />
     <Content Include="ViewModels\ViewModels-Klassendiagramm.cd" />
   </ItemGroup>
   <ItemGroup>
