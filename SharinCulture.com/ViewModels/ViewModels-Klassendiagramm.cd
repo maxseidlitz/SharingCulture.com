@@ -37,14 +37,14 @@
   <Class Name="SharingCulture.com.Kategorie" Collapsed="true">
     <Position X="8.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Kategorie.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SharingCulture.com.Nachbarschaft" Collapsed="true">
     <Position X="8.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAIAAAACAAAAAAAAQAgAAAAAAAAAAABAQAAAAA=</HashCode>
       <FileName>Models\Nachbarschaft.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -67,7 +67,7 @@
     <Position X="2.75" Y="6.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgAAACAAQA=</HashCode>
-      <FileName>BenutzerViewModel.vb</FileName>
+      <FileName>ViewModels\BenutzerViewModel.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Nachbarschaft" />

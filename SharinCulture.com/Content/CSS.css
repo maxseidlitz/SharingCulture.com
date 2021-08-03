@@ -87,7 +87,7 @@ td {
 /* TABELLE ALLE GEGENSTÄNDE*/
 table.tblAlleGegenstaende {
   font-family: Bahnschrift, sans-serif;
-  border: 6px solid #24943A;
+  border: 2px solid #24943A;
   background-color: #D4EED1;
   width: 100%;
   text-align: center;
@@ -142,7 +142,7 @@ table.tblAlleGegenstaende tfoot .links a{
 }
     
 /*Klassen*/
-.Primärnavigation {
+.Primaernavigation {
     display: contents;
 }
 

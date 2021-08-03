@@ -4,8 +4,8 @@
     <Position X="3.75" Y="2.75" Width="2.25" />
     <AssociationLine Name="Kategorie" Type="SharingCulture.com.Kategorie" FixedToPoint="true">
       <Path>
-        <Point X="3.75" Y="3.312" />
-        <Point X="2.75" Y="3.312" />
+        <Point X="3.75" Y="3.787" />
+        <Point X="2.75" Y="3.787" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -36,7 +36,7 @@
   <Class Name="SharingCulture.com.Kategorie">
     <Position X="1.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Kategorie.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -83,7 +83,7 @@
   <Class Name="SharingCulture.com.Nachbarschaft">
     <Position X="12.25" Y="2.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAIAAAACAAAAAAAAQAgAAAAAAAAAAABAQAAAAA=</HashCode>
       <FileName>Models\Nachbarschaft.vb</FileName>
     </TypeIdentifier>
   </Class>

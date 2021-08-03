@@ -158,7 +158,8 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="BenutzerViewModel.vb" />
+    <Compile Include="Controllers\BenutzerController.vb" />
+    <Compile Include="ViewModels\BenutzerViewModel.vb" />
     <Compile Include="Controllers\GegenstandController.vb" />
     <Compile Include="Controllers\StartseiteController.vb" />
     <Compile Include="Models\DataAccess\GegenstandDataModel.Context.vb">
@@ -316,7 +317,9 @@
     <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Benutzer\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

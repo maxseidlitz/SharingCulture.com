@@ -16,18 +16,19 @@ End Code
 
 
         <!--Linker Block für die Navigation
-        div class "Primärnavigation"-->
+        div class "Primaernavigation"-->
         <div>
             <h1>Navigation</h1>
         </div>
 
-        <div class="Primärnavigation">
+        <div class="Primaernavigation">
             <img src="../Content/Bilder/typ.jpg" style="float:left;width:10%" />
 
             <label style="text-align: left">Name, Vorname:</label> <br />
             <input type="text" value="Dent, Arthur" /> <br />
             <label>Community:</label> <br />
-            <input type="text" value="Studiwohnheim Prenzlberg" />
+            <input type="text" value="Studiwohnheim Prenzlberg" /> <br />
+
 
             <button type="button">Startseite</button> <br />
             <button type="button">Alle verfügbaren Gegenstände</button> <br />
@@ -63,8 +64,8 @@ End Code
                 </div>
 
                 <!-- NEUE TABELLE
-                    Die eingefügten Gegenstände dienen vorerst als Platzhalter und sollen nachher durch eine Eingabe ersetzt werden
-                    L.S. 16.05.2021 18 Uhr-->
+                Die eingefügten Gegenstände dienen vorerst als Platzhalter und sollen nachher durch eine Eingabe ersetzt werden
+                L.S. 16.05.2021 18 Uhr-->
                 <!--Ab hier sind Beipsieldaten eingetragen! 30.6.21; Max Seidlitz -->
                 <!--Hier müssen dann mit HTML-Helpern die Daten aus der DB gelesen werden.-->
                 <table class="tblAlleGegenstaende">

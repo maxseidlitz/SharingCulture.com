@@ -14,7 +14,7 @@ Partial Public Class GegenstandEntity
     Public Property gegID_ As Integer
     Public Property gegBezeichnung As String
     Public Property gegIstGebucht As Boolean
-    Public Property gegBild As Nullable(Of Short)
+    Public Property gegBild As Byte()
     Public Property gegnachIDFk As Integer
     Public Property gegbenBenutzernameFk As String
     Public Property gegkatKategorieFk As Integer

@@ -26,39 +26,38 @@ Public Class Gegenstand
 
     'Konstruktor mit Parametern
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
-                   pbinaryBild As image, pintNachbarschaft As Integer, pstrBenutzername As String, pKat As Kategorie)
+                  pbinaryBild As Image, pintNachbarschaft As Integer, pstrBenutzername As String, pKat As Kategorie)
         mstrBezeichnung = pstrBezeichnung
         mintID = pintID
         mbolIstGebucht = pbolIstGebucht
         mbinaryBild = pbinaryBild
         mintNachbarschaft = pintNachbarschaft
         mstrBenutzername = pstrBenutzername
-
         mKategorie = pKat
     End Sub
 
     'Konstruktor mit Parametern und Fremdschlüssel für Kategorie
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
-                   pbinaryBild As Image, pintNachbarschaft As Integer, pstrBenutzername As String, pintKatFk As Kategorie)
+                   pbinaryBild As Image, pintNachbarschaft As Integer, pstrBenutzername As String, pintKatFk As Integer)
         mstrBezeichnung = pstrBezeichnung
         mintID = pintID
         mbolIstGebucht = pbolIstGebucht
         mbinaryBild = pbinaryBild
         mintNachbarschaft = pintNachbarschaft
         mstrBenutzername = pstrBenutzername
-
         mKategorie = Nothing
     End Sub
 
-    Public Sub New(pGegenstandEntity As GegenstandEntity, pKategorie As KategorieEntity)
-        mbinaryBild = pGegenstandEntity.gegBild
-        mbolIstGebucht = pGegenstandEntity.gegIstGebucht
-        mintID = pGegenstandEntity.gegID_
-        mintNachbarschaft = pGegenstandEntity.gegnachIDFk
-        mstrBenutzername = pGegenstandEntity.gegbenBenutzernameFk
-        mstrBezeichnung = pGegenstandEntity.gegBezeichnung
-
-    End Sub
+    '*** Auskommentiert am 3.8. - Aufgrund desFehlers das mbinaryBild nicht im DatTyp short? gespeichert werden kann | Wir planen Bilder komplett raus zu lassen!
+    'Public Sub New(pGegenstandEntity As GegenstandEntity, pKategorie As KategorieEntity)
+    '    mbinaryBild = pGegenstandEntity.gegBild
+    '    mbolIstGebucht = pGegenstandEntity.gegIstGebucht
+    '    mintID = pGegenstandEntity.gegID_
+    '    mintNachbarschaft = pGegenstandEntity.gegnachIDFk
+    '    mstrBenutzername = pGegenstandEntity.gegbenBenutzernameFk
+    '    mstrBezeichnung = pGegenstandEntity.gegBezeichnung
+    '
+    'End Sub
 
     Public Property strBezeichnung As String
         Get

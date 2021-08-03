@@ -13,29 +13,29 @@ End Code
 
 </head>
 
-<body class="centertext">
-    <!--Die Klasse .hintergrundbildAnmelden kann hier einen Muster-Hintergrund einfügen in grün-->
-    <p>
-        <!--hier wird auch auf CSS.css zugegriffen um die Style-Anpassung aus dem CSS mit dem class-Attribut auszulesen-->
-        <img id="GifAnmeldung" src="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif" alt="Logo" class="centerblock" style="width:25%" />
-        <!--<img  src="../Bilder/SharingCulture-Motiv.png" alt="Logo" class="center" style="width:100%"/> -->
+        <body class="centertext">
+            <!--Die Klasse .hintergrundbildAnmelden kann hier einen Muster-Hintergrund einfügen in grün-->
+            <p>
+                <!--hier wird auch auf CSS.css zugegriffen um die Style-Anpassung aus dem CSS mit dem class-Attribut auszulesen-->
+                <img id="GifAnmeldung" src="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif" alt="Logo" class="centerblock" style="width:25%"/>
+                <!--<img  src="../Bilder/SharingCulture-Motiv.png" alt="Logo" class="center" style="width:100%"/> -->
 
-    </p>
+            </p>
 
-    <form method="get" action="Anmelden.html" class="border">
-        <!--Formular für die Anmeldung-->
-        <h2 class="centertext">Anmeldung</h2>
-        <p>Benutzername: </p>
-        <input type="text" autofocus />
-        <p>Passwort: </p>
-        <input type="password" />
-        
-        <p>
-            <input type="button" name="btnAbbrechen" value="Abbrechen" />
-            <input type="submit" name="btnBestätigen" value="Bestätigen" />
-        </p>
-        <p>
-            <a class="sekundaer" href="../Webseiten/frmRegistrieren.html">Registrieren</a>
-        </p>
-    </form>
-</body>
+            <form method="get" action="Anmelden.html" class="border">
+                <!--Formular für die Anmeldung-->
+                <h2 class="centertext">Anmeldung</h2>
+                <p>Benutzername: </p>
+                <input type="text" autofocus />
+                <p>Passwort: </p>
+                <input type="password"/>
+
+                <p>
+                    <input type="button" name="btnAbbrechen" value="Abbrechen"/>
+                    <input type="submit" name="btnBestätigen" value="Bestätigen"/>
+                </p>
+                <p>
+                    <a class="sekundaer" href="../Webseiten/frmRegistrieren.html">Registrieren</a>
+                </p>
+            </form>
+        </body>
