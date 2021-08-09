@@ -1,5 +1,5 @@
 # SharingCommunity
-![Logo-ScharingCulture](http://github.com/maxseidlitz/SharingCulture.com/blob/master/SharinCulture.com/Content/Bilder/SharingCulture-Motiv.png)
+![Logo-ScharingCulture](https://raw.githubusercontent.com/maxseidlitz/SharingCulture.com/master/SharinCulture.com/Content/Bilder/SharingCulture-Motiv.png)
 ## 1.1	Einleitung
 Das Projekt SharingCulture ist eine Webanwendung, die angemeldeten Personen ermöglicht nachhaltiger, ökologischer sowie ökonomischer zu leben. Es bietet die Möglichkeit, Dinge mit der Nachbarschaft/Gemeinschaft/Community zu teilen/anbieten bzw. auszuborgen/ausleihen/reservieren. 
 ## 1.2	Ausgangssituation
