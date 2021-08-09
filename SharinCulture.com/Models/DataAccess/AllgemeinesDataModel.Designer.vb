@@ -1,4 +1,4 @@
-﻿' Die T4-Codegenerierung ist für Modell 'D:\1 - BEUTH\Semester 6\Informatik-Anwendung\SharingCulture\SharingCulture.com\SharinCulture.com\Models\DataAccess\GegenstandDataModel.edmx' aktiviert. 
+﻿' Die T4-Codegenerierung ist für Modell 'D:\1 - BEUTH\Semester 6\Informatik-Anwendung\SharingCulture\SharingCulture.com\SharinCulture.com\Models\DataAccess\AllgemeinesDataModel.edmx' aktiviert. 
 ' Um die Generierung von Legacycode zu aktivieren, ändern Sie den Wert der Designer-Eigenschaft 'Code Generation Strategy'
 ' in 'Legacy ObjectContext'. Diese Eigenschaft wird im Eigenschaftenfenster angezeigt, wenn das Modell
 ' im Designer geöffnet ist.

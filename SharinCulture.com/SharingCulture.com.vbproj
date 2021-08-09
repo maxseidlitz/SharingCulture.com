@@ -159,6 +159,12 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\BenutzerController.vb" />
+    <Compile Include="Models\DataAccess\BenutzerEntity.vb">
+      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataAccess\NachbarschaftEntity.vb">
+      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\BenutzerViewModel.vb" />
     <Compile Include="Controllers\GegenstandController.vb" />
     <Compile Include="Controllers\StartseiteController.vb" />
@@ -167,10 +173,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GegenstandDataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataAccess\GegenstandDataModel.Designer.vb">
+    <Compile Include="Models\DataAccess\AllgemeinesDataModel.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DataAccess\GegenstandDataModel.vb">
       <AutoGen>True</AutoGen>
@@ -243,12 +249,12 @@
     <Content Include="Content\CSS.css" />
     <Content Include="Models\DataAccess\GegenstandDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
       <LastGenOutput>GegenstandDataModel.Context.vb</LastGenOutput>
     </Content>
     <Content Include="Models\DataAccess\GegenstandDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
       <LastGenOutput>GegenstandDataModel.vb</LastGenOutput>
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -261,12 +267,12 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Models\Entwurfsklassendiagramm.cd" />
-    <EntityDeploy Include="Models\DataAccess\GegenstandDataModel.edmx">
+    <EntityDeploy Include="Models\DataAccess\AllgemeinesDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GegenstandDataModel.Designer.vb</LastGenOutput>
+      <LastGenOutput>AllgemeinesDataModel.Designer.vb</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\DataAccess\GegenstandDataModel.edmx.diagram">
-      <DependentUpon>GegenstandDataModel.edmx</DependentUpon>
+    <Content Include="Models\DataAccess\AllgemeinesDataModel.edmx.diagram">
+      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
     </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -289,6 +295,7 @@
     <Content Include="Views\Startseite\Test.vbhtml" />
     <Content Include="Views\Gegenstand\UebersichtAlleGegenstaende.vbhtml" />
     <Content Include="ViewModels\ViewModels-Klassendiagramm.cd" />
+    <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -312,14 +319,11 @@
     <Content Include="Views\_ViewStart.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
     <Content Include="Views\Home\Contact.vbhtml" />
-    <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Shared\Error.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Benutzer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
