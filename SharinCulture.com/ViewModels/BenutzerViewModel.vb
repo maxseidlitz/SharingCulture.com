@@ -4,6 +4,7 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class BenutzerViewModel
+
     Private mNachbarschaft As Integer
     Private mBenutzer As Integer 'Integer?
 
@@ -22,6 +23,5 @@ Public Class BenutzerViewModel
         Set(value As Benutzer)
         End Set
     End Property
-
 
 End Class
