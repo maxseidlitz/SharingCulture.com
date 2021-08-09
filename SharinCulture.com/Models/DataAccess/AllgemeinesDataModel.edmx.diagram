@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bcd894f344954cc79a327a8bcc00da2b" Name="Diagram1" ZoomLevel="97">
+      <Diagram DiagramId="bcd894f344954cc79a327a8bcc00da2b" Name="Diagram1" ZoomLevel="84">
         <EntityTypeShape EntityType="Datenbank1Model.GegenstandEntity" Width="1.75" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Datenbank1Model.KategorieEntity" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="Datenbank1Model.gegkatKategorieFk" ManuallyRouted="false" />
