@@ -5,7 +5,7 @@ Namespace Controllers
         Inherits Controller
 
         ' GET: Benutzer
-        Function Index() As ActionResult
+        Function Anmeldung() As ActionResult
             Return View()
         End Function
     End Class

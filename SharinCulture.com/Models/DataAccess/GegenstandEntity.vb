@@ -20,5 +20,7 @@ Partial Public Class GegenstandEntity
     Public Property gegkatKategorieFk As Integer
 
     Public Overridable Property tblKategorie As KategorieEntity
+    Public Overridable Property tblBenutzer As BenutzerEntity
+    Public Overridable Property tblnachbarschaft As NachbarschaftEntity
 
 End Class

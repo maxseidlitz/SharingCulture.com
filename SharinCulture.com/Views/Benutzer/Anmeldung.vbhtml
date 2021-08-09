@@ -1,0 +1,45 @@
+﻿@ModelType SharingCulture.com.BenutzerListe
+
+@Code
+    Layout = Nothing
+End Code
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SharingCulture - Log In</title>
+    <link rel="stylesheet" type="text/css" href="../Webseiten/CSS.css" />
+    <!--Steuert das icon was im "Browser-Tab"(also Header)angezeigt wird!-->
+    <link rel="icon" href="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif">
+    <!--hier wird der Style für Bilder festgelegt; sorgt dafür, dass unser Logo mittig positioniert ist!-->
+
+</head>
+
+<body class="centertext">
+    <!--Die Klasse .hintergrundbildAnmelden kann hier einen Muster-Hintergrund einfügen in grün-->
+    <p>
+        <!--hier wird auch auf CSS.css zugegriffen um die Style-Anpassung aus dem CSS mit dem class-Attribut auszulesen-->
+        <img id="GifAnmeldung" src="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif" alt="Logo" class="centerblock" style="width:25%" />
+        <!--<img  src="../Content/Bilder/SharingCulture-Motiv.png" alt="Logo" class="center" style="width:100%"/>-->
+
+    </p>
+
+    <form method="get" action="Anmelden.html" class="border">
+        <!--Formular für die Anmeldung-->
+        <h2 class="centertext">Anmeldung</h2>
+        <p>Benutzername: </p>
+        <input type="text" autofocus />
+        <p>Passwort: </p>
+        <input type="password" />
+
+        <p>
+            <input type="button" name="btnAbbrechen" value="Abbrechen" />
+            <input type="submit" name="btnBestätigen" value="Bestätigen" />
+        </p>
+        <p>
+            <a class="sekundaer" href="../Webseiten/frmRegistrieren.html">Registrieren</a>
+        </p>
+    </form>
+</body>

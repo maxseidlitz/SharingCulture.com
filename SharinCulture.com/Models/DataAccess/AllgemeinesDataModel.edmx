@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Datenbank1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblBenutzer">
+          <Key>
+            <PropertyRef Name="benBenutzername" />
+          </Key>
+          <Property Name="benBenutzername" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="benPasswort" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="benVorname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="benName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="benEmail" Type="varchar" MaxLength="50" />
+          <Property Name="benTelefonnummer" Type="varchar" MaxLength="50" />
+          <Property Name="benGeburtsdatum" Type="date" Nullable="false" />
+          <Property Name="benScore" Type="int" Nullable="false" />
+          <Property Name="benIstKoordinator" Type="bit" Nullable="false" />
+          <Property Name="benIstEigentümer" Type="bit" Nullable="false" />
+          <Property Name="bennachIDFk" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblGegenstand">
+          <Key>
+            <PropertyRef Name="gegID " />
+          </Key>
+          <Property Name="gegID " Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gegBezeichnung" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="gegIstGebucht" Type="bit" Nullable="false" />
+          <Property Name="gegBild" Type="image" />
+          <Property Name="gegnachIDFk" Type="int" Nullable="false" />
+          <Property Name="gegbenBenutzernameFk" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="gegkatKategorieFk" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblKategorie">
+          <Key>
+            <PropertyRef Name="katID" />
+          </Key>
+          <Property Name="katID" Type="int" Nullable="false" />
+          <Property Name="katBezeichnung" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblnachbarschaft">
+          <Key>
+            <PropertyRef Name="nachID" />
+          </Key>
+          <Property Name="nachID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nachName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nachOrt" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="bennachIDFk">
+          <End Role="tblnachbarschaft" Type="Self.tblnachbarschaft" Multiplicity="1" />
+          <End Role="tblBenutzer" Type="Self.tblBenutzer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblnachbarschaft">
+              <PropertyRef Name="nachID" />
+            </Principal>
+            <Dependent Role="tblBenutzer">
+              <PropertyRef Name="bennachIDFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gegbenIDFk">
+          <End Role="tblBenutzer" Type="Self.tblBenutzer" Multiplicity="1" />
+          <End Role="tblGegenstand" Type="Self.tblGegenstand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBenutzer">
+              <PropertyRef Name="benBenutzername" />
+            </Principal>
+            <Dependent Role="tblGegenstand">
+              <PropertyRef Name="gegbenBenutzernameFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gegkatKategorieFk">
+          <End Role="tblKategorie" Type="Self.tblKategorie" Multiplicity="1" />
+          <End Role="tblGegenstand" Type="Self.tblGegenstand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKategorie">
+              <PropertyRef Name="katID" />
+            </Principal>
+            <Dependent Role="tblGegenstand">
+              <PropertyRef Name="gegkatKategorieFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gegnachIDFk">
+          <End Role="tblnachbarschaft" Type="Self.tblnachbarschaft" Multiplicity="1" />
+          <End Role="tblGegenstand" Type="Self.tblGegenstand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblnachbarschaft">
+              <PropertyRef Name="nachID" />
+            </Principal>
+            <Dependent Role="tblGegenstand">
+              <PropertyRef Name="gegnachIDFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Datenbank1ModelStoreContainer">
+          <EntitySet Name="tblBenutzer" EntityType="Self.tblBenutzer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblGegenstand" EntityType="Self.tblGegenstand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblKategorie" EntityType="Self.tblKategorie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblnachbarschaft" EntityType="Self.tblnachbarschaft" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="bennachIDFk" Association="Self.bennachIDFk">
+            <End Role="tblnachbarschaft" EntitySet="tblnachbarschaft" />
+            <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+          </AssociationSet>
+          <AssociationSet Name="gegbenIDFk" Association="Self.gegbenIDFk">
+            <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+            <End Role="tblGegenstand" EntitySet="tblGegenstand" />
+          </AssociationSet>
+          <AssociationSet Name="gegkatKategorieFk" Association="Self.gegkatKategorieFk">
+            <End Role="tblKategorie" EntitySet="tblKategorie" />
+            <End Role="tblGegenstand" EntitySet="tblGegenstand" />
+          </AssociationSet>
+          <AssociationSet Name="gegnachIDFk" Association="Self.gegnachIDFk">
+            <End Role="tblnachbarschaft" EntitySet="tblnachbarschaft" />
+            <End Role="tblGegenstand" EntitySet="tblGegenstand" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Datenbank1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GegenstandEntity">
+          <Key>
+            <PropertyRef Name="gegID_" />
+          </Key>
+          <Property Name="gegID_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gegBezeichnung" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gegIstGebucht" Type="Boolean" Nullable="false" />
+          <Property Name="gegBild" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="gegnachIDFk" Type="Int32" Nullable="false" />
+          <Property Name="gegbenBenutzernameFk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gegkatKategorieFk" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblKategorie" Relationship="Self.gegkatKategorieFk" FromRole="tblGegenstand" ToRole="tblKategorie" />
+          <NavigationProperty Name="tblBenutzer" Relationship="Datenbank1Model.gegbenIDFk" FromRole="GegenstandEntity" ToRole="tblBenutzer" />
+          <NavigationProperty Name="tblnachbarschaft" Relationship="Datenbank1Model.gegnachIDFk" FromRole="GegenstandEntity" ToRole="tblnachbarschaft" />
+        </EntityType>
+        <EntityType Name="KategorieEntity">
+          <Key>
+            <PropertyRef Name="katID" />
+          </Key>
+          <Property Name="katID" Type="Int32" Nullable="false" />
+          <Property Name="katBezeichnung" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tblGegenstand" Relationship="Self.gegkatKategorieFk" FromRole="tblKategorie" ToRole="tblGegenstand" />
+        </EntityType>
+        <Association Name="gegkatKategorieFk">
+          <End Role="tblKategorie" Type="Datenbank1Model.KategorieEntity" Multiplicity="1" />
+          <End Role="tblGegenstand" Type="Datenbank1Model.GegenstandEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKategorie">
+              <PropertyRef Name="katID" />
+            </Principal>
+            <Dependent Role="tblGegenstand">
+              <PropertyRef Name="gegkatKategorieFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Datenbank1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblGegenstand" EntityType="Datenbank1Model.GegenstandEntity" />
+          <EntitySet Name="tblKategorie" EntityType="Datenbank1Model.KategorieEntity" />
+          <AssociationSet Name="gegkatKategorieFk" Association="Self.gegkatKategorieFk">
+            <End Role="tblKategorie" EntitySet="tblKategorie" />
+            <End Role="tblGegenstand" EntitySet="tblGegenstand" />
+          </AssociationSet>
+          <EntitySet Name="tblBenutzer" EntityType="Datenbank1Model.BenutzerEntity" />
+          <EntitySet Name="tblnachbarschaft" EntityType="Datenbank1Model.NachbarschaftEntity" />
+          <AssociationSet Name="bennachIDFk" Association="Datenbank1Model.bennachIDFk">
+            <End Role="tblnachbarschaft" EntitySet="tblnachbarschaft" />
+            <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+          </AssociationSet>
+          <AssociationSet Name="gegbenIDFk" Association="Datenbank1Model.gegbenIDFk">
+            <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+            <End Role="GegenstandEntity" EntitySet="tblGegenstand" />
+          </AssociationSet>
+          <AssociationSet Name="gegnachIDFk" Association="Datenbank1Model.gegnachIDFk">
+            <End Role="tblnachbarschaft" EntitySet="tblnachbarschaft" />
+            <End Role="GegenstandEntity" EntitySet="tblGegenstand" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BenutzerEntity">
+          <Key>
+            <PropertyRef Name="benBenutzername" />
+          </Key>
+          <Property Name="benBenutzername" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benPasswort" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benVorname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benTelefonnummer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benGeburtsdatum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="benScore" Type="Int32" Nullable="false" />
+          <Property Name="benIstKoordinator" Type="Boolean" Nullable="false" />
+          <Property Name="benIstEigentümer" Type="Boolean" Nullable="false" />
+          <Property Name="bennachIDFk" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblnachbarschaft" Relationship="Datenbank1Model.bennachIDFk" FromRole="tblBenutzer" ToRole="tblnachbarschaft" />
+          <NavigationProperty Name="tblGegenstand" Relationship="Datenbank1Model.gegbenIDFk" FromRole="tblBenutzer" ToRole="GegenstandEntity" />
+        </EntityType>
+        <EntityType Name="NachbarschaftEntity">
+          <Key>
+            <PropertyRef Name="nachID" />
+          </Key>
+          <Property Name="nachID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nachName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nachOrt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblBenutzer" Relationship="Datenbank1Model.bennachIDFk" FromRole="tblnachbarschaft" ToRole="tblBenutzer" />
+          <NavigationProperty Name="tblGegenstand" Relationship="Datenbank1Model.gegnachIDFk" FromRole="tblnachbarschaft" ToRole="GegenstandEntity" />
+        </EntityType>
+        <Association Name="bennachIDFk">
+          <End Type="Datenbank1Model.NachbarschaftEntity" Role="tblnachbarschaft" Multiplicity="1" />
+          <End Type="Datenbank1Model.BenutzerEntity" Role="tblBenutzer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblnachbarschaft">
+              <PropertyRef Name="nachID" />
+            </Principal>
+            <Dependent Role="tblBenutzer">
+              <PropertyRef Name="bennachIDFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gegbenIDFk">
+          <End Type="Datenbank1Model.BenutzerEntity" Role="tblBenutzer" Multiplicity="1" />
+          <End Type="Datenbank1Model.GegenstandEntity" Role="GegenstandEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBenutzer">
+              <PropertyRef Name="benBenutzername" />
+            </Principal>
+            <Dependent Role="GegenstandEntity">
+              <PropertyRef Name="gegbenBenutzernameFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gegnachIDFk">
+          <End Type="Datenbank1Model.NachbarschaftEntity" Role="tblnachbarschaft" Multiplicity="1" />
+          <End Type="Datenbank1Model.GegenstandEntity" Role="GegenstandEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblnachbarschaft">
+              <PropertyRef Name="nachID" />
+            </Principal>
+            <Dependent Role="GegenstandEntity">
+              <PropertyRef Name="gegnachIDFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Datenbank1ModelStoreContainer" CdmEntityContainer="Datenbank1Entities">
+          <EntitySetMapping Name="tblGegenstand">
+            <EntityTypeMapping TypeName="Datenbank1Model.GegenstandEntity">
+              <MappingFragment StoreEntitySet="tblGegenstand">
+                <ScalarProperty Name="gegID_" ColumnName="gegID " />
+                <ScalarProperty Name="gegBezeichnung" ColumnName="gegBezeichnung" />
+                <ScalarProperty Name="gegIstGebucht" ColumnName="gegIstGebucht" />
+                <ScalarProperty Name="gegBild" ColumnName="gegBild" />
+                <ScalarProperty Name="gegnachIDFk" ColumnName="gegnachIDFk" />
+                <ScalarProperty Name="gegbenBenutzernameFk" ColumnName="gegbenBenutzernameFk" />
+                <ScalarProperty Name="gegkatKategorieFk" ColumnName="gegkatKategorieFk" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKategorie">
+            <EntityTypeMapping TypeName="Datenbank1Model.KategorieEntity">
+              <MappingFragment StoreEntitySet="tblKategorie">
+                <ScalarProperty Name="katID" ColumnName="katID" />
+                <ScalarProperty Name="katBezeichnung" ColumnName="katBezeichnung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBenutzer">
+            <EntityTypeMapping TypeName="Datenbank1Model.BenutzerEntity">
+              <MappingFragment StoreEntitySet="tblBenutzer">
+                <ScalarProperty Name="bennachIDFk" ColumnName="bennachIDFk" />
+                <ScalarProperty Name="benIstEigentümer" ColumnName="benIstEigentümer" />
+                <ScalarProperty Name="benIstKoordinator" ColumnName="benIstKoordinator" />
+                <ScalarProperty Name="benScore" ColumnName="benScore" />
+                <ScalarProperty Name="benGeburtsdatum" ColumnName="benGeburtsdatum" />
+                <ScalarProperty Name="benTelefonnummer" ColumnName="benTelefonnummer" />
+                <ScalarProperty Name="benEmail" ColumnName="benEmail" />
+                <ScalarProperty Name="benName" ColumnName="benName" />
+                <ScalarProperty Name="benVorname" ColumnName="benVorname" />
+                <ScalarProperty Name="benPasswort" ColumnName="benPasswort" />
+                <ScalarProperty Name="benBenutzername" ColumnName="benBenutzername" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblnachbarschaft">
+            <EntityTypeMapping TypeName="Datenbank1Model.NachbarschaftEntity">
+              <MappingFragment StoreEntitySet="tblnachbarschaft">
+                <ScalarProperty Name="nachOrt" ColumnName="nachOrt" />
+                <ScalarProperty Name="nachName" ColumnName="nachName" />
+                <ScalarProperty Name="nachID" ColumnName="nachID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

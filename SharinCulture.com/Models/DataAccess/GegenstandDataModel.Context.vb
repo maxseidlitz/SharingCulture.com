@@ -24,5 +24,7 @@ Partial Public Class Datenbank1Entities
 
     Public Overridable Property tblGegenstand() As DbSet(Of GegenstandEntity)
     Public Overridable Property tblKategorie() As DbSet(Of KategorieEntity)
+    Public Overridable Property tblBenutzer() As DbSet(Of BenutzerEntity)
+    Public Overridable Property tblnachbarschaft() As DbSet(Of NachbarschaftEntity)
 
 End Class
