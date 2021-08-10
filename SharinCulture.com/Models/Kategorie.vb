@@ -19,6 +19,11 @@ Public Class Kategorie
         mstrBezeichnung = pstrBezeichnung
     End Sub
 
+    Public Sub New(pkatEntity As KategorieEntity)
+        mintID = pkatEntity.katID
+        mstrBezeichnung = pkatEntity.katBezeichnung
+    End Sub
+
     Property intID As Integer
         Get
             Return mintID
