@@ -22,7 +22,6 @@ Namespace Controllers
         End Sub
 
 
-
         ' GET: Gegenstand
         <HttpGet>
         Function UebersichtAlleGegenstaende() As ActionResult
@@ -37,7 +36,7 @@ Namespace Controllers
             For Each gegEntity In db.tblGegenstand.ToList()
                 katEntity = gegEntity.tblKategorie ' Vom Datensatz aus tblGegenstaende in tblKategorien navigieren
 
-                geg = New Gegenstand(gegEntity) ' Objekt der Entity-Klasse zur Initialisierung eines Objekts der Model-Klasse nutzen
+                geg = New Gegenstand(gegEntity) 'Objekt der Entity-Klasse zur Initialisierung eines Objekts der Model-Klasse nutzen
 
                 ' Prüfen, ob es eine Kategorie gibt
                 If katEntity IsNot Nothing Then
@@ -48,7 +47,7 @@ Namespace Controllers
                 vmGegenstaendeListe.hinzufuegen(geg) ' Model-Objekt zur Liste hinzufügen
             Next
 
-            Return View(vmGegenstaendeListe) 'Übergabe der Liste aller Gegenstände, damit diese dann in der View per Zäherschleife ausgelesen werden kann
+            Return View(vmGegenstaendeListe) 'Übergabe der Liste aller Gegenstände, damit diese dann in der View per Zählerschleife ausgelesen werden kann
         End Function
 
     End Class
