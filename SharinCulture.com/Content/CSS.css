@@ -79,8 +79,8 @@ td {
     font-family: Bahnschrift, Verdana, sans-serif;
     border: 6px solid #24943A;
     background-color: #D4EED1;
-    width: 240px;
-    height: 240px;
+    width: 240px; 
+    height: 50px; /*Höhe auf von 240px auf 50px geändert damit wir ein angenehmeres Aussehen haben; MS 12.8.//11:08h */
     text-align: center;
 }
   
