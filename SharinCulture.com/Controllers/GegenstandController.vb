@@ -4,6 +4,7 @@ Namespace Controllers
     Public Class GegenstandController
         Inherits System.Web.Mvc.Controller
 
+<<<<<<< HEAD
         'Verbindung zur Datenbank
         Private db As Datenbank1Entities
 
@@ -22,13 +23,12 @@ Namespace Controllers
         End Sub
 
 
+=======
+>>>>>>> parent of bdc0cd4 (Merge pull request #27 from maxseidlitz/MaxTry)
         ' GET: Gegenstand
-        <HttpGet>
         Function UebersichtAlleGegenstaende() As ActionResult
-            Dim geg As Gegenstand
-            Dim gegEntity As GegenstandEntity
-            Dim katEntity As KategorieEntity
             Dim vmGegenstaendeListe As GegenstaendeListe
+<<<<<<< HEAD
 
             vmGegenstaendeListe = New GegenstaendeListe
 
@@ -48,6 +48,9 @@ Namespace Controllers
             Next
 
             Return View(vmGegenstaendeListe) 'Übergabe der Liste aller Gegenstände, damit diese dann in der View per Zählerschleife ausgelesen werden kann
+=======
+            Return View(vmGegenstaendeListe)                    'Übergabe der Liste aller Gegenstände, damit diese dann in der View per Zäherschleife ausgelesen werden kann
+>>>>>>> parent of bdc0cd4 (Merge pull request #27 from maxseidlitz/MaxTry)
         End Function
 
     End Class

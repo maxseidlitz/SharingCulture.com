@@ -49,16 +49,15 @@ Public Class Gegenstand
     End Sub
 
     '*** Auskommentiert am 3.8. - Aufgrund desFehlers das mbinaryBild nicht im DatTyp short? gespeichert werden kann | Wir planen Bilder komplett raus zu lassen!
-    Public Sub New(pGegenstandEntity As GegenstandEntity)
-        'mbinaryBild = pGegenstandEntity.gegBild
-        mbolIstGebucht = pGegenstandEntity.gegIstGebucht
-        mintID = pGegenstandEntity.gegID_
-        mintNachbarschaft = pGegenstandEntity.gegnachIDFk
-
-        mstrBenutzername = pGegenstandEntity.gegbenBenutzernameFk
-        mstrBezeichnung = pGegenstandEntity.gegBezeichnung
-
-    End Sub
+    'Public Sub New(pGegenstandEntity As GegenstandEntity, pKategorie As KategorieEntity)
+    '    mbinaryBild = pGegenstandEntity.gegBild
+    '    mbolIstGebucht = pGegenstandEntity.gegIstGebucht
+    '    mintID = pGegenstandEntity.gegID_
+    '    mintNachbarschaft = pGegenstandEntity.gegnachIDFk
+    '    mstrBenutzername = pGegenstandEntity.gegbenBenutzernameFk
+    '    mstrBezeichnung = pGegenstandEntity.gegBezeichnung
+    '
+    'End Sub
 
     Public Property strBezeichnung As String
         Get

@@ -24,7 +24,7 @@ Public Class GegenstaendeListe
         End Set
     End Property
 
-    Public Sub LadenAlleGegenstawnde()
+    Public Sub LadenAlleGegenstände()
 
     End Sub
 
