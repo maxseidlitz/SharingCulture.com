@@ -1,20 +1,22 @@
 ﻿Public Class GegenstandViewModel
-    Private mGegenstand As Integer
-    Private mKategorie As Integer
+    Private mGegenstand As Gegenstand
+    Private mKategorieAlle As List(Of Kategorie)
 
     Public Property Gegenstand As Gegenstand
         Get
-            Return Nothing
+            Return mGegenstand
         End Get
         Set(value As Gegenstand)
+            mGegenstand = value
         End Set
     End Property
 
-    Public Property Kategorie As Kategorie
+    Public Property KategorienAlle() As List(Of Kategorie)
         Get
-            Return Nothing
+            Return mKategorieAlle
         End Get
-        Set(value As Kategorie)
+        Set(value As List(Of Kategorie))
+            mKategorieAlle = value
         End Set
     End Property
 End Class

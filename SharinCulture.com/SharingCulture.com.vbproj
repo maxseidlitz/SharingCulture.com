@@ -297,6 +297,7 @@
     <Content Include="Views\Gegenstand\UebersichtAlleGegenstaende.vbhtml" />
     <Content Include="ViewModels\ViewModels-Klassendiagramm.cd" />
     <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
+    <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
