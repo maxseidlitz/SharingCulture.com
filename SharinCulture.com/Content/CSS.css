@@ -182,6 +182,7 @@ table.tblAlleGegenstaende {
     padding: 30px;
     margin: auto;
     float: left;
+    align-content: flex-end;
 }
 
 .AnmeldeMenueInhalt {
