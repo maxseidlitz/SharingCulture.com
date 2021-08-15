@@ -7,6 +7,10 @@ header {
 body {
     font-family: Bahnschrift;
     font-size: 18px;
+    background: url(Bilder/tim-mossholder-bo3SHP58C3g-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 p {
@@ -25,7 +29,7 @@ h1 {
     padding-left: 5px;
     padding-top: 10px;
     padding: 10px;
-    color: yellowgreen
+    color: limegreen
 }
 
 h2 {
@@ -60,7 +64,6 @@ img {
 input {
     font-family: Bahnschrift;
     font-size: 11px;
-    Font-style: italic;
 }
 
 form {
@@ -70,7 +73,7 @@ form {
 }
 
 
-  table, th {
+table, th {
     border: 1px solid black;
     white-space: nowrap;
 }
@@ -79,68 +82,76 @@ td {
     font-family: Bahnschrift, Verdana, sans-serif;
     border: 6px solid #24943A;
     background-color: #D4EED1;
-    width: 240px; 
-    height: 50px; /*Höhe auf von 240px auf 50px geändert damit wir ein angenehmeres Aussehen haben; MS 12.8.//11:08h */
+    width: 240px;
+    height: 240px;
     text-align: center;
 }
-  
+
 /* TABELLE ALLE GEGENSTÄNDE*/
 table.tblAlleGegenstaende {
-  font-family: Bahnschrift, sans-serif;
-  border: 2px solid #24943A;
-  background-color: #D4EED1;
-  width: 100%;
-  text-align: center;
+    font-family: Bahnschrift, sans-serif;
+    border: 2px solid #24943A;
+    background-color: #D4EED1;
+    width: 100%;
+    text-align: center;
 }
 
-table.tblAlleGegenstaende td, table.tblAlleGegenstaende th {
-  border: 1px solid #24943A;
-  padding: 3px 2px;
-}
-table.tblAlleGegenstaende tbody td {
-  font-size: 13px;
-}
-table.tblAlleGegenstaende thead {
-  background: #24943A;
-  background: -moz-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
-  background: -webkit-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
-  background: linear-gradient(to bottom, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
-  border-bottom: 0px solid #444444;
-}
-table.tblAlleGegenstaende thead th {
-  font-size: 19px;
-  font-weight: bold;
-  color: #F0F0F0;
-  text-align: left;
-  border-left: 2px solid #24943A; 
-}
-table.tblAlleGegenstaende thead th:first-child {
-  border-left: none;
-}
-table.tblAlleGegenstaende tfoot {
-  font-size: 13px;
-  font-weight: bold;
-  color: #F0F0F0;
-  background: #24943A;
-  background: -moz-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
-  background: -webkit-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
-  background: linear-gradient(to bottom, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
-  border-top: 1px solid #24943A;
-}
-table.tblAlleGegenstaende tfoot td {
-  font-size: 13px;
-}
-table.tblAlleGegenstaende tfoot .links {
-  text-align: right;
-}
-table.tblAlleGegenstaende tfoot .links a{
-  display: inline-block;
-  background: #FFFFFF;
-  color: #24943A;
-  padding: 2px 8px;
-  border-radius: 5px;
-}
-    
+    table.tblAlleGegenstaende td, table.tblAlleGegenstaende th {
+        border: 1px solid #24943A;
+        padding: 3px 2px;
+    }
+
+    table.tblAlleGegenstaende tbody td {
+        font-size: 13px;
+    }
+
+    table.tblAlleGegenstaende thead {
+        background: #24943A;
+        background: -moz-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        background: -webkit-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        background: linear-gradient(to bottom, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        border-bottom: 0px solid #444444;
+    }
+
+        table.tblAlleGegenstaende thead th {
+            font-size: 19px;
+            font-weight: bold;
+            color: #F0F0F0;
+            text-align: left;
+            border-left: 2px solid #24943A;
+        }
+
+            table.tblAlleGegenstaende thead th:first-child {
+                border-left: none;
+            }
+
+    table.tblAlleGegenstaende tfoot {
+        font-size: 13px;
+        font-weight: bold;
+        color: #F0F0F0;
+        background: #24943A;
+        background: -moz-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        background: -webkit-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        background: linear-gradient(to bottom, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        border-top: 1px solid #24943A;
+    }
+
+        table.tblAlleGegenstaende tfoot td {
+            font-size: 13px;
+        }
+
+        table.tblAlleGegenstaende tfoot .links {
+            text-align: right;
+        }
+
+            table.tblAlleGegenstaende tfoot .links a {
+                display: inline-block;
+                background: #FFFFFF;
+                color: #24943A;
+                padding: 2px 8px;
+                border-radius: 5px;
+            }
+
 /*Klassen*/
 .Primaernavigation {
     display: contents;
@@ -148,7 +159,7 @@ table.tblAlleGegenstaende tfoot .links a{
 
 .topnav {
     display: block;
-margin-left: 5em;
+    margin-left: 5em;
 }
 
 .border {
@@ -167,24 +178,32 @@ margin-left: 5em;
     font-size: 25px;
     border-collapse: collapse;
     border-spacing: 10px;
-    width: 350px;
+    width: 250px;
     padding: 30px;
-    border: solid rgb(119, 161, 34);
     margin: auto;
+    float: left;
 }
 
 .AnmeldeMenueInhalt {
     font-size: 25px;
     border-collapse: collapse;
     border-spacing: 10px;
-    width: 350px;
+    width: 250px;
     padding: 30px;
     margin: auto;
+    float: left;
 }
 
-.hintergrundbildAnmelden{
+.AnmeldeMenueBild {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+}
+
+.hintergrundbildAnmelden {
     background-image: url(../Bilder/tile_background.png);
-    background-repeat:no-repeat ;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
@@ -212,3 +231,15 @@ margin-left: 5em;
 }
 
 /*ID's */
+.btnAuswahl {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 50px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

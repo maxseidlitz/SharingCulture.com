@@ -1,16 +1,12 @@
-﻿@ModelType SharingCulture.com.BenutzerListe
-
-@Code
-    Layout = Nothing
+﻿@Code
+    ViewData("Title") = "Startseite"
 End Code
-
-<!DOCTYPE html>
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SharingCulture - Log In</title>
-    <link rel="stylesheet" type="text/css" href="../Webseiten/CSS.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS.css" />
     <!--Steuert das icon was im "Browser-Tab"(also Header)angezeigt wird!-->
     <link rel="icon" href="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif">
     <!--hier wird der Style für Bilder festgelegt; sorgt dafür, dass unser Logo mittig positioniert ist!-->
@@ -22,24 +18,25 @@ End Code
     <p>
         <!--hier wird auch auf CSS.css zugegriffen um die Style-Anpassung aus dem CSS mit dem class-Attribut auszulesen-->
         <img id="GifAnmeldung" src="https://cdn.dribbble.com/users/765531/screenshots/2679710/step-05-6-drib.gif" alt="Logo" class="centerblock" style="width:25%" />
-        <!--<img  src="../Content/Bilder/SharingCulture-Motiv.png" alt="Logo" class="center" style="width:100%"/>-->
+        <!--<img  src="../Bilder/SharingCulture-Motiv.png" alt="Logo" class="center" style="width:100%"/> -->
 
     </p>
 
-    <form method="get" action="Anmelden.html" class="border">
+    <form method="get" action="Anmelden.html" class="p">
         <!--Formular für die Anmeldung-->
-        <h2 class="centertext">Anmeldung</h2>
-        <p>Benutzername: </p>
-        <input type="text" autofocus />
-        <p>Passwort: </p>
-        <input type="password" />
+        <h1 class="centertext" style="font-size: 70px; color:limegreen">Anmeldung</h1>
+        <p><b style="font-size:40px">Benutzername: </b></p>
+        <input type="text" autofocus style="font-size:20px" />
+        <p><b style="font-size:40px">Passwort: </b></p>
+        <input type="password" style="font-size:20px" />
 
         <p>
-            <input type="button" name="btnAbbrechen" value="Abbrechen" />
-            <input type="submit" name="btnBestätigen" value="Bestätigen" />
+            <input type="submit" name="btnBestätigen" value="Bestätigen" style="font-size:20px" />
+            <input type="button" name="btnAbbrechen" value="Abbrechen" style="font-size:20px" />
         </p>
-        <p>
-            <a class="sekundaer" href="../Webseiten/frmRegistrieren.html">Registrieren</a>
-        </p>
+        <div>
+            <p style="font-size:20px; background-color:lightblue">Noch kein Mitglied? Hier kostenlos <a href="../Webseiten/frmRegistrieren.html" style="font-size:20px; color:limegreen; font-weight:bold">registrieren</a></p>
+
+        </div>
     </form>
 </body>
