@@ -22,7 +22,7 @@ End Code
     </p>
 
     <h1>Übersicht aller Gegenstände</h1>
-    <p>Hier sehen Sie alle verfügbaren Gegenstände.</p>
+    <p>Hier sehen Sie alle zur Ausleihe verfügbaren Gegenstände.</p>
     <table class="tblAlleGegenstaende">
         <tr>
             <th>ID</th>

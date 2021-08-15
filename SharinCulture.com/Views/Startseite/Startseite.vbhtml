@@ -29,18 +29,20 @@ End Code
 
             <!--WIESO KRIEG ICH DIE BESCHRIFTUNG NICHT MITTIG BZW. LINKSBÜNDIG?-->
             <!--<a href="Meldungen.html">Meldungen</a>-->
-            <input name="btnMeldungen" type="button" value="Meldungen" class="btnAuswahl" />
+            <input name="btnMeldungen" type="button" value="Meldungen" class="btnAuswahl" title="Klicke hier um dir aktuelle Meldungen anzusehen" />
             <br />
 
             <!--Wie verweisen wir mit den Buttons auf die anderen Seiten? Bitte gemeinsame Session-->
             <!--<a href="MeineGegenstände.html">Meine Gegenständen</a>-->
-            <input name="btnMeineGegenstände" class="btnAuswahl" type="button" value="Meine Gegenstände" />
+            <input name="btnMeineGegenstände" class="btnAuswahl" type="button" value="Meine Gegenstände" title="Klicke hier um dir deine aktuell angebotenen Gegenstände anzusehen" />
             <br />
 
             <!--<a href="frmGelieheneGegenstände.html">Aktuell geliehene Gegenstände</a>-->
-            <input name="btnGelieheneGegenstände" class="btnAuswahl" type="button" value="Geliehene Gegenstände" />
+            <input name="btnGelieheneGegenstände" class="btnAuswahl" type="button" value="Geliehene Gegenstände" title="Klicke hier um dir deine aktuell ausgeliehenen Gegenstände anzusehen"/>
             <br />
 
+            <input name="btnAlleGegenstände" type="button" value="Alle Gegenstände" class="btnAuswahl" title="Klicke hier um dir alle momentan angebotenen Gegenstände anzusehen" />
+            <br />
         </p>
         <p>
             <img class="AnmeldeMenueBild" src="~/Content/Bilder/Berlin.gif" style="width:50%;">
