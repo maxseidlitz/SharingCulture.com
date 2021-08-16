@@ -2,7 +2,8 @@
     Inherits System.Web.Mvc.Controller
 
     Function Index() As ActionResult
-        Return RedirectToAction("Index", "Benutzer")
+        'Return RedirectToAction("Index", "Benutzer")
+        Return View()
     End Function
 
 End Class

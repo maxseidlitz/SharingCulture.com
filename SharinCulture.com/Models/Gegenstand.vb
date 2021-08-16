@@ -7,8 +7,8 @@ Public Class Gegenstand
     Private mstrBezeichnung As String
     Private mintID As Integer
     Private mbolIstGebucht As Boolean
-    Private mbinaryBild As image
-    Private mintNachbarschaft As Integer
+    Private mbinaryBild As Image
+    Private mNachbarschaft As Nachbarschaft
     Private mstrBenutzername As String
     Private mKategorie As Kategorie
 
@@ -18,7 +18,7 @@ Public Class Gegenstand
         mintID = -1
         mbolIstGebucht = False
         mbinaryBild = Nothing
-        mintNachbarschaft = -1              'muss mintNachbarschaft und intNachbarschaft nicht als Fremdschlüssel gekennzeichnet sein? [M.S./02.08.]
+        mNachbarschaft = Nothing 'muss mintNachbarschaft und intNachbarschaft nicht als Fremdschlüssel gekennzeichnet sein? [M.S./02.08.]
         mstrBenutzername = String.Empty
 
         mKategorie = Nothing
@@ -26,24 +26,24 @@ Public Class Gegenstand
 
     'Konstruktor mit Parametern
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
-                  pbinaryBild As Image, pintNachbarschaft As Integer, pstrBenutzername As String, pKat As Kategorie)
+                  pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pKat As Kategorie)
         mstrBezeichnung = pstrBezeichnung
         mintID = pintID
         mbolIstGebucht = pbolIstGebucht
         mbinaryBild = pbinaryBild
-        mintNachbarschaft = pintNachbarschaft
+        mNachbarschaft = pNachbarschaft
         mstrBenutzername = pstrBenutzername
         mKategorie = pKat
     End Sub
 
     'Konstruktor mit Parametern und Fremdschlüssel für Kategorie
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
-                   pbinaryBild As Image, pintNachbarschaft As Integer, pstrBenutzername As String, pintKatFk As Integer)
+                   pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pintKatFk As Integer)
         mstrBezeichnung = pstrBezeichnung
         mintID = pintID
         mbolIstGebucht = pbolIstGebucht
         mbinaryBild = pbinaryBild
-        mintNachbarschaft = pintNachbarschaft
+        mNachbarschaft = pNachbarschaft
         mstrBenutzername = pstrBenutzername
         mKategorie = Nothing
     End Sub
@@ -53,12 +53,34 @@ Public Class Gegenstand
         'mbinaryBild = pGegenstandEntity.gegBild
         mbolIstGebucht = pGegenstandEntity.gegIstGebucht
         mintID = pGegenstandEntity.gegID_
-        mintNachbarschaft = pGegenstandEntity.gegnachIDFk
 
         mstrBenutzername = pGegenstandEntity.gegbenBenutzernameFk
         mstrBezeichnung = pGegenstandEntity.gegBezeichnung
 
     End Sub
+
+    Public Function UmwandelnInGegenstandEntity() As GegenstandEntity
+        Dim gegE As GegenstandEntity
+        gegE = New GegenstandEntity
+
+        gegE.gegID_ = mintID
+
+        gegE.gegBezeichnung = mstrBezeichnung
+        gegE.gegIstGebucht = mbolIstGebucht
+        'gegE.gegBild = mbinaryBild                      'Wir müssen diese Bilder raushauen, das nervt unnormal! Lass ein JavaScript schreiben was anhand des Namens ein beliebiges Bild such und im HTML abbildet!
+        gegE.gegbenBenutzernameFk = mstrBenutzername
+
+        If mKategorie IsNot Nothing Then
+            gegE.gegkatKategorieFk = mKategorie.intID
+        End If
+
+        If mNachbarschaft IsNot Nothing Then
+            gegE.gegnachIDFk = mNachbarschaft.intID
+        End If
+
+        Return gegE
+    End Function
+
 
     Public Property strBezeichnung As String
         Get
@@ -92,11 +114,12 @@ Public Class Gegenstand
         End Set
     End Property
 
-    Public Property intNachbarschaft As Integer
+    Public Property intNachbarschaft As Nachbarschaft
         Get
-            Return mintNachbarschaft
+            Return mNachbarschaft
         End Get
-        Set(value As Integer)
+        Set(value As Nachbarschaft)
+            mNachbarschaft = value
         End Set
     End Property
 

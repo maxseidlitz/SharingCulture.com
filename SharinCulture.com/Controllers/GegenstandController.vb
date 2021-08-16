@@ -1,4 +1,5 @@
-﻿Imports System.Web.Mvc
+﻿Imports System.Data.Entity
+Imports System.Web.Mvc
 
 Namespace Controllers
     Public Class GegenstandController
@@ -78,46 +79,45 @@ Namespace Controllers
             Return View(vmGeg) ' Neue Aufgabe und Liste aller Kategorien als ViewModel an die View übergeben
         End Function
 
-        'TODO: POST Prozedur erledigen!!!! @MS, 14.8.
-        '' POST: /Aufgabe/Hinzufuegen
-        '<HttpPost>
-        'Function Hinzufuegen(pvmAuf As AufgabeViewModel) As ActionResult
-        '    Dim auf As Aufgabe
-        '    Dim aufEntity As AufgabeEntity
-        '    Dim kat As Kategorie
-        '    Dim lstKategorienAlle As List(Of Kategorie)
-        '
-        '    If Not ModelState.IsValid Then
-        '        ' Alle Kategorien aus Datenbank laden
-        '        lstKategorienAlle = New List(Of Kategorie)
-        '
-        '        For Each katEntity In db.tblKategorien.ToList
-        '            kat = New Kategorie(katEntity)
-        '            lstKategorienAlle.Add(kat)
-        '        Next
-        '
-        '        pvmAuf.KategorienAlle = lstKategorienAlle
-        '        Return View(pvmAuf)
-        '    End If
-        '
-        '    ' Aufgabe aus dem ViewModel holen und in AufgabeEntity umwandeln
-        '    auf = pvmAuf.Aufgabe
-        '    aufEntity = auf.gibAlsAufgabeEntity
-        '
-        '    ' Speichern vorbereiten
-        '    db.tblAufgaben.Attach(aufEntity) ' Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
-        '    db.Entry(aufEntity).State = EntityState.Added ' als Hinzugefügt markieren
-        '
-        '    ' Vorsichtig Änderungen speichern
-        '    Try
-        '        db.SaveChanges()
-        '    Catch ex As Exception
-        '        ' Im Fehlerfall wird der Fehler im ViewModel vermerkt
-        '        ModelState.AddModelError(String.Empty, "Hinzufügen war nicht erfolgreich.")
-        '    End Try
-        '
-        '    Return RedirectToAction("Index") ' Zurück zur Übersicht über alle Aufgaben
-        'End Function
+        ' POST: /Gegenstand/Hinzufuegen
+        <HttpPost>
+        Function Hinzufuegen(pvmGeg As GegenstandViewModel) As ActionResult
+            Dim geg As Gegenstand
+            Dim gegEntity As GegenstandEntity
+            Dim kat As Kategorie
+            Dim lstKategorienAlle As List(Of Kategorie)
+
+            If Not ModelState.IsValid Then
+                ' Alle Kategorien aus Datenbank laden
+                lstKategorienAlle = New List(Of Kategorie)
+
+                For Each katEntity In db.tblKategorie.ToList
+                    kat = New Kategorie(katEntity)
+                    lstKategorienAlle.Add(kat)
+                Next
+
+                pvmGeg.KategorienAlle = lstKategorienAlle
+                Return View(pvmGeg)
+            End If
+
+            ' Gegenstand aus dem ViewModel ziehen und in GegenstandEntity umwandeln
+            geg = pvmGeg.Gegenstand
+            gegEntity = geg.UmwandelnInGegenstandEntity
+
+            ' Speichern vorbereiten
+            db.tblGegenstand.Attach(gegEntity) ' Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
+            db.Entry(gegEntity).State = EntityState.Added ' als Hinzugefügt markieren
+
+            'Änderungen speichern
+            Try
+                db.SaveChanges()
+            Catch ex As Exception
+                ' Im Fehlerfall wird der Fehler im ViewModel vermerkt
+                ModelState.AddModelError(String.Empty, "Hinzufügen war nicht erfolgreich.")
+            End Try
+
+            Return RedirectToAction("UebersichtMeineGegenstaende") ' Zurück zur Übersicht über alle Aufgaben
+        End Function
 
 
     End Class
