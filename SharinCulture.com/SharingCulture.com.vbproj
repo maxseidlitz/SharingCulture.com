@@ -241,6 +241,7 @@
     <Content Include="Content\Bilder\Sharing.png" />
     <Content Include="Content\Bilder\SharingCulture-Motiv.png" />
     <Content Include="Content\Bilder\tile_background.png" />
+    <Content Include="Content\Bilder\tim-mossholder-bo3SHP58C3g-unsplash.jpg" />
     <Content Include="Content\Bilder\typ.jpg" />
     <Content Include="Content\Bilder\vacuum-24229_1280.png" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -292,12 +293,15 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Views\Shared\frmNeuesAngebot.vbhtml" />
     <Content Include="Views\Startseite\Startseite.vbhtml" />
     <Content Include="Views\Startseite\Test.vbhtml" />
     <Content Include="Views\Gegenstand\UebersichtAlleGegenstaende.vbhtml" />
     <Content Include="ViewModels\ViewModels-Klassendiagramm.cd" />
     <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
     <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
+    <Content Include="Views\Gegenstand\frmÜbersichtGelieheneGegenstände.vbhtml" />
+    <Content Include="Views\Gegenstand\frmÜbersichtMeineGegenstände.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
