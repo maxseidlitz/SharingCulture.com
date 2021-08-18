@@ -293,13 +293,18 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Home\frmMeldungen.vbhtml" />
+    <Content Include="Views\Benutzer\frmRegistrieren.vbhtml" />
+    <Content Include="Views\Shared\dlgGegenstandDetails.vbhtml" />
+    <Content Include="Views\Shared\dlgLeihen.vbhtml" />
     <None Include="Views\Shared\frmNeuesAngebot.vbhtml" />
+    <None Include="Views\Shared\dlgMeldungDetails.vbhtml" />
     <Content Include="Views\Startseite\Startseite.vbhtml" />
     <Content Include="Views\Startseite\Test.vbhtml" />
-    <Content Include="Views\Gegenstand\UebersichtAlleGegenstaende.vbhtml" />
+    <Content Include="Views\Gegenstand\frmÜbersichtAlleGegenstaende.vbhtml" />
     <Content Include="ViewModels\ViewModels-Klassendiagramm.cd" />
     <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
-    <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
+    <Content Include="Views\Gegenstand\dlgNeuerGegenstand.vbhtml" />
     <Content Include="Views\Gegenstand\frmÜbersichtGelieheneGegenstände.vbhtml" />
     <Content Include="Views\Gegenstand\frmÜbersichtMeineGegenstände.vbhtml" />
   </ItemGroup>
@@ -324,7 +329,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Views\_ViewStart.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
-    <Content Include="Views\Home\Contact.vbhtml" />
+    <Content Include="Views\Home\dlgKontaktformular.vbhtml" />
     <Content Include="Views\Shared\Error.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
