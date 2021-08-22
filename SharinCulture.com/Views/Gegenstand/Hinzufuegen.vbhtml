@@ -12,112 +12,53 @@ End Code
     <title>Hinzufuegen</title>
 </head>
 <body>
-
     <!--Linker Block für die Navigation
     div class "Primärnavigation"-->
     <div>
         <h1>Navigation</h1>
     </div>
 
-    <div class="Primärnavigation">
+    <div Class="Primärnavigation">
         <img src="../Bilder/typ.jpg" style="float:left;width:10%" />
 
-        <label style="text-align: left">Name, Vorname:</label> <br />
+        <Label style="text-align: left"> Name, Vorname :   </Label> <br />
         <input type="text" value="Dent, Arthur" /> <br />
-        <label>Community:</label> <br />
+        <Label> Community :   </Label> <br />
         <input type="text" value="Studiwohnheim Prenzlberg" />
 
-        <button type="button">Startseite</button> <br />
-        <button type="button">Alle verfügbaren Gegenstände</button> <br />
-        <button type="button">Meine geliehenen Gegenstände</button> <br />
-        <button type="button">Meine angebotenen Gegenstände</button> <br />
-        <button type="button">Meldungen</button> <br />
+        <Button type="button"> Startseite</Button> <br />
+        <Button type="button"> Alle verfügbaren Gegenstände</Button> <br />
+        <Button type="button"> Meine geliehenen Gegenstände</Button> <br />
+        <Button type="button"> Meine angebotenen Gegenstände</Button> <br />
+        <Button type="button"> Meldungen</Button> <br />
     </div>
 
+    <div>
+        <h1>Hier Neuen Gegenstand hinzufügen</h1>
+        <p>Hier können Sie einen neuen Gegenstand hinzufügen.</p>
 
-
-
-    <!-- Tabpanel zur Navigation-->
-    <p>
-        <a href="frmÜbersichtAlleGegenstände.html">Ausleihbare Gegenstände</a>
-        <a href="frmNeuesAngebot.html">Neues Angebot erstellen</a>
-        <a href="frmNeuerSuchauftrag.html">Neuen Suchauftrag anlegen</a>
-    </p>
-
-    <div class="items">
-
-
-
-        <form accept-charset="UTF-8" action="action_page.php" autocomplete="off" method="GET" target="_blank">
-            <fieldset>
-                <legend><h1>Neues Angebot erstellen</h1></legend>
-
-                <label for="name"><h3>Name</h3></label>
-                <input name="name" type="text" value="" />
-
-                <label for="vorname"><h3>Vorname</h3></label>
-                <input vorname="vorname" type="text" value="" />
-
-                <label for="bezeichnung"><h3>Bezeichnung</h3></label>
-                <input vorname="bezeichnung" type="text" value="" /> <br />
-
-                <label for="kategorie"><h3>Kategorie</h3></label>
-                <select>
-                    <option selected="standard" value="1">Keine</option>
-                    <option value="10">Raum</option>
-                    <option value="2">Küchenutensilien</option>
-                    <option value="3">Garten</option>
-                    <option value="4">Werkzeug</option>
-                    <option value="5">Haushalt</option>
-                    <option value="6">Auto, Rad & Boot</option>
-                    <option value="7">Dienstleistungen</option>
-                    <option value="8">Familie, Kind & Baby</option>
-                    <option value="9">Jobs</option>
-                    <option value="11">Mode & Beauty</option>
-                    <option value="12">Elektronik</option>
-                    <option value="13">Musik, Filme & Bücher</option>
-                    <option value="14">Nachbarschaftshilfe</option>
-                </select><br />
-
-
-                <label for="ergänzenderText"><h3>Ergänzender Text:</h3></label>
-                <textarea cols="30" rows="2">Hallo, ich biete...</textarea><br />
-
-                <label for="zeitraum"><h3>Anbietungszeitraum:</h3></label>
-                <div class="anfangsdatum">
-                    <label for="anfangsdatum">Von:</label>
-                    <input type="date" id="date" value="2018-07-03">
-                    <span></span>
-                    <input type="time" id="time" value="08:00">
-                </div>
-                <div class="enndatum">
-                    <label for="endatum">Bis:</label>
-                    <input type="date" id="date" value="2018-07-03">
-                    <span></span>
-                    <input type="time" id="time" value="08:00">
-                </div>
-
-                <br />
-
-                <div>
-                    <form method="post" enctype="multipart/form-data">
-                        <label>
-                            <h3>
-                                Bild hinzufügen:
-                                <input name="bilddatei" type="image" size="50">
-                            </h3>
-                        </label>
-                        <button>Durchsuchen...</button>
-                    </form>
-                </div>
-
-                <br />
-                <button type="submit" value="Submit" style="width: 125px; height: 50px;">Angebot speichern</button>
-
-
-            </fieldset>
-        </form>
-
-
-</body></body>
+        @Using Html.BeginForm
+            @<div>
+                @Html.HiddenFor(Function(m) Model.Gegenstand.intID)
+            </div>
+            @<div>
+                <!--Bezeichnung des Gegenstands-->
+                @Html.LabelFor(Function(m) Model.Gegenstand.strBezeichnung)
+                @Html.TextBoxFor(Function(m) Model.Gegenstand.strBezeichnung)
+                @Html.ValidationMessageFor(Function(m) Model.Gegenstand.strBezeichnung)
+            </div>
+            @<div>
+                <!--Kategorie des Ggenstandes-->
+                @Html.LabelFor(Function(m) Model.Gegenstand.Kategorie.strBezeichnung)
+                @Html.DropDownListFor(Function(m) Model.Gegenstand.Kategorie.intID, New SelectList(Model.KategorienAlle, "ID", "Bezeichnung"))
+                @Html.ValidationMessageFor(Function(m) Model.Gegenstand.Kategorie.strBezeichnung)
+            </div>
+            @<div>
+                <!-- Link zum Abbrechen, d.h. zur Navigation zur frmUebersichtAlleGegenstaende-Seite und Schaltfläche zum Absenden des Formulars -->
+                @Html.ActionLink("Abbrechen", "Index")
+                <input type="submit" value="Speichern" />
+            </div>
+        End Using
+    </div>
+</body>
 </html>
