@@ -23,6 +23,8 @@ End Code
 
     <h1>Übersicht aller Gegenstände</h1>
     <p>Hier sehen Sie alle zur Ausleihe verfügbaren Gegenstände.</p>
+    <!-- Link zum Hinzufügen von neuem Gegenstand-->
+    @Html.ActionLink("Hinzufügen", "Hinzufuegen")
     <table class="tblAlleGegenstaende">
         <tr>
             <th>ID</th>
