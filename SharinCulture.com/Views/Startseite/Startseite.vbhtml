@@ -16,7 +16,7 @@ End Code
 
 
     <div class="jumbotron">
-        <h1>SharingCultrue.com</h1>
+        <h1>SharingCulture.com</h1>
         <p class="lead">Die bewusste Art zu teilen.</p>
 
     </div>
