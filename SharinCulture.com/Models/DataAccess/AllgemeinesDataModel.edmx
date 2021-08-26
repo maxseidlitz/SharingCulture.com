@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Datenbank1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAusleihe">
+          <Key>
+            <PropertyRef Name="ausID" />
+          </Key>
+          <Property Name="ausID" Type="int" Nullable="false" />
+          <Property Name="ausStart" Type="datetime" />
+          <Property Name="ausEnde" Type="datetime" />
+          <Property Name="ausgegIDFk" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="tblBenutzer">
           <Key>
             <PropertyRef Name="benBenutzername" />
@@ -48,6 +57,18 @@
           <Property Name="nachName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="nachOrt" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <Association Name="ausgegIDFk">
+          <End Role="tblGegenstand" Type="Self.tblGegenstand" Multiplicity="1" />
+          <End Role="tblAusleihe" Type="Self.tblAusleihe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblGegenstand">
+              <PropertyRef Name="gegID " />
+            </Principal>
+            <Dependent Role="tblAusleihe">
+              <PropertyRef Name="ausgegIDFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="bennachIDFk">
           <End Role="tblnachbarschaft" Type="Self.tblnachbarschaft" Multiplicity="1" />
           <End Role="tblBenutzer" Type="Self.tblBenutzer" Multiplicity="*" />
@@ -97,10 +118,15 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Datenbank1ModelStoreContainer">
+          <EntitySet Name="tblAusleihe" EntityType="Self.tblAusleihe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblBenutzer" EntityType="Self.tblBenutzer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblGegenstand" EntityType="Self.tblGegenstand" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblKategorie" EntityType="Self.tblKategorie" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblnachbarschaft" EntityType="Self.tblnachbarschaft" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="ausgegIDFk" Association="Self.ausgegIDFk">
+            <End Role="tblGegenstand" EntitySet="tblGegenstand" />
+            <End Role="tblAusleihe" EntitySet="tblAusleihe" />
+          </AssociationSet>
           <AssociationSet Name="bennachIDFk" Association="Self.bennachIDFk">
             <End Role="tblnachbarschaft" EntitySet="tblnachbarschaft" />
             <End Role="tblBenutzer" EntitySet="tblBenutzer" />
@@ -124,9 +150,9 @@
       <Schema Namespace="Datenbank1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="GegenstandEntity">
           <Key>
-            <PropertyRef Name="gegID_" />
+            <PropertyRef Name="gegID" />
           </Key>
-          <Property Name="gegID_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gegID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="gegBezeichnung" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="gegIstGebucht" Type="Boolean" Nullable="false" />
           <Property Name="gegBild" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -136,6 +162,7 @@
           <NavigationProperty Name="tblKategorie" Relationship="Self.gegkatKategorieFk" FromRole="tblGegenstand" ToRole="tblKategorie" />
           <NavigationProperty Name="tblBenutzer" Relationship="Datenbank1Model.gegbenIDFk" FromRole="GegenstandEntity" ToRole="tblBenutzer" />
           <NavigationProperty Name="tblnachbarschaft" Relationship="Datenbank1Model.gegnachIDFk" FromRole="GegenstandEntity" ToRole="tblnachbarschaft" />
+          <NavigationProperty Name="tblAusleihe" Relationship="Datenbank1Model.ausgegIDFk" FromRole="GegenstandEntity" ToRole="tblAusleihe" />
         </EntityType>
         <EntityType Name="KategorieEntity">
           <Key>
@@ -177,6 +204,11 @@
           <AssociationSet Name="gegnachIDFk" Association="Datenbank1Model.gegnachIDFk">
             <End Role="tblnachbarschaft" EntitySet="tblnachbarschaft" />
             <End Role="GegenstandEntity" EntitySet="tblGegenstand" />
+          </AssociationSet>
+          <EntitySet Name="tblAusleihe" EntityType="Datenbank1Model.tblAusleihe" />
+          <AssociationSet Name="ausgegIDFk" Association="Datenbank1Model.ausgegIDFk">
+            <End Role="GegenstandEntity" EntitySet="tblGegenstand" />
+            <End Role="tblAusleihe" EntitySet="tblAusleihe" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="BenutzerEntity">
@@ -243,6 +275,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="tblAusleihe">
+          <Key>
+            <PropertyRef Name="ausID" />
+          </Key>
+          <Property Name="ausID" Type="Int32" Nullable="false" />
+          <Property Name="ausStart" Type="DateTime" Precision="3" />
+          <Property Name="ausEnde" Type="DateTime" Precision="3" />
+          <Property Name="ausgegIDFk" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblGegenstand" Relationship="Datenbank1Model.ausgegIDFk" FromRole="tblAusleihe" ToRole="GegenstandEntity" />
+        </EntityType>
+        <Association Name="ausgegIDFk">
+          <End Type="Datenbank1Model.GegenstandEntity" Role="GegenstandEntity" Multiplicity="1" />
+          <End Type="Datenbank1Model.tblAusleihe" Role="tblAusleihe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GegenstandEntity">
+              <PropertyRef Name="gegID" />
+            </Principal>
+            <Dependent Role="tblAusleihe">
+              <PropertyRef Name="ausgegIDFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -252,7 +306,7 @@
           <EntitySetMapping Name="tblGegenstand">
             <EntityTypeMapping TypeName="Datenbank1Model.GegenstandEntity">
               <MappingFragment StoreEntitySet="tblGegenstand">
-                <ScalarProperty Name="gegID_" ColumnName="gegID " />
+                <ScalarProperty Name="gegID" ColumnName="gegID " />
                 <ScalarProperty Name="gegBezeichnung" ColumnName="gegBezeichnung" />
                 <ScalarProperty Name="gegIstGebucht" ColumnName="gegIstGebucht" />
                 <ScalarProperty Name="gegBild" ColumnName="gegBild" />
@@ -293,6 +347,16 @@
                 <ScalarProperty Name="nachOrt" ColumnName="nachOrt" />
                 <ScalarProperty Name="nachName" ColumnName="nachName" />
                 <ScalarProperty Name="nachID" ColumnName="nachID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAusleihe">
+            <EntityTypeMapping TypeName="Datenbank1Model.tblAusleihe">
+              <MappingFragment StoreEntitySet="tblAusleihe">
+                <ScalarProperty Name="ausgegIDFk" ColumnName="ausgegIDFk" />
+                <ScalarProperty Name="ausEnde" ColumnName="ausEnde" />
+                <ScalarProperty Name="ausStart" ColumnName="ausStart" />
+                <ScalarProperty Name="ausID" ColumnName="ausID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

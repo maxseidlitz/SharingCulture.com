@@ -22,7 +22,7 @@ End Code
     </p>
 
     <h1>Übersicht aller Gegenstände</h1>
-    <p>Hier sehen Sie alle zur Ausleihe verfügbaren Gegenstände.</p>
+    <p>Hier sehen Sie alle ausleihbaren Gegenstände.</p>
     <!-- Link zum Hinzufügen von neuem Gegenstand-->
     @Html.ActionLink("Hinzufügen", "Hinzufuegen")
     <table class="tblAlleGegenstaende">
@@ -48,5 +48,6 @@ End Code
             </tr>
         Next
     </table>
+
 </body>
 </html>
