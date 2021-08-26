@@ -13,6 +13,7 @@
           <Property Name="ausStart" Type="datetime" />
           <Property Name="ausEnde" Type="datetime" />
           <Property Name="ausgegIDFk" Type="int" Nullable="false" />
+          <Property Name="ausbenBenutzernameFk" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="tblBenutzer">
           <Key>
@@ -57,6 +58,18 @@
           <Property Name="nachName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="nachOrt" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <Association Name="ausbenBenutzernameFk">
+          <End Role="tblBenutzer" Type="Self.tblBenutzer" Multiplicity="1" />
+          <End Role="tblAusleihe" Type="Self.tblAusleihe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBenutzer">
+              <PropertyRef Name="benBenutzername" />
+            </Principal>
+            <Dependent Role="tblAusleihe">
+              <PropertyRef Name="ausbenBenutzernameFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="ausgegIDFk">
           <End Role="tblGegenstand" Type="Self.tblGegenstand" Multiplicity="1" />
           <End Role="tblAusleihe" Type="Self.tblAusleihe" Multiplicity="*" />
@@ -123,6 +136,10 @@
           <EntitySet Name="tblGegenstand" EntityType="Self.tblGegenstand" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblKategorie" EntityType="Self.tblKategorie" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblnachbarschaft" EntityType="Self.tblnachbarschaft" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="ausbenBenutzernameFk" Association="Self.ausbenBenutzernameFk">
+            <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+            <End Role="tblAusleihe" EntitySet="tblAusleihe" />
+          </AssociationSet>
           <AssociationSet Name="ausgegIDFk" Association="Self.ausgegIDFk">
             <End Role="tblGegenstand" EntitySet="tblGegenstand" />
             <End Role="tblAusleihe" EntitySet="tblAusleihe" />
@@ -210,6 +227,10 @@
             <End Role="GegenstandEntity" EntitySet="tblGegenstand" />
             <End Role="tblAusleihe" EntitySet="tblAusleihe" />
           </AssociationSet>
+          <AssociationSet Name="ausbenBenutzernameFk" Association="Datenbank1Model.ausbenBenutzernameFk">
+            <End Role="BenutzerEntity" EntitySet="tblBenutzer" />
+            <End Role="AusleiheEntity" EntitySet="tblAusleihe" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="BenutzerEntity">
           <Key>
@@ -228,6 +249,7 @@
           <Property Name="bennachIDFk" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tblnachbarschaft" Relationship="Datenbank1Model.bennachIDFk" FromRole="tblBenutzer" ToRole="tblnachbarschaft" />
           <NavigationProperty Name="tblGegenstand" Relationship="Datenbank1Model.gegbenIDFk" FromRole="tblBenutzer" ToRole="GegenstandEntity" />
+          <NavigationProperty Name="tblAusleihe" Relationship="Datenbank1Model.ausbenBenutzernameFk" FromRole="BenutzerEntity" ToRole="AusleiheEntity" />
         </EntityType>
         <EntityType Name="NachbarschaftEntity">
           <Key>
@@ -284,6 +306,8 @@
           <Property Name="ausEnde" Type="DateTime" Precision="3" />
           <Property Name="ausgegIDFk" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tblGegenstand" Relationship="Datenbank1Model.ausgegIDFk" FromRole="tblAusleihe" ToRole="GegenstandEntity" />
+          <Property Name="ausbenBenutzernameFk" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblBenutzer" Relationship="Datenbank1Model.ausbenBenutzernameFk" FromRole="AusleiheEntity" ToRole="BenutzerEntity" />
         </EntityType>
         <Association Name="ausgegIDFk">
           <End Type="Datenbank1Model.GegenstandEntity" Role="GegenstandEntity" Multiplicity="1" />
@@ -294,6 +318,18 @@
             </Principal>
             <Dependent Role="tblAusleihe">
               <PropertyRef Name="ausgegIDFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ausbenBenutzernameFk">
+          <End Type="Datenbank1Model.BenutzerEntity" Role="BenutzerEntity" Multiplicity="1" />
+          <End Type="Datenbank1Model.AusleiheEntity" Role="AusleiheEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BenutzerEntity">
+              <PropertyRef Name="benBenutzername" />
+            </Principal>
+            <Dependent Role="AusleiheEntity">
+              <PropertyRef Name="ausbenBenutzernameFk" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -353,6 +389,7 @@
           <EntitySetMapping Name="tblAusleihe">
             <EntityTypeMapping TypeName="Datenbank1Model.AusleiheEntity">
               <MappingFragment StoreEntitySet="tblAusleihe">
+                <ScalarProperty Name="ausbenBenutzernameFk" ColumnName="ausbenBenutzernameFk" />
                 <ScalarProperty Name="ausgegIDFk" ColumnName="ausgegIDFk" />
                 <ScalarProperty Name="ausEnde" ColumnName="ausEnde" />
                 <ScalarProperty Name="ausStart" ColumnName="ausStart" />

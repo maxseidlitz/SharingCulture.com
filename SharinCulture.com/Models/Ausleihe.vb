@@ -10,6 +10,7 @@ Public Class Ausleihe
     Private mdatAusleiheStart As Date
     Private mdatAusleiheEnde As Date
     Private mGegenstand As Gegenstand
+    Private mBenutzer As Benutzer
 
     'Konstruktor parameterlos
     Public Sub New()
@@ -20,11 +21,12 @@ Public Class Ausleihe
     End Sub
 
     'Konstruktor mit Parametern
-    Public Sub New(pintID As Integer, pdatAusleiheStart As Date, pdatAusleiheEnde As Date, pGegenstand As Gegenstand)
+    Public Sub New(pintID As Integer, pdatAusleiheStart As Date, pdatAusleiheEnde As Date, pGegenstand As Gegenstand, pBenutzer As Benutzer)
         mintID = pintID
         mdatAusleiheStart = pdatAusleiheStart
         mdatAusleiheEnde = pdatAusleiheEnde
         mGegenstand = pGegenstand
+        mBenutzer = pBenutzer
     End Sub
 
     Public Property intID As Integer
@@ -56,6 +58,14 @@ Public Class Ausleihe
             Return mGegenstand
         End Get
         Set(value As Gegenstand)
+        End Set
+    End Property
+
+    Public Property Benutzer As Benutzer
+        Get
+            Return mBenutzer
+        End Get
+        Set(value As Benutzer)
         End Set
     End Property
 
