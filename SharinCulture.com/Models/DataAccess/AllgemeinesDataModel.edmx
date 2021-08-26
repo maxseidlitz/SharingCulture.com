@@ -205,7 +205,7 @@
             <End Role="tblnachbarschaft" EntitySet="tblnachbarschaft" />
             <End Role="GegenstandEntity" EntitySet="tblGegenstand" />
           </AssociationSet>
-          <EntitySet Name="tblAusleihe" EntityType="Datenbank1Model.tblAusleihe" />
+          <EntitySet Name="tblAusleihe" EntityType="Datenbank1Model.AusleiheEntity" />
           <AssociationSet Name="ausgegIDFk" Association="Datenbank1Model.ausgegIDFk">
             <End Role="GegenstandEntity" EntitySet="tblGegenstand" />
             <End Role="tblAusleihe" EntitySet="tblAusleihe" />
@@ -275,7 +275,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="tblAusleihe">
+        <EntityType Name="AusleiheEntity">
           <Key>
             <PropertyRef Name="ausID" />
           </Key>
@@ -287,7 +287,7 @@
         </EntityType>
         <Association Name="ausgegIDFk">
           <End Type="Datenbank1Model.GegenstandEntity" Role="GegenstandEntity" Multiplicity="1" />
-          <End Type="Datenbank1Model.tblAusleihe" Role="tblAusleihe" Multiplicity="*" />
+          <End Type="Datenbank1Model.AusleiheEntity" Role="tblAusleihe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GegenstandEntity">
               <PropertyRef Name="gegID" />
@@ -351,7 +351,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblAusleihe">
-            <EntityTypeMapping TypeName="Datenbank1Model.tblAusleihe">
+            <EntityTypeMapping TypeName="Datenbank1Model.AusleiheEntity">
               <MappingFragment StoreEntitySet="tblAusleihe">
                 <ScalarProperty Name="ausgegIDFk" ColumnName="ausgegIDFk" />
                 <ScalarProperty Name="ausEnde" ColumnName="ausEnde" />
