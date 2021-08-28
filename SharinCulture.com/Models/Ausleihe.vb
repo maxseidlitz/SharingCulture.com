@@ -29,6 +29,38 @@ Public Class Ausleihe
         mBenutzer = pBenutzer
     End Sub
 
+    'Konstuktor für di Entity Klasse
+    Public Sub New(pAusleiheEntity As AusleiheEntity)
+        'mbinaryBild = pGegenstandEntity.gegBild
+        mintID = pAusleiheEntity.ausID
+        mdatAusleiheStart = pAusleiheEntity.ausStart
+        mdatAusleiheEnde = pAusleiheEntity.ausEnde
+        mGegenstand = pAusleiheEntity.ausgegIDFk
+        mBenutzer = pAusleiheEntity.ausbenBenutzernameFk
+    End Sub
+
+    'erstmal o erstelt, komischerweise ist die Ausleie Entity aber noch nicht da... obwohl sie schon im DataModel integriert ist.
+    Public Function UmwandelnInAusleiheEntity() As AusleiheEntity
+        Dim ausE As AusleiheEntity
+        ausE = New AusleiheEntity
+
+        ausE.ausID = mintID
+        ausE.ausStart = mdatAusleiheStart
+        ausE.ausEnde = mdatAusleiheEnde
+        ausE.ausgegIDFk = mGegenstand
+        ausE.ausbenBenutzernameFk = mBenutzer
+
+        If mGegenstand IsNot Nothing Then
+            ausE.ausgegIDFk = mGegenstand.intID
+        End If
+
+        If mBenutzer IsNot Nothing Then
+            ausE.ausbenBenutzernameFk = mBenutzer.strBenutzername
+        End If
+
+        Return ausE
+    End Function
+
     Public Property intID As Integer
         Get
             Return mintID
