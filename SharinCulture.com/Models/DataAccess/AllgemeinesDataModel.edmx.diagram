@@ -15,7 +15,7 @@
         <AssociationConnector Association="Datenbank1Model.gegnachIDFk" />
         <EntityTypeShape EntityType="Datenbank1Model.AusleiheEntity" Width="1.5" PointX="0.75" PointY="2.5" />
         <AssociationConnector Association="Datenbank1Model.ausgegIDFk" />
-        <AssociationConnector Association="Datenbank1Model.ausbenBenutzernameFk" />
+        <AssociationConnector Association="Datenbank1Model.ausbenBenutzernameFk" ></AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
