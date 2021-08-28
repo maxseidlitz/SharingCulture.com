@@ -48,11 +48,10 @@ Public Class Gegenstand
         mKategorie = Nothing
     End Sub
 
-    '*** Auskommentiert am 3.8. - Aufgrund desFehlers das mbinaryBild nicht im DatTyp short? gespeichert werden kann | Wir planen Bilder komplett raus zu lassen!
     Public Sub New(pGegenstandEntity As GegenstandEntity)
         'mbinaryBild = pGegenstandEntity.gegBild
         mbolIstGebucht = pGegenstandEntity.gegIstGebucht
-        mintID = pGegenstandEntity.gegID_
+        mintID = pGegenstandEntity.gegID
 
         mstrBenutzername = pGegenstandEntity.gegbenBenutzernameFk
         mstrBezeichnung = pGegenstandEntity.gegBezeichnung
@@ -63,7 +62,7 @@ Public Class Gegenstand
         Dim gegE As GegenstandEntity
         gegE = New GegenstandEntity
 
-        gegE.gegID_ = mintID
+        gegE.gegID = mintID
 
         gegE.gegBezeichnung = mstrBezeichnung
         gegE.gegIstGebucht = mbolIstGebucht

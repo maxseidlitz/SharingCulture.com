@@ -30,6 +30,7 @@ Namespace Controllers
             Dim geg As Gegenstand
             Dim gegEntity As GegenstandEntity
             Dim katEntity As KategorieEntity
+            Dim ausEntity As AusleiheEntity
             Dim vmGegenstaendeListe As GegenstaendeListe
 
             vmGegenstaendeListe = New GegenstaendeListe

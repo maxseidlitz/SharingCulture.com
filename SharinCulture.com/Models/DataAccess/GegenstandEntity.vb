@@ -11,7 +11,7 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class GegenstandEntity
-    Public Property gegID_ As Integer
+    Public Property gegID As Integer
     Public Property gegBezeichnung As String
     Public Property gegIstGebucht As Boolean
     Public Property gegBild As Byte()
