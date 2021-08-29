@@ -27,7 +27,7 @@ Public Class Gegenstand
 
     'Konstruktor mit Parametern
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
-                  pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pKat As Kategorie, pAus as AusleiheEntity)
+                  pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pKat As Kategorie, pAus As Ausleihe)
         mstrBezeichnung = pstrBezeichnung
         mintID = pintID
         mbolIstGebucht = pbolIstGebucht
@@ -36,9 +36,9 @@ Public Class Gegenstand
         mstrBenutzername = pstrBenutzername
         mKategorie = pKat
         mAusleihe = pAus
-    
+
     End Sub
-    
+
     'Konstruktor mit Parametern und Fremdschlüssel für Kategorie
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
                    pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pintKatFk As Integer)

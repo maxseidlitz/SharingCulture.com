@@ -30,7 +30,8 @@ Namespace Controllers
             Dim geg As Gegenstand
             Dim gegEntity As GegenstandEntity
             Dim katEntity As KategorieEntity
-            Dim ausEntity As AusleiheEntity
+            'Ich glaube Ausleihe muss hier nicht integriert werden, sondern eher in einem separaten Controller??? M.S. 29.8. 14h
+            'Dim ausEntity As AusleiheEntity
             Dim vmGegenstaendeListe As GegenstaendeListe
 
             vmGegenstaendeListe = New GegenstaendeListe

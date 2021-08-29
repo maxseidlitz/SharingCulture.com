@@ -19,8 +19,9 @@ Partial Public Class GegenstandEntity
     Public Property gegbenBenutzernameFk As String
     Public Property gegkatKategorieFk As Integer
 
-    Public Overridable Property tblKategorie As KategorieEntity
+    Public Overridable Property tblAusleihe As ICollection(Of AusleiheEntity) = New HashSet(Of AusleiheEntity)
     Public Overridable Property tblBenutzer As BenutzerEntity
+    Public Overridable Property tblKategorie As KategorieEntity
     Public Overridable Property tblnachbarschaft As NachbarschaftEntity
 
 End Class

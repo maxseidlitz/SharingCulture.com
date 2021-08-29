@@ -160,37 +160,40 @@
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Models\BenutzerListe.vb" />
     <Compile Include="Controllers\BenutzerController.vb" />
-    <Compile Include="Models\DataAccess\BenutzerEntity.vb">
-      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DataAccess\NachbarschaftEntity.vb">
-      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\BenutzerViewModel.vb" />
-    <Compile Include="Controllers\GegenstandController.vb" />
-    <Compile Include="Controllers\StartseiteController.vb" />
-    <Compile Include="Models\DataAccess\GegenstandDataModel.Context.vb">
+    <Compile Include="Models\DataAccess\AllgemeinesDataModel.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GegenstandDataModel.Context.tt</DependentUpon>
+      <DependentUpon>AllgemeinesDataModel.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DataAccess\AllgemeinesDataModel.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataAccess\GegenstandDataModel.vb">
+    <Compile Include="Models\DataAccess\AllgemeinesDataModel.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+      <DependentUpon>AllgemeinesDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\GegenstandViewModel.vb" />
+    <Compile Include="Models\DataAccess\AusleiheEntity.vb">
+      <DependentUpon>AllgemeinesDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataAccess\BenutzerEntity.vb">
+      <DependentUpon>AllgemeinesDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DataAccess\GegenstandEntity.vb">
-      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+      <DependentUpon>AllgemeinesDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DataAccess\KategorieEntity.vb">
-      <DependentUpon>GegenstandDataModel.tt</DependentUpon>
+      <DependentUpon>AllgemeinesDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataAccess\NachbarschaftEntity.vb">
+      <DependentUpon>AllgemeinesDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BenutzerViewModel.vb" />
+    <Compile Include="Controllers\GegenstandController.vb" />
+    <Compile Include="Controllers\StartseiteController.vb" />
+    <Compile Include="ViewModels\GegenstandViewModel.vb" />
     <Compile Include="Models\KategorieListe.vb" />
     <Compile Include="Models\Ausleihe.vb" />
     <Compile Include="Models\AusleihenListe.vb" />
@@ -249,16 +252,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSS.css" />
-    <Content Include="Models\DataAccess\GegenstandDataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
-      <LastGenOutput>GegenstandDataModel.Context.vb</LastGenOutput>
-    </Content>
-    <Content Include="Models\DataAccess\GegenstandDataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
-      <LastGenOutput>GegenstandDataModel.vb</LastGenOutput>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -268,7 +261,18 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Models\DataAccess\AllgemeinesDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
+      <LastGenOutput>AllgemeinesDataModel.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\DataAccess\AllgemeinesDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
+      <LastGenOutput>AllgemeinesDataModel.vb</LastGenOutput>
+    </Content>
     <Content Include="Models\Entwurfsklassendiagramm.cd" />
+    <Content Include="Controllers\MVC-Muster.cd" />
     <EntityDeploy Include="Models\DataAccess\AllgemeinesDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AllgemeinesDataModel.Designer.vb</LastGenOutput>
@@ -276,7 +280,6 @@
     <Content Include="Models\DataAccess\AllgemeinesDataModel.edmx.diagram">
       <DependentUpon>AllgemeinesDataModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Controllers\MVC-Muster.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
