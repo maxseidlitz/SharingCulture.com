@@ -23,6 +23,7 @@ Partial Public Class BenutzerEntity
     Public Property benIstEigentümer As Boolean
     Public Property bennachIDFk As Integer
 
+    Public Overridable Property tblAusleihe As ICollection(Of AusleiheEntity) = New HashSet(Of AusleiheEntity)
     Public Overridable Property tblnachbarschaft As NachbarschaftEntity
     Public Overridable Property tblGegenstand As ICollection(Of GegenstandEntity) = New HashSet(Of GegenstandEntity)
 

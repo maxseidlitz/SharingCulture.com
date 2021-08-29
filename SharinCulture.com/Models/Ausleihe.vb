@@ -35,8 +35,6 @@ Public Class Ausleihe
         mintID = pAusleiheEntity.ausID
         mdatAusleiheStart = pAusleiheEntity.ausStart
         mdatAusleiheEnde = pAusleiheEntity.ausEnde
-        mGegenstand = pAusleiheEntity.ausgegIDFk
-        mBenutzer = pAusleiheEntity.ausbenBenutzernameFk
     End Sub
 
     'erstmal o erstelt, komischerweise ist die Ausleie Entity aber noch nicht da... obwohl sie schon im DataModel integriert ist.
@@ -47,8 +45,6 @@ Public Class Ausleihe
         ausE.ausID = mintID
         ausE.ausStart = mdatAusleiheStart
         ausE.ausEnde = mdatAusleiheEnde
-        ausE.ausgegIDFk = mGegenstand
-        ausE.ausbenBenutzernameFk = mBenutzer
 
         If mGegenstand IsNot Nothing Then
             ausE.ausgegIDFk = mGegenstand.intID
