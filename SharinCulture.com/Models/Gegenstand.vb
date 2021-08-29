@@ -11,6 +11,7 @@ Public Class Gegenstand
     Private mNachbarschaft As Nachbarschaft
     Private mstrBenutzername As String
     Private mKategorie As Kategorie
+    Private mAusleihe as Ausleihe
 
     'Paramterloser Konstruktor
     Public Sub New()
@@ -20,13 +21,13 @@ Public Class Gegenstand
         mbinaryBild = Nothing
         mNachbarschaft = Nothing 'muss mintNachbarschaft und intNachbarschaft nicht als Fremdschlüssel gekennzeichnet sein? [M.S./02.08.]
         mstrBenutzername = String.Empty
-
         mKategorie = Nothing
+        mAusleihe = Nothing
     End Sub
 
     'Konstruktor mit Parametern
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
-                  pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pKat As Kategorie)
+                  pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pKat As Kategorie, pAus as AusleiheEntity)
         mstrBezeichnung = pstrBezeichnung
         mintID = pintID
         mbolIstGebucht = pbolIstGebucht
@@ -34,8 +35,10 @@ Public Class Gegenstand
         mNachbarschaft = pNachbarschaft
         mstrBenutzername = pstrBenutzername
         mKategorie = pKat
+        mAusleihe = pAus
+    
     End Sub
-
+    
     'Konstruktor mit Parametern und Fremdschlüssel für Kategorie
     Public Sub New(pstrBezeichnung As String, pintID As Integer, pbolIstGebucht As Boolean,
                    pbinaryBild As Image, pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pintKatFk As Integer)
@@ -46,6 +49,8 @@ Public Class Gegenstand
         mNachbarschaft = pNachbarschaft
         mstrBenutzername = pstrBenutzername
         mKategorie = Nothing
+        mAusleihe = Nothing
+
     End Sub
 
     Public Sub New(pGegenstandEntity As GegenstandEntity)
@@ -66,7 +71,7 @@ Public Class Gegenstand
 
         gegE.gegBezeichnung = mstrBezeichnung
         gegE.gegIstGebucht = mbolIstGebucht
-        'gegE.gegBild = mbinaryBild                      'Wir müssen diese Bilder raushauen, das nervt unnormal! Lass ein JavaScript schreiben was anhand des Namens ein beliebiges Bild such und im HTML abbildet!
+        'gegE.gegBild = mbinaryBild                      'Wir müssen diese Bilder raushauen, das nervt unnormal! Lass ein JavaScript schreiben was anhand des Namens ein beliebiges Bild sucht und im HTML abbildet!
         gegE.gegbenBenutzernameFk = mstrBenutzername
 
         If mKategorie IsNot Nothing Then
@@ -77,7 +82,11 @@ Public Class Gegenstand
             gegE.gegnachIDFk = mNachbarschaft.intID
         End If
 
+        'Hier muss so etwas [siehe 4 Zeilen oberhalb] nicht für Ausleihe gemacht werden, denn die Daten der DB für die Ausleihe werden separat in die "AusleiheEnitity" geladen und dann per Fk 
+        'mit dem Gegenstand verknüpft.
+
         Return gegE
+    
     End Function
 
 
