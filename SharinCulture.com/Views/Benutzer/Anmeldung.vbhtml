@@ -1,8 +1,9 @@
-﻿@ModelType SharingCulture.com.BenutzerViewModel
+﻿@ModelType SharingCulture.com.BenutzerListe
 
 
 @Code
     Layout = Nothing
+    ViewBag.Title = "Anmeldung"
 End Code
 
 <!DOCTYPE html>
@@ -31,10 +32,8 @@ End Code
     <form method="get" action="Anmelden.html" class="p">
         <!--Formular für die Anmeldung-->
         <h1 class="centertext" style="font-size: 70px; color:limegreen">Anmeldung</h1>
-        <p><b style="font-size:40px">Benutzername: </b></p>
 
         <!--HTML Helper Try1-->
-
         @Using Html.BeginForm
             @<div>
                 <!-- Titel der Aufgabe -->

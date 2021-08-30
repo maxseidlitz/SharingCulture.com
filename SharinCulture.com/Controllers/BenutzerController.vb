@@ -21,37 +21,67 @@ Namespace Controllers
             MyBase.Dispose(disposing) 'Aufrufen des Oberklassen-Destruktors
         End Sub
 
-        ' GET: Benutzer
-        Function Anmeldung() As ActionResult
+        'hat nicht auf diese weise funktioniert mit dem Anmelden. Siehe untere Anelden_Funktion!
+        '        ' GET: Benutzer
+        '        Function Anmeldung() As ActionResult
+        '
+        '            Dim ben As Benutzer
+        '            Dim benEntity As BenutzerEntity
+        '            Dim nachEntity As NachbarschaftEntity
+        '            Dim vmBenutzerListe As BenutzerListe
+        '
+        '            vmBenutzerListe = New BenutzerListe
+        '
+        '            ' Jede Zeile in der Tabelle tblBenutzer als Objekt der Entity-Klasse durchlaufen
+        '            For Each benEntity In db.tblBenutzer.ToList()
+        '                nachEntity = benEntity.tblnachbarschaft ' Vom Datensatz aus tblBenutzer in tblnachbarschaft navigieren
+        '
+        '                ben = New Benutzer(benEntity) ' Objekt der Entity-Klasse zur Initialisierung eines Objekts der Model-Klasse nutzen
+        '
+        '                ' Prüfen, ob es eine Nachbarschaft gibt
+        '                If nachEntity IsNot Nothing Then
+        '                    ' Umwandlung des Objekts der Entity-Klasse in Objekt der Model-Klasse
+        '                    ben.Nachbarschaft = New Nachbarschaft(nachEntity)
+        '                End If
+        '
+        '                vmBenutzerListe.hinzufuegen(ben) ' Model-Objekt zur Liste hinzufügen
+        '            Next
+        '
+        '            Return View(vmBenutzerListe) 'Übergabe der Liste aller Benutzer, damit diese dann in der View per Zäherschleife ausgelesen werden kann
+        '
+        '
+        '            Return View()
+        '        End Function
 
+        <HttpPost>
+        <ValidateAntiForgeryToken>
+        Function Anmeldung(pBen As Benutzer) As ActionResult
             Dim ben As Benutzer
-            Dim benEntity As BenutzerEntity
-            Dim nachEntity As NachbarschaftEntity
-            Dim vmBenutzerListe As BenutzerListe
+            Dim benE As BenutzerEntity
 
-            vmBenutzerListe = New BenutzerListe
+            If ModelState.IsValid Then
+                Using db As Datenbank1Entities = New Datenbank1Entities
 
-            ' Jede Zeile in der Tabelle tblBenutzer als Objekt der Entity-Klasse durchlaufen
-            For Each benEntity In db.tblBenutzer.ToList()
-                nachEntity = benEntity.tblnachbarschaft ' Vom Datensatz aus tblBenutzer in tblnachbarschaft navigieren
-
-                ben = New Benutzer(benEntity) ' Objekt der Entity-Klasse zur Initialisierung eines Objekts der Model-Klasse nutzen
-
-                ' Prüfen, ob es eine Nachbarschaft gibt
-                If nachEntity IsNot Nothing Then
-                    ' Umwandlung des Objekts der Entity-Klasse in Objekt der Model-Klasse
-                    ben.Nachbarschaft = New Nachbarschaft(nachEntity)
-                End If
-
-                vmBenutzerListe.hinzufuegen(ben) ' Model-Objekt zur Liste hinzufügen
-            Next
-
-            Return View(vmBenutzerListe) 'Übergabe der Liste aller Benutzer, damit diese dann in der View per Zäherschleife ausgelesen werden kann
+                    Try
+                        For Each benE In db.tblBenutzer.ToList
+                            If (benE.benBenutzername.Equals(pBen.strBenutzername) And benE.benPasswort.Equals(pBen.strPasswort)) Then
+                                benE = ben
+                            End If
+                        Next
+                    Catch ex As Exception
+                        benE = Nothing
+                    End Try
 
 
-            Return View()
+                    If benE IsNot Nothing Then
+                        System.Web.HttpContext.Current.Session("BenutzerID") = benE.benBenutzername.ToString()
+                        Return RedirectToAction("Startseite", "Home")
+
+                    End If
+                End Using
+            End If
+            Return View(pBen)
         End Function
-
 
     End Class
 End Namespace

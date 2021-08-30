@@ -4,11 +4,11 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class Benutzer
+    Private mstrBenutzername As String
     Private mbolIstEigentuemer As Boolean
     Private mbolIstKoordinator As Boolean
     Private mdatGeburtstag As Date
     Private mNachbarschaft As Nachbarschaft
-    Private mstrBenutzername As String
     Private mstrEmail As String
     Private mstrName As String
     Private mstrPasswort As String
@@ -17,11 +17,11 @@ Public Class Benutzer
 
     'Parameterloser Kostruktor
     Public Sub New()
+        mstrBenutzername = String.Empty
         mbolIstEigentuemer = False
         mbolIstKoordinator = False
         mdatGeburtstag = Date.Today
         mNachbarschaft = Nothing
-        mstrBenutzername = String.Empty
         mstrEmail = String.Empty
         mstrName = String.Empty
         mstrPasswort = String.Empty
@@ -33,11 +33,11 @@ Public Class Benutzer
                    pNachbarschaft As Nachbarschaft, pstrBenutzername As String, pstrEmail As String,
                    pstrName As String, pstrPasswort As String, pstrTelefonnummer As String)
 
+        mstrBenutzername = pstrBenutzername
         mbolIstEigentuemer = pbolIstEigentuemer
         mbolIstKoordinator = pbolIstKoordinator
         mdatGeburtstag = pdatGeburtstag
         mNachbarschaft = Nothing
-        mstrBenutzername = pstrBenutzername
         mstrEmail = pstrEmail
         mstrName = pstrName
         mstrPasswort = pstrPasswort
@@ -50,11 +50,10 @@ Public Class Benutzer
                    pintNachFk As Integer, pstrBenutzername As String, pstrEmail As String,
                    pstrName As String, pstrPasswort As String, pstrTelefonnummer As String)
 
+        mstrBenutzername = pstrBenutzername
         mbolIstEigentuemer = pbolIstEigentuemer
         mbolIstKoordinator = pbolIstKoordinator
         mdatGeburtstag = pdatGeburtstag
-
-        mstrBenutzername = pstrBenutzername
         mstrEmail = pstrEmail
         mstrName = pstrName
         mstrPasswort = pstrPasswort
@@ -63,11 +62,10 @@ Public Class Benutzer
     End Sub
 
     Public Sub New(pBenutzer As BenutzerEntity)
+        mstrBenutzername = pBenutzer.benBenutzername
         mbolIstEigentuemer = pBenutzer.benIstEigentümer
         mbolIstKoordinator = pBenutzer.benIstKoordinator
         mdatGeburtstag = pBenutzer.benGeburtsdatum
-
-        mstrBenutzername = pBenutzer.benBenutzername
         mstrEmail = pBenutzer.benEmail
         mstrName = pBenutzer.benName
         mstrPasswort = pBenutzer.benPasswort

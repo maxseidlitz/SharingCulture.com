@@ -23,7 +23,6 @@ Namespace Controllers
         End Sub
 
 
-
         ' GET: Gegenstand
         <HttpGet>
         Function UebersichtAlleGegenstaende() As ActionResult

@@ -17,7 +17,7 @@ Public Class BenutzerViewModel
         End Set
     End Property
 
-    Public Property Nachbarschaft() As List(Of Nachbarschaft)
+    Public Property NachbarschaftenAlle() As List(Of Nachbarschaft)
         Get
             Return mNachbarschaftenAlle
         End Get
