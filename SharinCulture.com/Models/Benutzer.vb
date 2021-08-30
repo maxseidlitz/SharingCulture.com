@@ -62,6 +62,38 @@ Public Class Benutzer
 
     End Sub
 
+    Public Sub New(pBenutzer As BenutzerEntity)
+        mbolIstEigentuemer = pBenutzer.benIstEigentümer
+        mbolIstKoordinator = pBenutzer.benIstKoordinator
+        mdatGeburtstag = pBenutzer.benGeburtsdatum
+
+        mstrBenutzername = pBenutzer.benBenutzername
+        mstrEmail = pBenutzer.benEmail
+        mstrName = pBenutzer.benName
+        mstrPasswort = pBenutzer.benPasswort
+        mstrTelefonnummer = pBenutzer.benTelefonnummer
+    End Sub
+
+    Public Function UmwandelnInBenutzerEntity() As BenutzerEntity
+        Dim benE As BenutzerEntity
+        benE = New BenutzerEntity
+
+        benE.benBenutzername = mstrBenutzername
+        benE.benEmail = mstrEmail
+        benE.benName = mstrName
+        benE.benPasswort = mstrPasswort
+        benE.benTelefonnummer = mstrTelefonnummer
+        benE.benGeburtsdatum = mdatGeburtstag
+        benE.benIstEigentümer = mbolIstEigentuemer
+        benE.benIstKoordinator = mbolIstKoordinator
+
+        If mNachbarschaft IsNot Nothing Then
+            benE.bennachIDFk = mNachbarschaft.intID
+        End If
+
+        Return benE
+
+    End Function
 
     Public Property strBenutzername As String
         Get

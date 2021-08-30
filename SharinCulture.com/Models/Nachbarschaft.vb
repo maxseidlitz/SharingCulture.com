@@ -24,6 +24,13 @@ Public Class Nachbarschaft
 
     'Konstruktor mit Parametern UND Fremdschlüssel ist hier nicht nötig, denn es gibt keine Fremdschlüssel
 
+
+    Public Sub New(pNachbarschaftEntity As NachbarschaftEntity)
+        mintID = pNachbarschaftEntity.nachID
+        mstrName = pNachbarschaftEntity.nachName
+        mstrOrt = pNachbarschaftEntity.nachOrt
+    End Sub
+
     Public Property intID As Integer
         Get
             Return mintID

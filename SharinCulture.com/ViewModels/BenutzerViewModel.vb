@@ -4,24 +4,25 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class BenutzerViewModel
+    Private mBenutzer As Benutzer
 
-    Private mNachbarschaft As Integer
-    Private mBenutzer As Integer 'Integer?
-
-    Public Property Nachbarschaft As Nachbarschaft
-        Get
-            Return Nothing
-        End Get
-        Set(value As Nachbarschaft)
-        End Set
-    End Property
+    Private mNachbarschaftenAlle As List(Of Nachbarschaft)
 
     Public Property Benutzer As Benutzer
         Get
             Return Nothing
         End Get
         Set(value As Benutzer)
+            mBenutzer = value
         End Set
     End Property
 
+    Public Property Nachbarschaft() As List(Of Nachbarschaft)
+        Get
+            Return mNachbarschaftenAlle
+        End Get
+        Set(value As List(Of Nachbarschaft))
+            mNachbarschaftenAlle = value
+        End Set
+    End Property
 End Class

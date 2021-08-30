@@ -1,8 +1,12 @@
-﻿
+﻿@ModelType SharingCulture.com.BenutzerViewModel
+
 
 @Code
-    ViewData("Title") = "Startseite"
+    Layout = Nothing
 End Code
+
+<!DOCTYPE html>
+
 
 <head>
     <meta charset="utf-8" />
@@ -28,6 +32,19 @@ End Code
         <!--Formular für die Anmeldung-->
         <h1 class="centertext" style="font-size: 70px; color:limegreen">Anmeldung</h1>
         <p><b style="font-size:40px">Benutzername: </b></p>
+
+        <!--HTML Helper Try1-->
+
+        @Using Html.BeginForm
+            @<div>
+                <!-- Titel der Aufgabe -->
+                @Html.LabelFor(Function(m) Model.Benutzer.strBenutzername)
+                @Html.TextBoxFor(Function(m) Model.Benutzer.strBenutzername)
+                @Html.ValidationMessageFor(Function(m) Model.Benutzer.strBenutzername)
+            </div>
+
+        End Using
+        <!--Ende HTML Helper Try1-->
         <input type="text" autofocus style="font-size:20px" />
         <p><b style="font-size:40px">Passwort: </b></p>
         <input type="password" style="font-size:20px" />
