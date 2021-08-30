@@ -31,7 +31,7 @@ End Code
             <th>Bild</th>
             <th>Bezeichnung</th>
             <th>Kategorie</th>
-            <th>Leihende Person</th>
+            <th>Eigentümer</th>
             <th>Details</th>
         </tr>
 

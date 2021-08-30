@@ -8,7 +8,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ACCAAAAAKEgACCAAAQAAAACAAAAAAAgASAABQAAAAQA=</HashCode>
+      <HashCode>ACCAAAAAKEgACCAAAQAAAACAAAAAQAgASAABQAAAAQA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -32,8 +32,8 @@
       <FileName>Models\Kategorie.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SharingCulture.com.Nachbarschaft" Collapsed="true">
-    <Position X="9.5" Y="8.75" Width="1.5" />
+  <Class Name="SharingCulture.com.Nachbarschaft">
+    <Position X="9.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAACAAAAAAAAQAgAAAAAAAAAAABAQAAAAA=</HashCode>
       <FileName>Models\Nachbarschaft.vb</FileName>
@@ -46,7 +46,7 @@
         <Point X="8.016" Y="14.814" />
         <Point X="8.016" Y="15.189" />
         <Point X="10.625" Y="15.189" />
-        <Point X="10.625" Y="9.312" />
+        <Point X="10.625" Y="10.277" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-0.291" Y="0.908" />
@@ -68,8 +68,8 @@
         <Point X="6.75" Y="8.391" />
         <Point X="6.75" Y="7.75" />
         <Point X="9.125" Y="7.75" />
-        <Point X="9.125" Y="9.062" />
-        <Point X="9.5" Y="9.062" />
+        <Point X="9.125" Y="9.042" />
+        <Point X="9.5" Y="9.042" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
