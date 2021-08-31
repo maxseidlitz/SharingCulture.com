@@ -1,4 +1,4 @@
-﻿@ModelType SharingCulture.com.BenutzerListe
+﻿@ModelType SharingCulture.com.Benutzer
 
 
 @Code
@@ -29,19 +29,32 @@ End Code
 
     </p>
 
-    <form method="get" action="Anmelden.html" class="p">
+    <form method="get" action="Anmeldung.html" class="p">
         <!--Formular für die Anmeldung-->
         <h1 class="centertext" style="font-size: 70px; color:limegreen">Anmeldung</h1>
 
         <!--HTML Helper Try1-->
-        @Using Html.BeginForm
-            @<div>
-                <!-- Titel der Aufgabe -->
-                @Html.LabelFor(Function(m) Model.Benutzer.strBenutzername)
-                @Html.TextBoxFor(Function(m) Model.Benutzer.strBenutzername)
-                @Html.ValidationMessageFor(Function(m) Model.Benutzer.strBenutzername)
-            </div>
+        @Using Html.BeginForm("Anmeldung", "Benutzer", FormMethod.Post)
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(True)
 
+            @<div>
+                @Html.LabelFor(Function(m) m.strBenutzername, New With {.class = "control-label"})
+                @Html.TextBoxFor(Function(m) m.strBenutzername, New With {.class = "form-control password"})
+                @Html.ValidationMessageFor(Function(m) m.strBenutzername)
+            </div>
+            @<div>
+                @Html.LabelFor(Function(m) m.strPasswort, New With {.Class = "control-label"})
+                @Html.TextBoxFor(Function(m) m.strPasswort, New With {.class = "form-control", .type = "password"})
+                @Html.ValidationMessageFor(Function(m) m.strPasswort)
+            </div>
+            @<div>
+                <input type="submit" name="btnBestätigen" value="Bestätigen" style="font-size:20px" />
+            </div>
+            @<div>
+                <p>Noch kein Mitglied? Registrieren Sie sich jetzt kostenlos!</p>
+                @Html.ActionLink("Registrieren", "Benutzer", Nothing, New With {.class = "btn btn-default", .role = "button"})
+            </div>
         End Using
         <!--Ende HTML Helper Try1-->
         <input type="text" autofocus style="font-size:20px" />
@@ -49,12 +62,7 @@ End Code
         <input type="password" style="font-size:20px" />
 
         <p>
-            <input type="submit" name="btnBestätigen" value="Bestätigen" style="font-size:20px" />
             <input type="button" name="btnAbbrechen" value="Abbrechen" style="font-size:20px" />
         </p>
-        <div>
-            <p style="font-size:20px; background-color:lightblue">Noch kein Mitglied? Hier kostenlos <a href="../Webseiten/frmRegistrieren.html" style="font-size:20px; color:limegreen; font-weight:bold">registrieren</a></p>
-
-        </div>
     </form>
 </body>

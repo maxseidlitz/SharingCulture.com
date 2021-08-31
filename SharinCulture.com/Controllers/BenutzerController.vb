@@ -74,7 +74,8 @@ Namespace Controllers
 
 
                     If benE IsNot Nothing Then
-                        System.Web.HttpContext.Current.Session("BenutzerID") = benE.benBenutzername.ToString()
+                        System.Web.HttpContext.Current.Session("Benutzername") = benE.benBenutzername.ToString()
+                        System.Web.HttpContext.Current.Session("IstKoordinator") = benE.benIstKoordinator.ToString()
                         Return RedirectToAction("Startseite", "Home")
 
                     End If
