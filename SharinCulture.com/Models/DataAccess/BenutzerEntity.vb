@@ -9,6 +9,7 @@
 
 Imports System
 Imports System.Collections.Generic
+Imports SharingCulture.com
 
 Partial Public Class BenutzerEntity
     Public Property benBenutzername As String
@@ -27,4 +28,8 @@ Partial Public Class BenutzerEntity
     Public Overridable Property tblnachbarschaft As NachbarschaftEntity
     Public Overridable Property tblGegenstand As ICollection(Of GegenstandEntity) = New HashSet(Of GegenstandEntity)
 
+    'war ein Vorschlag der Problemlösung vom VisualStudio damit man jetzt BenutzerEntity in Benutzer speichern kann.
+    Public Shared Widening Operator CType(v As Benutzer) As BenutzerEntity
+        Throw New NotImplementedException()
+    End Operator
 End Class
