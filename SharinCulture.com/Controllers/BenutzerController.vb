@@ -1,4 +1,5 @@
 ﻿Imports System.Web.Mvc
+Imports SharingCulture.Benutzer
 
 Namespace Controllers
     Public Class BenutzerController
@@ -12,6 +13,9 @@ Namespace Controllers
             MyBase.New() ' Konstruktor der Oberklasse aufrufen
 
             db = New Datenbank1Entities
+
+            Debug.Print("Datenbank mit Entity-Framework verbunden.")
+
         End Sub
 
         'Destruktor für Controller, der DB-Verbindung beendet
@@ -67,9 +71,11 @@ Namespace Controllers
                             If (benE.benBenutzername.Equals(pBen.strBenutzername) And benE.benPasswort.Equals(pBen.strPasswort)) Then
                                 benE = ben
                             End If
+                            Debug.Print("Benutzer zurückgegeben")
                         Next
                     Catch ex As Exception
                         benE = Nothing
+                        Debug.Print("Exception aufgetreten.")
                     End Try
 
 
@@ -80,6 +86,7 @@ Namespace Controllers
 
                     End If
                 End Using
+            Else Debug.Print("ModelState not valid.")
             End If
             Return View(pBen)
         End Function
