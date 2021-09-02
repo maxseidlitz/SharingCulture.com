@@ -24,11 +24,22 @@ Public Class Kategorie
         mstrBezeichnung = pkatEntity.katBezeichnung
     End Sub
 
+    Public Function gibAlsEntity() As KategorieEntity
+        Dim katEntity As KategorieEntity
+        katEntity = New KategorieEntity
+
+        katEntity.katID = mintID
+        katEntity.katBezeichnung = mstrBezeichnung
+
+        Return katEntity
+    End Function
+
     Property intID As Integer
         Get
             Return mintID
         End Get
         Set(value As Integer)
+            mintID = value
         End Set
     End Property
 
@@ -37,6 +48,7 @@ Public Class Kategorie
             Return mstrBezeichnung
         End Get
         Set(value As String)
+            mstrBezeichnung = value
         End Set
     End Property
 End Class

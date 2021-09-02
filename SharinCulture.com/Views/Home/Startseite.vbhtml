@@ -1,4 +1,6 @@
-﻿@Code
+﻿@Modeltype SharingCulture.com.Benutzer
+
+@Code
     ViewData("Title") = "Startseite"
 End Code
 
@@ -17,7 +19,7 @@ End Code
 
     <div class="jumbotron">
         <h1>SharingCulture.com</h1>
-        <p class="lead">Die bewusste Art zu teilen.</p>
+        <p class="lead" style="text-align:center;">Die bewusste Art zu teilen.</p>
 
     </div>
 
@@ -42,12 +44,9 @@ End Code
             <br />
 
             <input name="btnAlleGegenstände" type="button" value="Alle Gegenstände" class="btnAuswahl" title="Klicke hier um dir alle momentan angebotenen Gegenstände anzusehen" />
-            @Html.ActionLink("Alle Gegenstände", "UebersichtAlleGegenstaende")
+            @Html.ActionLink("Gegenstand", "UebersichtAlleGegenstaende")
 
             <br />
         </p>
-        <p>
-            <img class="AnmeldeMenueBild" src="~/Content/Bilder/Berlin.gif" style="width:50%;">
-        </p><!--WIE KRIEG ICH DAS SCHEISS BILD AUF DIE SELBE HÖHE WIE DEN RESTLICHEN SCHEISS?!?!?!?!?!!-->
     </div>
 </body>

@@ -1,7 +1,7 @@
 ﻿@ModelType SharingCulture.com.GegenstandViewModel
 
 @Code
-    Layout = Nothing
+    Layout = Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 
 <!DOCTYPE html>
@@ -14,24 +14,6 @@ End Code
 <body>
     <!--Linker Block für die Navigation
     div class "Primärnavigation"-->
-    <div>
-        <h1>Navigation</h1>
-    </div>
-
-    <div Class="Primärnavigation">
-        <img src="../Bilder/typ.jpg" style="float:left;width:10%" />
-
-        <Label style="text-align: left"> Name, Vorname :   </Label> <br />
-        <input type="text" value="Dent, Arthur" /> <br />
-        <Label> Community :   </Label> <br />
-        <input type="text" value="Studiwohnheim Prenzlberg" />
-
-        <Button type="button"> Startseite</Button> <br />
-        <Button type="button"> Alle verfügbaren Gegenstände</Button> <br />
-        <Button type="button"> Meine geliehenen Gegenstände</Button> <br />
-        <Button type="button"> Meine angebotenen Gegenstände</Button> <br />
-        <Button type="button"> Meldungen</Button> <br />
-    </div>
 
     <div>
         <h1>Hier Neuen Gegenstand hinzufügen</h1>

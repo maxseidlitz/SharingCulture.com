@@ -1,13 +1,16 @@
-﻿Public Class HomeController
-    Inherits System.Web.Mvc.Controller
+﻿Imports System.Web.Mvc
 
-    Function Index() As ActionResult
-        Return RedirectToAction("Anmeldung", "Benutzer")
-    End Function
+Namespace Controllers
+    Public Class HomeController
+        Inherits Controller
+        ' GET: Home
+        Function Index() As ActionResult
+            Return RedirectToAction("Startseite", "Home")
+        End Function
 
-    Function Startseite() As ActionResult
-        Return View()
-    End Function
+        Function Startseite() As ActionResult
+            Return View()
+        End Function
 
-
-End Class
+    End Class
+End Namespace

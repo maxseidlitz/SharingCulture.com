@@ -1,7 +1,7 @@
 ﻿@ModelType SharingCulture.com.GegenstaendeListe
 
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 
 <!DOCTYPE html>
@@ -14,12 +14,7 @@ End Code
 </head>
 <body>
 
-    <!-- Tabpanel zur Navigation-->
-    <p>
-        <a href="frmÜbersichtAlleGegenstände.html">Ausleihbare Gegenstände</a>
-        <a href="frmNeuesAngebot.html">Neues Angebot erstellen</a>
-        <a href="frmNeuerSuchauftrag.html">Neuen Suchauftrag anlegen</a>
-    </p>
+    <!-- Tabpanel zur Navigation, ist jetzt in die Navbar integriert. Siehe "../Views/Shared/_Layout.vbhtml", hier wurde alles deklariert. (aktuell Zeile 22 ff.)-->
 
     <h1>Übersicht aller Gegenstände</h1>
     <p>Hier sehen Sie alle ausleihbaren Gegenstände.</p>

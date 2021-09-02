@@ -204,10 +204,6 @@
     </Compile>
     <Compile Include="Models\Kategorie.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -281,7 +277,6 @@
     </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -297,17 +292,18 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Home\Meldungen.vbhtml" />
-    <Content Include="Views\Benutzer\Registrieren.vbhtml" />
+    <Content Include="Views\Home\Registrieren.vbhtml" />
     <Content Include="Views\Shared\dlgGegenstandDetails.vbhtml" />
     <Content Include="Views\Shared\dlgLeihen.vbhtml" />
     <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
     <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
     <None Include="Views\Shared\NeuesAngebot.vbhtml" />
     <None Include="Views\Shared\dlgMeldungDetails.vbhtml" />
     <Content Include="Views\Home\Startseite.vbhtml" />
     <Content Include="Views\Gegenstand\UebersichtAlleGegenstaende.vbhtml" />
     <Content Include="ViewModels\ViewModels-Klassendiagramm.cd" />
-    <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
+    <Content Include="Views\Home\Anmeldung.vbhtml" />
     <Content Include="Views\Gegenstand\dlgNeuerGegenstand.vbhtml" />
     <Content Include="Views\Gegenstand\UebersichtGelieheneGegenstaende.vbhtml" />
     <Content Include="Views\Gegenstand\UebersichtMeineGegenstaende.vbhtml" />
