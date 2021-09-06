@@ -38,7 +38,7 @@ End Code
                 <td>@geg.Kategorie</td>
                 <td>@geg.strBenutzername</td>
                 <td>
-                    @Html.ActionLink("Details", "DetailsAnzeigen", New With {.ID = geg.intID})
+                    @Html.ActionLink("Details", "Details", New With {.ID = geg.intID})
                 </td>
             </tr>
         Next

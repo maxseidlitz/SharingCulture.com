@@ -297,6 +297,7 @@
     <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
     <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
+    <Content Include="Views\Gegenstand\Details.vbhtml" />
     <None Include="Views\Shared\NeuesAngebot.vbhtml" />
     <None Include="Views\Shared\dlgMeldungDetails.vbhtml" />
     <Content Include="Views\Home\Startseite.vbhtml" />
