@@ -21,7 +21,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ACCAAAAAKEgACCAAAQAAAACAAAAAQAgASAABQAAAAQA=</HashCode>
+      <HashCode>ACCAAAAAKEgACCAAAQAAAACAAAAAQAgACAABQACAAQA=</HashCode>
       <FileName>Models\Gegenstand.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -48,7 +48,7 @@
   <Class Name="SharingCulture.com.Kategorie">
     <Position X="2.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>AICAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Kategorie.vb</FileName>
     </TypeIdentifier>
   </Class>

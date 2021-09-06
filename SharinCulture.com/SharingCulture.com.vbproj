@@ -294,10 +294,10 @@
     <Content Include="Views\Home\Registrieren.vbhtml" />
     <Content Include="Views\Shared\Details.vbhtml" />
     <Content Include="Views\Shared\dlgLeihen.vbhtml" />
-    <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
     <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Benutzer\Anmeldung.vbhtml" />
     <Content Include="Views\Gegenstand\Details.vbhtml" />
+    <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
     <None Include="Views\Shared\NeuesAngebot.vbhtml" />
     <None Include="Views\Shared\dlgMeldungDetails.vbhtml" />
     <Content Include="Views\Home\Startseite.vbhtml" />

@@ -28,6 +28,7 @@ Namespace Controllers
         Function UebersichtAlleGegenstaende() As ActionResult
             Dim geg As Gegenstand
             Dim gegEntity As GegenstandEntity
+            Dim kat As Kategorie
             Dim katEntity As KategorieEntity
             'Ich glaube Ausleihe muss hier nicht integriert werden, sondern eher in einem separaten Controller??? M.S. 29.8. 14h
             'Dim ausEntity As AusleiheEntity
@@ -58,68 +59,61 @@ Namespace Controllers
         Function Hinzufuegen() As ActionResult
             Dim geg As Gegenstand
             Dim kat As Kategorie
-            Dim lstKategorienAlle As List(Of Kategorie)
+            Dim lstKat As List(Of Kategorie)
             Dim vmGeg As GegenstandViewModel
 
-            geg = New Gegenstand ' Neue leere Aufgabe erzeugen
+            geg = New Gegenstand 'Neuen leeren Gegenstand erzeugen
 
-            ' Alle Kategorien aus Datenbank laden
-            lstKategorienAlle = New List(Of Kategorie)
-
-            For Each katEntity In db.tblKategorie.ToList
-                kat = New Kategorie(katEntity)
-                lstKategorienAlle.Add(kat)
+            'Alle Kategorien aus der DB laden
+            lstKat = New List(Of Kategorie)
+            For Each katE In db.tblKategorie.ToList
+                kat = New Kategorie(katE)
+                lstKat.Add(kat)
             Next
 
-            ' ViewModel vorbereiten
+            'ViewModel vorbereiten
             vmGeg = New GegenstandViewModel
-
             vmGeg.Gegenstand = geg
-            vmGeg.KategorienAlle = lstKategorienAlle
-
-            Return View(vmGeg) ' Neue Aufgabe und Liste aller Kategorien als ViewModel an die View übergeben
+            vmGeg.KategorienAlle = lstKat
+            Return View(vmGeg)
         End Function
 
-        ' POST: /Gegenstand/Hinzufuegen
+        'POST: /Gegenstand/Hinzufuegen
         <HttpPost>
         Function Hinzufuegen(pvmGeg As GegenstandViewModel) As ActionResult
             Dim geg As Gegenstand
-            Dim gegEntity As GegenstandEntity
+            Dim gegE As GegenstandEntity
             Dim kat As Kategorie
-            Dim lstKategorienAlle As List(Of Kategorie)
+            Dim lstKat As List(Of Kategorie)
 
             If Not ModelState.IsValid Then
-                ' Alle Kategorien aus Datenbank laden
-                lstKategorienAlle = New List(Of Kategorie)
+                lstKat = New List(Of Kategorie) 'Alle Branche aus Datenbank laden
 
-                For Each katEntity In db.tblKategorie.ToList
-                    kat = New Kategorie(katEntity)
-                    lstKategorienAlle.Add(kat)
+                For Each katE In db.tblKategorie.ToList
+                    kat = New Kategorie(katE)
+                    lstKat.Add(kat)
                 Next
-
-                pvmGeg.KategorienAlle = lstKategorienAlle
+                pvmGeg.KategorienAlle = lstKat
                 Return View(pvmGeg)
             End If
 
-            ' Gegenstand aus dem ViewModel ziehen und in GegenstandEntity umwandeln
+            '!!!ToDo!!!  Hier könnte auch gelich die Session ID genommen werden um den eu hinzugefügten Geg. mit dem benutzernamen zu befüllen.
+            'Gegenstand aus dem ViewModel holen und in Gegestand Entity umwandeln
             geg = pvmGeg.Gegenstand
-            gegEntity = geg.UmwandelnInGegenstandEntity
+            gegE = geg.UmwandelnInGegenstandEntity
+            'speichern vorbereiten
+            db.tblGegenstand.Attach(gegE) 'Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
+            db.Entry(gegE).State = EntityState.Added 'als Hinzugefügt markieren
 
-            ' Speichern vorbereiten
-            db.tblGegenstand.Attach(gegEntity) ' Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
-            db.Entry(gegEntity).State = EntityState.Added ' als Hinzugefügt markieren
-
-            'Änderungen speichern
+            'Vorsichtig Änderungen speichern
             Try
                 db.SaveChanges()
             Catch ex As Exception
-                ' Im Fehlerfall wird der Fehler im ViewModel vermerkt
+                'Im Fehlerfall wird der Fehler im ViewModel vermerkt
                 ModelState.AddModelError(String.Empty, "Hinzufügen war nicht erfolgreich.")
             End Try
-
-            Return RedirectToAction("UebersichtMeineGegenstaende") ' Zurück zur Übersicht über alle Aufgaben
+            Return RedirectToAction("UebersichtAlleGegenstaende") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
-
 
         Function Details(ID As Integer) As ActionResult
             'Deklaration

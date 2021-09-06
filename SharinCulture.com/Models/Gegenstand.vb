@@ -122,7 +122,7 @@ Public Class Gegenstand
         End Set
     End Property
 
-    Public Property intNachbarschaft As Nachbarschaft
+    Public Property Nachbarschaft As Nachbarschaft
         Get
             Return mNachbarschaft
         End Get

@@ -32,13 +32,13 @@ End Code
 
         @For Each geg In Model.Gegenstaende
             @<tr>
-                <td>@geg.intID</td>
-                <td>@geg.binaryBild</td>
-                <td>@geg.strBezeichnung</td>
+                <td>@geg.ID</td>
+                <td>@geg.Bild</td>
+                <td>@geg.Bezeichnung</td>
                 <td>@geg.Kategorie</td>
-                <td>@geg.strBenutzername</td>
+                <td>@geg.Benutzername</td>
                 <td>
-                    @Html.ActionLink("Details", "Details", New With {.ID = geg.intID})
+                    @Html.ActionLink("Details", "Details", New With {.ID = geg.ID})
                 </td>
             </tr>
         Next

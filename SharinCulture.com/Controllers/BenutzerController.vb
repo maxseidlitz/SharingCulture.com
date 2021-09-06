@@ -1,5 +1,5 @@
 ﻿Imports System.Web.Mvc
-Imports SharingCulture.Benutzer
+Imports SharingCulture.com.Benutzer
 
 Namespace Controllers
     Public Class BenutzerController

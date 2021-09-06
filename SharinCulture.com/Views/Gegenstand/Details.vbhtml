@@ -14,25 +14,25 @@ End Code
 
 </head>
 <body>
-        <div>
-            <h1>
-                @Html.DisplayFor(Function(m) m.Gegenstand.strBezeichnung)
-            </h1>
-        </div>
+    <div>
+        <h1>
+            @Html.DisplayFor(Function(m) m.Gegenstand.Bezeichnung)
+        </h1>
+        <p style="font-style:italic;color: grey; text-align:right">
+            Kategorie:
+            @Html.DisplayFor(Function(m) m.Gegenstand.Kategorie.ID)
+        </p>
+    </div>
 
         <div>
             <p>
                 Besitzer:
             </p>
             <p style="font-style:italic;color: grey;">
-                @Html.DisplayFor(Function(m) m.Gegenstand.strBenutzername)
+                @Html.DisplayFor(Function(m) m.Gegenstand.Benutzername)
             </p>
-            <p>
-                Kategorie:
-            </p>
-            <p style="font-style:italic;color: grey;">
-                @Html.DisplayFor(Function(m) m.Gegenstand.Kategorie.strBezeichnung)
-            </p>
+          
+           
         </div>
 </body>
 </html>
