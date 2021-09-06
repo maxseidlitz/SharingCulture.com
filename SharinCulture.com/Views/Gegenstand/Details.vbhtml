@@ -16,11 +16,11 @@ End Code
 <body>
     <div>
         <h1>
-            @Html.DisplayFor(Function(m) m.Gegenstand.Bezeichnung)
+            @Html.DisplayFor(Function(m) m.Gegenstand.strBezeichnung)
         </h1>
         <p style="font-style:italic;color: grey; text-align:right">
             Kategorie:
-            @Html.DisplayFor(Function(m) m.Gegenstand.Kategorie.ID)
+            @Html.DisplayFor(Function(m) m.Gegenstand.Kategorie.intID)
         </p>
     </div>
 
@@ -29,7 +29,7 @@ End Code
                 Besitzer:
             </p>
             <p style="font-style:italic;color: grey;">
-                @Html.DisplayFor(Function(m) m.Gegenstand.Benutzername)
+                @Html.DisplayFor(Function(m) m.Gegenstand.strBenutzername)
             </p>
           
            

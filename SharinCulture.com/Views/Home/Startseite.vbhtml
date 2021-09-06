@@ -24,7 +24,8 @@ End Code
     </div>
 
     <div>
-        <p class="AnmeldeMenue" style="font-size: 30px; color:black; font-weight:900; ">Hallo, Leo!</p> <!--Wie fügt man hier noch den passenden Benutzernamen ein? (LS 13.08.)-->
+        <p class="AnmeldeMenue" style="font-size: 30px; color:black; font-weight:900; "> Hallo, @Html.DisplayFor(Function(m) m.Benutzer.strBenutzername)!</p>
+        <!--Wie fügt man hier noch den passenden Benutzernamen ein? (LS 13.08.)-->
         <br />
 
         <p class="AnmeldeMenueInhalt">
