@@ -121,5 +121,46 @@ Namespace Controllers
         End Function
 
 
+        Function Details(ID As Integer) As ActionResult
+            'Deklaration
+            Dim geg As Gegenstand
+            Dim gegE As GegenstandEntity
+            Dim kat As Kategorie
+            Dim katE As KategorieEntity
+            Dim vmGeg As GegenstandViewModel
+
+            'Datenbankzugriff über Entity Framework
+            gegE = db.tblGegenstand.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblGegenstand nachschlagen
+            katE = gegE.tblKategorie 'Vom Datensatz aus tblGegenstand in tblKategorie navigieren
+
+            If gegE Is Nothing Then
+                Return New HttpNotFoundResult("Gegenstand mit der ID " & ID & " wurde nicht gefunden")
+            End If
+            'Gefundenen Datensatz aus der Datenbank entnehmen
+            db.Entry(gegE).State = EntityState.Detached
+            'Umwandeln in ein Objekt der Model-Klasse
+            geg = New Gegenstand(gegE)
+
+            'Prüfen, ob Branche vorhanden
+            If katE IsNot Nothing Then
+                geg.Kategorie = New Kategorie(katE)
+            End If
+
+            katE = db.tblKategorie.Find(gegE.gegkatKategorieFk)
+
+            If katE Is Nothing Then
+                Return New HttpNotFoundResult("Kategorie mit der ID " & gegE.gegkatKategorieFk & " wurde nicht gefunden")
+            End If
+            db.Entry(katE).State = EntityState.Detached
+            kat = New Kategorie(katE)
+
+            geg.Kategorie = kat
+
+            'Vorbereitung des View-Models
+            vmGeg = New GegenstandViewModel
+            vmGeg.Gegenstand = geg
+
+            Return View(vmGeg)
+        End Function
     End Class
 End Namespace

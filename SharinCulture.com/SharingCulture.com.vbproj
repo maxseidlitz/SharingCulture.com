@@ -267,7 +267,6 @@
       <LastGenOutput>AllgemeinesDataModel.vb</LastGenOutput>
     </Content>
     <Content Include="Models\Entwurfsklassendiagramm.cd" />
-    <Content Include="Controllers\MVC-Muster.cd" />
     <EntityDeploy Include="Models\DataAccess\AllgemeinesDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AllgemeinesDataModel.Designer.vb</LastGenOutput>
@@ -293,7 +292,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Home\Meldungen.vbhtml" />
     <Content Include="Views\Home\Registrieren.vbhtml" />
-    <Content Include="Views\Shared\dlgGegenstandDetails.vbhtml" />
+    <Content Include="Views\Shared\Details.vbhtml" />
     <Content Include="Views\Shared\dlgLeihen.vbhtml" />
     <Content Include="Views\Gegenstand\Hinzufuegen.vbhtml" />
     <Content Include="Views\Home\Index.vbhtml" />

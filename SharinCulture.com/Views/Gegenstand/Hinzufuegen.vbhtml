@@ -16,7 +16,7 @@ End Code
     div class "Primärnavigation"-->
 
     <div>
-        <h1>Hier Neuen Gegenstand hinzufügen</h1>
+        <h1>Neuen Gegenstand hinzufügen</h1>
         <p>Hier können Sie einen neuen Gegenstand hinzufügen.</p>
 
         @Using Html.BeginForm
